@@ -1,19 +1,16 @@
 //
 //  eazesportzAppDelegate.m
-//  EazesportzHighlights
+//  Eazesportz Broadcast Console
 //
-//  Created by Gilbert Zaldivar on 3/4/14.
+//  Created by Gilbert Zaldivar on 1/29/14.
 //  Copyright (c) 2014 Gilbert Zaldivar. All rights reserved.
 //
 
 #import "eazesportzAppDelegate.h"
-
 #import "EazesportzRetrieveSport.h"
-#import "eazesportzMasterViewController.h"
 #import "eazesportzLoginViewController.h"
-#import "eazesportzPlayerViewController.h"
-#import "eazesportzMainViewController.h"
-#import "eazesportzLiveHighlightViewController.h"
+#import "eazesportzScheduleBroadcastViewController.h"
+#import "eazesportzLiveVideoViewController.h"
 
 #import "eazesportzSelectTeamWindowController.h"
 
@@ -21,11 +18,9 @@
 
 @interface  eazesportzAppDelegate()
 
-@property (nonatomic, strong) IBOutlet eazesportzMasterViewController *masterViewController;
 @property (nonatomic, strong) IBOutlet eazesportzLoginViewController *loginViewController;
-@property (nonatomic, strong) IBOutlet eazesportzPlayerViewController *playerController;
-@property (nonatomic, strong) IBOutlet eazesportzMainViewController *processVideoController;
-@property (nonatomic, strong) IBOutlet eazesportzLiveHighlightViewController *liveHighlightsController;
+@property (nonatomic, strong) IBOutlet eazesportzScheduleBroadcastViewController *broadcastScheduleController;
+@property (nonatomic, strong) IBOutlet eazesportzLiveVideoViewController *liveVideoController;
 
 @end
 
@@ -40,31 +35,31 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    // Insert code here to initialize your application    
     [AmazonErrorHandler shouldNotThrowExceptions];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginResult:) name:@"LoginSuccessfulNotification" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPlayerView:) name:@"PlayerReadyNotification" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processVideoView:) name:@"DisplayProcessVideoNotification" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeView:) name:@"DisplayMainViewController" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(highlightClips:) name:@"CreateLiveHighlightsNotification" object:nil];
+        
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginResult:)
+                                                 name:@"LoginSuccessfulNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeView:)
+                                                 name:@"DisplayMainViewController" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(liveVideoView:)
+                                                 name:@"LiveVideoViewNotification" object:nil];
     
     [self.window setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"Footballbkg.png"]]];
     
     self.loginViewController =
-    [[eazesportzLoginViewController alloc] initWithNibName:@"eazesportzLoginViewController" bundle:nil];
+                [[eazesportzLoginViewController alloc] initWithNibName:@"eazesportzLoginViewController" bundle:nil];
     
     [self.loginViewController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     [self resizeWindowForContentSize:[self.loginViewController.view frame].size];
     [self.window.contentView addSubview:self.loginViewController.view];
 }
-
-// Returns the directory the application uses to store the Core Data store file. This code uses a directory named "eazesportz.com.EazesportzHighlights" in the user's Application Support directory.
+// Returns the directory the application uses to store the Core Data store file. This code uses a directory named "eazesportz.com.Eazesportz_Broadcast_Console" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
-    return [appSupportURL URLByAppendingPathComponent:@"eazesportz.com.EazesportzHighlights"];
+    return [appSupportURL URLByAppendingPathComponent:@"eazesportz.com.Eazesportz_Broadcast_Console"];
 }
 
 // Creates if necessary and returns the managed object model for the application.
@@ -74,7 +69,7 @@
         return _managedObjectModel;
     }
 	
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"EazesportzHighlights" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Eazesportz_Broadcast_Console" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -121,7 +116,7 @@
         }
     }
     
-    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"EazesportzHighlights.storedata"];
+    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"Eazesportz_Broadcast_Console.storedata"];
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
     if (![coordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]) {
         [[NSApplication sharedApplication] presentError:error];
@@ -174,6 +169,16 @@
     }
 }
 
+- (IBAction)sdMenuItemClicked:(id)sender {
+    [_sdmenuitem setState:NSOnState];
+    [_hdmenuitem setState:NSOffState];
+}
+
+- (IBAction)hdMenuItemClicked:(id)sender {
+    [_sdmenuitem setState:NSOffState];
+    [_sdmenuitem setState:NSOnState];
+}
+
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
     // Save changes in the application's managed object context before the application terminates.
@@ -221,7 +226,7 @@
 }
 
 - (void)loginResult:(NSNotification *)notification {
-    //    [_loginWindow close];
+//    [_loginWindow close];
     getSport = [[EazesportzRetrieveSport alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotSport:) name:@"SportChangedNotification"
                                                object:nil];
@@ -231,27 +236,25 @@
 - (void)gotSport:(NSNotification *)notification {
     if ([[[notification userInfo] objectForKey:@"Result"] isEqualToString:@"Success"]) {
         [self.loginViewController.view removeFromSuperview];
-        self.processVideoController =
-        [[eazesportzMainViewController alloc] initWithNibName:@"eazesportzMainViewController" bundle:nil];
-        self.processVideoController.sport = getSport.sport;
-        
-        [self.processVideoController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-        [self resizeWindowForContentSize:[self.processVideoController.view frame].size];
-        [self.window.contentView addSubview:self.processVideoController.view];
+        self.broadcastScheduleController =
+            [[eazesportzScheduleBroadcastViewController alloc] initWithNibName:@"eazesportzScheduleBroadcastViewController" bundle:nil];
+        self.broadcastScheduleController.sport = getSport.sport;
+        self.broadcastScheduleController.user = self.loginViewController.user;
+
+        [self.broadcastScheduleController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+        [self resizeWindowForContentSize:[self.broadcastScheduleController.view frame].size];
+        [self.window.contentView addSubview:self.broadcastScheduleController.view];
     }
 }
 
 - (void)homeView:(NSNotification *)notification {
-    if ([[[notification userInfo] objectForKey:@"Message"] isEqualToString:@"VideoClipView"]) {
-        [self.playerController.view removeFromSuperview];
-        self.playerController = nil;
-    } else if ([[[notification userInfo] objectForKey:@"Message"] isEqualToString:@"SelectOpponentView"]) {
-        [self.masterViewController.view removeFromSuperview];
+    if ([[[notification userInfo] objectForKey:@"Message"] isEqualToString:@"LiveView"]) {
+        [self.liveVideoController.view removeFromSuperview];
     }
     
-    [self.processVideoController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-    [self resizeWindowForContentSize:[self.processVideoController.view frame].size];
-    [self.window.contentView addSubview:self.processVideoController.view];
+    [self.broadcastScheduleController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+    [self resizeWindowForContentSize:[self.broadcastScheduleController.view frame].size];
+    [self.window.contentView addSubview:self.broadcastScheduleController.view];
 }
 
 - (void)resizeWindowForContentSize:(NSSize)size {
@@ -263,46 +266,31 @@
     [window setFrame:newWindowFrame display:YES animate:[window isVisible]];
 }
 
-- (void)loadPlayerView:(NSNotification *)notification {
-    [self.masterViewController.view removeFromSuperview];
-    self.playerController = [[eazesportzPlayerViewController alloc] initWithNibName:@"eazesportzPlayerViewController" bundle:nil];
-    self.playerController.videoUrl = self.masterViewController.videoUrl;
-    self.playerController.game = self.masterViewController.game;
-    self.playerController.team = self.masterViewController.team;
-    self.playerController.sport = getSport.sport;
-    self.playerController.user = self.loginViewController.user;
-    self.playerController.highlightDate = [self.masterViewController.highlightDate dateValue];
-    
-//    if ([_hdmenuitem state] == NSOnState)
-//        self.playerController.highdef = YES;
-//    else if ([_sdmenuitem state] == NSOnState)
-//        self.playerController.highdef = NO;
-    
-    [self.playerController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-    [self resizeWindowForContentSize:[self.playerController.view frame].size];
-    [self.window.contentView addSubview:[self.playerController view]];
-}
-
-- (void)processVideoView:(NSNotification *)notification {
+/*
+- (void)scheduleBroadcast:(NSNotification *)notification {
     [self.processVideoController.view removeFromSuperview];
-    self.masterViewController = [[eazesportzMasterViewController alloc] initWithNibName:@"eazesportzMasterViewController" bundle:nil];
-    self.masterViewController.sport = getSport.sport;
-    self.masterViewController.user = self.loginViewController.user;
+    self.broadcastScheduleController = [[eazesportzScheduleBroadcastViewController alloc]
+                                        initWithNibName:@"eazesportzScheduleBroadcastViewController" bundle:nil];
+    self.broadcastScheduleController.user = self.loginViewController.user;
+    self.broadcastScheduleController.sport = getSport.sport;
     
-    [self.masterViewController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-    [self resizeWindowForContentSize:[self.masterViewController.view frame].size];
-    [self.window.contentView addSubview:self.masterViewController.view];
-    self.masterViewController.masterWindow = self.window;
+    [self.broadcastScheduleController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+    [self resizeWindowForContentSize:[self.broadcastScheduleController.view frame].size];
+    [self.window.contentView addSubview:self.broadcastScheduleController.view];
 }
+ */
 
-- (void)highlightClips:(NSNotification *)notification {
-    [self.processVideoController.view removeFromSuperview];
-    self.liveHighlightsController = [[eazesportzLiveHighlightViewController alloc] initWithNibName:@"eazesportzLiveHighlightViewController" bundle:nil];
-    self.liveHighlightsController.sport = getSport.sport;
-    self.liveHighlightsController.user = self.loginViewController.user;
-    [self.liveHighlightsController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
-    [self resizeWindowForContentSize:[self.liveHighlightsController.view frame].size];
-    [self.window.contentView addSubview:self.liveHighlightsController.view];
+- (void)liveVideoView:(NSNotification *)notification {
+    self.liveVideoController = [[eazesportzLiveVideoViewController alloc] initWithNibName:@"eazesportzLiveVideoViewController" bundle:nil];
+    [self.broadcastScheduleController.view removeFromSuperview];
+    self.liveVideoController.user = self.loginViewController.user;
+    self.liveVideoController.sport = getSport.sport;
+    self.liveVideoController.team = self.broadcastScheduleController.team;
+    self.liveVideoController.event = self.broadcastScheduleController.event;
+    
+    [self.liveVideoController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+    [self resizeWindowForContentSize:[self.liveVideoController.view frame].size];
+    [self.window.contentView addSubview:self.liveVideoController.view];
 }
 
 @end

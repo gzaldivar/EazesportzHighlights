@@ -7,6 +7,185 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0BEC8C18C7CACF0040DB41 /* eazesportzBroadcastScheduleTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BEC8B18C7CACF0040DB41 /* eazesportzBroadcastScheduleTableCellView.m */; };
+		2B0BEC9018C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BEC8E18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.m */; };
+		2B0BEC9118C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BEC8F18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.xib */; };
+		2B0BEC9718C817CB0040DB41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D02018C6E95700584B38 /* Cocoa.framework */; };
+		2B0BEC9D18C817CC0040DB41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BEC9B18C817CC0040DB41 /* InfoPlist.strings */; };
+		2B0BEC9F18C817CC0040DB41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BEC9E18C817CC0040DB41 /* main.m */; };
+		2B0BECA318C817CC0040DB41 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BECA118C817CC0040DB41 /* Credits.rtf */; };
+		2B0BECA918C817CC0040DB41 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BECA718C817CC0040DB41 /* MainMenu.xib */; };
+		2B0BECAC18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BECAA18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodeld */; };
+		2B0BECAE18C817CC0040DB41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BECAD18C817CC0040DB41 /* Images.xcassets */; };
+		2B0BECB418C817CC0040DB41 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D04218C6E95700584B38 /* XCTest.framework */; };
+		2B0BECB518C817CC0040DB41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D02018C6E95700584B38 /* Cocoa.framework */; };
+		2B0BECBD18C817CC0040DB41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BECBB18C817CC0040DB41 /* InfoPlist.strings */; };
+		2B0BECBF18C817CC0040DB41 /* EazesportzBroadcastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BECBE18C817CC0040DB41 /* EazesportzBroadcastTests.m */; };
+		2B0BECC618C817FE0040DB41 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10418C6EF8D00584B38 /* AVFoundation.framework */; };
+		2B0BECC718C817FE0040DB41 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10218C6EF8300584B38 /* AVKit.framework */; };
+		2B0BECC818C818140040DB41 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10818C6EFF800584B38 /* CoreMedia.framework */; };
+		2B0BECC918C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
+		2B0BECCA18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
+		2B0BECCB18C818350040DB41 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10C18C6F02F00584B38 /* libavcodec.a */; };
+		2B0BECCC18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
+		2B0BECCD18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
+		2B0BECCE18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
+		2B0BECCF18C818350040DB41 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11018C6F02F00584B38 /* libavdevice.a */; };
+		2B0BECD018C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
+		2B0BECD118C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
+		2B0BECD218C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
+		2B0BECD318C818350040DB41 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11418C6F02F00584B38 /* libavfilter.a */; };
+		2B0BECD418C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
+		2B0BECD518C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
+		2B0BECD618C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
+		2B0BECD718C818350040DB41 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11818C6F02F00584B38 /* libavformat.a */; };
+		2B0BECD818C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
+		2B0BECD918C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
+		2B0BECDA18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
+		2B0BECDB18C818350040DB41 /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11C18C6F02F00584B38 /* libavresample.a */; };
+		2B0BECDC18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
+		2B0BECDD18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
+		2B0BECDE18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
+		2B0BECDF18C818350040DB41 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12018C6F03000584B38 /* libavutil.a */; };
+		2B0BECE018C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
+		2B0BECE118C818350040DB41 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12418C6F03000584B38 /* libbluray.1.dylib */; };
+		2B0BECE218C818350040DB41 /* libbluray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12318C6F03000584B38 /* libbluray.a */; };
+		2B0BECE318C818350040DB41 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12418C6F03000584B38 /* libbluray.1.dylib */; };
+		2B0BECE418C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B0BECE518C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B0BECE618C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B0BECE718C818360040DB41 /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12818C6F03000584B38 /* libbz2.a */; };
+		2B0BECE818C818360040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B0BECE918C818360040DB41 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12C18C6F03000584B38 /* libcharset.1.dylib */; };
+		2B0BECEA18C818360040DB41 /* libcharset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12B18C6F03000584B38 /* libcharset.a */; };
+		2B0BECEB18C818360040DB41 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12C18C6F03000584B38 /* libcharset.1.dylib */; };
+		2B0BECEC18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
+		2B0BECED18C818360040DB41 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12E18C6F03000584B38 /* libcrypto.a */; };
+		2B0BECEE18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
+		2B0BECEF18C818360040DB41 /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13018C6F03000584B38 /* libncurses.a */; };
+		2B0BECF018C818360040DB41 /* libncurses.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13118C6F03000584B38 /* libncurses.5.dylib */; };
+		2B0BECF118C818360040DB41 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13418C6F03000584B38 /* libedit.0.dylib */; };
+		2B0BECF218C818360040DB41 /* libedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13318C6F03000584B38 /* libedit.a */; };
+		2B0BECF318C818360040DB41 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13418C6F03000584B38 /* libedit.0.dylib */; };
+		2B0BECF418C818360040DB41 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13718C6F03100584B38 /* libenca.0.dylib */; };
+		2B0BECF518C818360040DB41 /* libenca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13618C6F03100584B38 /* libenca.a */; };
+		2B0BECF618C818360040DB41 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13718C6F03100584B38 /* libenca.0.dylib */; };
+		2B0BECF718C818360040DB41 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13A18C6F03100584B38 /* libexpat.1.dylib */; };
+		2B0BECF818C818360040DB41 /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13918C6F03100584B38 /* libexpat.a */; };
+		2B0BECF918C818360040DB41 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13A18C6F03100584B38 /* libexpat.1.dylib */; };
+		2B0BECFA18C818360040DB41 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13D18C6F03100584B38 /* libexslt.0.dylib */; };
+		2B0BECFB18C818360040DB41 /* libexslt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13C18C6F03100584B38 /* libexslt.a */; };
+		2B0BECFC18C818360040DB41 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13D18C6F03100584B38 /* libexslt.0.dylib */; };
+		2B0BECFD18C818360040DB41 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D14018C6F03100584B38 /* libfaac.0.dylib */; };
+		2B0BECFE18C818360040DB41 /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13F18C6F03100584B38 /* libfaac.a */; };
+		2B0BECFF18C818360040DB41 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D14018C6F03100584B38 /* libfaac.0.dylib */; };
+		2B0BED0618C818360040DB41 /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0018C818360040DB41 /* libasprintf.0.dylib */; };
+		2B0BED0718C818360040DB41 /* libasprintf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0118C818360040DB41 /* libasprintf.a */; };
+		2B0BED0818C818360040DB41 /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0218C818360040DB41 /* libasprintf.0.dylib */; };
+		2B0BED0918C818360040DB41 /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0318C818360040DB41 /* libass.5.dylib */; };
+		2B0BED0A18C818360040DB41 /* libass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0418C818360040DB41 /* libass.a */; };
+		2B0BED0B18C818360040DB41 /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0518C818360040DB41 /* libass.5.dylib */; };
+		2B0BED0C18C818440040DB41 /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */; };
+		2B0BED1318C818BB0040DB41 /* eazesportzAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BED1218C818BB0040DB41 /* eazesportzAppDelegate.m */; };
+		2B0BED1418C818CB0040DB41 /* Footballbkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17818C6F23700584B38 /* Footballbkg.png */; };
+		2B0BED1518C818CB0040DB41 /* add-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0B918C6EBD400584B38 /* add-item.png */; };
+		2B0BED1618C818CB0040DB41 /* arrow-big-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BA18C6EBD400584B38 /* arrow-big-01.png */; };
+		2B0BED1718C818CB0040DB41 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BD18C6EBE800584B38 /* calendar.png */; };
+		2B0BED1818C818CB0040DB41 /* copy-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BE18C6EBE800584B38 /* copy-item.png */; };
+		2B0BED1918C818CB0040DB41 /* delete-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BF18C6EBE800584B38 /* delete-item.png */; };
+		2B0BED1A18C818CB0040DB41 /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C018C6EBE800584B38 /* document.png */; };
+		2B0BED1B18C818CB0040DB41 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0FE18C6EE4900584B38 /* download.png */; };
+		2B0BED1C18C818CB0040DB41 /* film.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C518C6EC1F00584B38 /* film.png */; };
+		2B0BED1D18C818CB0040DB41 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17B18C6F89900584B38 /* home.png */; };
+		2B0BED1E18C818CB0040DB41 /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C718C6EC3F00584B38 /* newspaper.png */; };
+		2B0BED1F18C818CB0040DB41 /* photo_not_available.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C818C6EC3F00584B38 /* photo_not_available.png */; };
+		2B0BED2018C818CB0040DB41 /* photo_processing.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C918C6EC3F00584B38 /* photo_processing.png */; };
+		2B0BED2118C818CB0040DB41 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CA18C6EC3F00584B38 /* photo.png */; };
+		2B0BED2218C818CB0040DB41 /* power-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CB18C6EC3F00584B38 /* power-button.png */; };
+		2B0BED2318C818CB0040DB41 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CC18C6EC3F00584B38 /* reload.png */; };
+		2B0BED2418C818CB0040DB41 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CD18C6EC3F00584B38 /* save.png */; };
+		2B0BED2518C818CB0040DB41 /* scissor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CE18C6EC3F00584B38 /* scissor.png */; };
+		2B0BED2618C818CB0040DB41 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CF18C6EC3F00584B38 /* screen.png */; };
+		2B0BED2718C818CB0040DB41 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0D018C6EC3F00584B38 /* search.png */; };
+		2B0BED2818C818CB0040DB41 /* shut-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0DB18C6EC5E00584B38 /* shut-down.png */; };
+		2B0BED2C18C818E80040DB41 /* eazesportzEditEventWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BED2A18C818E80040DB41 /* eazesportzEditEventWindowController.m */; };
+		2B0BED2D18C818E80040DB41 /* eazesportzEditEventWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BED2B18C818E80040DB41 /* eazesportzEditEventWindowController.xib */; };
+		2B0BED3218C819160040DB41 /* eazesportzLiveVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BED3018C819160040DB41 /* eazesportzLiveVideoViewController.m */; };
+		2B0BED3318C819160040DB41 /* eazesportzLiveVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BED3118C819160040DB41 /* eazesportzLiveVideoViewController.xib */; };
+		2B0BED3718C819310040DB41 /* eazesportzScheduleBroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BED3518C819310040DB41 /* eazesportzScheduleBroadcastViewController.m */; };
+		2B0BED3818C819310040DB41 /* eazesportzScheduleBroadcastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B0BED3618C819310040DB41 /* eazesportzScheduleBroadcastViewController.xib */; };
+		2B0BED3918C81E000040DB41 /* eazesportzLoginViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0F418C6ECF000584B38 /* eazesportzLoginViewController.h */; };
+		2B0BED3A18C81E000040DB41 /* eazesportzLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0F518C6ECF000584B38 /* eazesportzLoginViewController.m */; };
+		2B0BED3B18C81E000040DB41 /* eazesportzLoginViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0F618C6ECF000584B38 /* eazesportzLoginViewController.xib */; };
+		2B0BED3C18C81E220040DB41 /* eazesportzSelectGameWindowController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0DD18C6EC9D00584B38 /* eazesportzSelectGameWindowController.h */; };
+		2B0BED3D18C81E220040DB41 /* eazesportzSelectGameWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0DE18C6EC9D00584B38 /* eazesportzSelectGameWindowController.m */; };
+		2B0BED3E18C81E220040DB41 /* eazesportzSelectGameWindowController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0DF18C6EC9D00584B38 /* eazesportzSelectGameWindowController.xib */; };
+		2B0BED3F18C81E220040DB41 /* eazesportzSelectTeamViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E018C6EC9D00584B38 /* eazesportzSelectTeamViewController.h */; };
+		2B0BED4018C81E220040DB41 /* eazesportzSelectTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E118C6EC9D00584B38 /* eazesportzSelectTeamViewController.m */; };
+		2B0BED4118C81E220040DB41 /* eazesportzSelectTeamViewController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E218C6EC9D00584B38 /* eazesportzSelectTeamViewController.xib */; };
+		2B0BED4218C81E220040DB41 /* eazesportzSelectTeamWindowController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E318C6EC9D00584B38 /* eazesportzSelectTeamWindowController.h */; };
+		2B0BED4318C81E220040DB41 /* eazesportzSelectTeamWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E418C6EC9D00584B38 /* eazesportzSelectTeamWindowController.m */; };
+		2B0BED4418C81E220040DB41 /* eazesportzSelectTeamWindowController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E518C6EC9D00584B38 /* eazesportzSelectTeamWindowController.xib */; };
+		2B0BED4518C81E220040DB41 /* eazesportzVideoFileWindowController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E818C6EC9D00584B38 /* eazesportzVideoFileWindowController.h */; };
+		2B0BED4618C81E220040DB41 /* eazesportzVideoFileWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E918C6EC9D00584B38 /* eazesportzVideoFileWindowController.m */; };
+		2B0BED4718C81E220040DB41 /* eazesportzVideoFileWindowController.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0EA18C6EC9D00584B38 /* eazesportzVideoFileWindowController.xib */; };
+		2B0BED4818C81E350040DB41 /* Athlete.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06B18C6EA6E00584B38 /* Athlete.h */; };
+		2B0BED4918C81E350040DB41 /* Athlete.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06C18C6EA6E00584B38 /* Athlete.m */; };
+		2B0BED4A18C81E350040DB41 /* BasketballStats.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06D18C6EA6E00584B38 /* BasketballStats.h */; };
+		2B0BED4B18C81E350040DB41 /* BasketballStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06E18C6EA6E00584B38 /* BasketballStats.m */; };
+		2B0BED4C18C81E350040DB41 /* eazesportzAVClip.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07118C6EA8E00584B38 /* eazesportzAVClip.h */; };
+		2B0BED4D18C81E350040DB41 /* eazesportzAVClip.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07218C6EA8E00584B38 /* eazesportzAVClip.m */; };
+		2B0BED4E18C81E350040DB41 /* Event.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07318C6EA8E00584B38 /* Event.h */; };
+		2B0BED4F18C81E350040DB41 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07418C6EA8E00584B38 /* Event.m */; };
+		2B0BED5018C81E350040DB41 /* FootballDefenseStats.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07518C6EA8E00584B38 /* FootballDefenseStats.h */; };
+		2B0BED5118C81E350040DB41 /* FootballDefenseStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07618C6EA8E00584B38 /* FootballDefenseStats.m */; };
+		2B0BED5218C81E350040DB41 /* FootballKickerStats.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07718C6EA8E00584B38 /* FootballKickerStats.h */; };
+		2B0BED5318C81E350040DB41 /* FootballKickerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07818C6EA8E00584B38 /* FootballKickerStats.m */; };
+		2B0BED5418C81E350040DB41 /* FootballPassingStat.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07918C6EA8E00584B38 /* FootballPassingStat.h */; };
+		2B0BED5518C81E350040DB41 /* FootballPassingStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07A18C6EA8E00584B38 /* FootballPassingStat.m */; };
+		2B0BED5618C81E350040DB41 /* FootballPlaceKickerStats.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07B18C6EA8E00584B38 /* FootballPlaceKickerStats.h */; };
+		2B0BED5718C81E350040DB41 /* FootballPlaceKickerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07C18C6EA8E00584B38 /* FootballPlaceKickerStats.m */; };
+		2B0BED5818C81E350040DB41 /* FootballPunterStats.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07D18C6EA8E00584B38 /* FootballPunterStats.h */; };
+		2B0BED5918C81E350040DB41 /* FootballPunterStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07E18C6EA8E00584B38 /* FootballPunterStats.m */; };
+		2B0BED5A18C81E350040DB41 /* FootballReceivingStat.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07F18C6EA8E00584B38 /* FootballReceivingStat.h */; };
+		2B0BED5B18C81E350040DB41 /* FootballReceivingStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08018C6EA8E00584B38 /* FootballReceivingStat.m */; };
+		2B0BED5C18C81E350040DB41 /* FootballReturnerStats.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08118C6EA8E00584B38 /* FootballReturnerStats.h */; };
+		2B0BED5D18C81E350040DB41 /* FootballReturnerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08218C6EA8E00584B38 /* FootballReturnerStats.m */; };
+		2B0BED5E18C81E350040DB41 /* FootballRushingStat.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08318C6EA8E00584B38 /* FootballRushingStat.h */; };
+		2B0BED5F18C81E350040DB41 /* FootballRushingStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08418C6EA8E00584B38 /* FootballRushingStat.m */; };
+		2B0BED6018C81E350040DB41 /* Gamelogs.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08518C6EA8E00584B38 /* Gamelogs.h */; };
+		2B0BED6118C81E350040DB41 /* Gamelogs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08618C6EA8E00584B38 /* Gamelogs.m */; };
+		2B0BED6218C81E350040DB41 /* GameSchedule.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08718C6EA8E00584B38 /* GameSchedule.h */; };
+		2B0BED6318C81E350040DB41 /* GameSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08818C6EA8E00584B38 /* GameSchedule.m */; };
+		2B0BED6418C81E350040DB41 /* Soccer.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08918C6EA8E00584B38 /* Soccer.h */; };
+		2B0BED6518C81E350040DB41 /* Soccer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08A18C6EA8E00584B38 /* Soccer.m */; };
+		2B0BED6618C81E350040DB41 /* Sport.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08B18C6EA8E00584B38 /* Sport.h */; };
+		2B0BED6718C81E350040DB41 /* Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08C18C6EA8E00584B38 /* Sport.m */; };
+		2B0BED6818C81E360040DB41 /* Team.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08D18C6EA8E00584B38 /* Team.h */; };
+		2B0BED6918C81E360040DB41 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08E18C6EA8E00584B38 /* Team.m */; };
+		2B0BED6A18C81E360040DB41 /* User.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08F18C6EA8E00584B38 /* User.h */; };
+		2B0BED6B18C81E360040DB41 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D09018C6EA8E00584B38 /* User.m */; };
+		2B0BED6C18C81E360040DB41 /* Video.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D09118C6EA8E00584B38 /* Video.h */; };
+		2B0BED6D18C81E360040DB41 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D09218C6EA8E00584B38 /* Video.m */; };
+		2B0BED6E18C81E440040DB41 /* eazesportzGetGame.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0AD18C6EB3500584B38 /* eazesportzGetGame.h */; };
+		2B0BED6F18C81E440040DB41 /* eazesportzGetGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0AE18C6EB3500584B38 /* eazesportzGetGame.m */; };
+		2B0BED7018C81E440040DB41 /* EazesportzLogin.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0AA18C6EB1B00584B38 /* EazesportzLogin.h */; };
+		2B0BED7118C81E440040DB41 /* EazesportzLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0AB18C6EB1B00584B38 /* EazesportzLogin.m */; };
+		2B0BED7218C81E440040DB41 /* EazesportzRetrieveEvents.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05818C6EA4200584B38 /* EazesportzRetrieveEvents.h */; };
+		2B0BED7318C81E440040DB41 /* EazesportzRetrieveEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05918C6EA4200584B38 /* EazesportzRetrieveEvents.m */; };
+		2B0BED7418C81E440040DB41 /* EazesportzRetrieveGames.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05A18C6EA4200584B38 /* EazesportzRetrieveGames.h */; };
+		2B0BED7518C81E440040DB41 /* EazesportzRetrieveGames.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05B18C6EA4200584B38 /* EazesportzRetrieveGames.m */; };
+		2B0BED7618C81E440040DB41 /* EazesportzRetrievePlayers.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05C18C6EA4200584B38 /* EazesportzRetrievePlayers.h */; };
+		2B0BED7718C81E440040DB41 /* EazesportzRetrievePlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05D18C6EA4200584B38 /* EazesportzRetrievePlayers.m */; };
+		2B0BED7818C81E440040DB41 /* EazesportzRetrieveSport.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05E18C6EA4200584B38 /* EazesportzRetrieveSport.h */; };
+		2B0BED7918C81E440040DB41 /* EazesportzRetrieveSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05F18C6EA4200584B38 /* EazesportzRetrieveSport.m */; };
+		2B0BED7A18C81E440040DB41 /* EazesportzRetrieveTeams.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06018C6EA4200584B38 /* EazesportzRetrieveTeams.h */; };
+		2B0BED7B18C81E440040DB41 /* EazesportzRetrieveTeams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06118C6EA4200584B38 /* EazesportzRetrieveTeams.m */; };
+		2B0BED7C18C81E440040DB41 /* EazesportzRetrieveVideos.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06218C6EA4200584B38 /* EazesportzRetrieveVideos.h */; };
+		2B0BED7D18C81E440040DB41 /* EazesportzRetrieveVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06318C6EA4200584B38 /* EazesportzRetrieveVideos.m */; };
+		2B0BED7E18C81E440040DB41 /* ShuffleAlphabet.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0B518C6EBA100584B38 /* ShuffleAlphabet.h */; };
+		2B0BED7F18C81E440040DB41 /* ShuffleAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0B618C6EBA100584B38 /* ShuffleAlphabet.m */; };
+		2B0BED8018C81E440040DB41 /* sportzConstants.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0B818C6EBB500584B38 /* sportzConstants.h */; };
 		2B24D02118C6E95700584B38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D02018C6E95700584B38 /* Cocoa.framework */; };
 		2B24D02B18C6E95700584B38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D02918C6E95700584B38 /* InfoPlist.strings */; };
 		2B24D02D18C6E95700584B38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D02C18C6E95700584B38 /* main.m */; };
@@ -19,9 +198,144 @@
 		2B24D04418C6E95700584B38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D02018C6E95700584B38 /* Cocoa.framework */; };
 		2B24D04C18C6E95700584B38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D04A18C6E95700584B38 /* InfoPlist.strings */; };
 		2B24D04E18C6E95700584B38 /* EazesportzHighlightsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D04D18C6E95700584B38 /* EazesportzHighlightsTests.m */; };
+		2B24D06418C6EA4200584B38 /* EazesportzRetrieveEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05918C6EA4200584B38 /* EazesportzRetrieveEvents.m */; };
+		2B24D06518C6EA4200584B38 /* EazesportzRetrieveGames.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05B18C6EA4200584B38 /* EazesportzRetrieveGames.m */; };
+		2B24D06618C6EA4200584B38 /* EazesportzRetrievePlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05D18C6EA4200584B38 /* EazesportzRetrievePlayers.m */; };
+		2B24D06718C6EA4200584B38 /* EazesportzRetrieveSport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D05F18C6EA4200584B38 /* EazesportzRetrieveSport.m */; };
+		2B24D06818C6EA4200584B38 /* EazesportzRetrieveTeams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06118C6EA4200584B38 /* EazesportzRetrieveTeams.m */; };
+		2B24D06918C6EA4200584B38 /* EazesportzRetrieveVideos.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06318C6EA4200584B38 /* EazesportzRetrieveVideos.m */; };
+		2B24D06F18C6EA6E00584B38 /* Athlete.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06C18C6EA6E00584B38 /* Athlete.m */; };
+		2B24D07018C6EA6E00584B38 /* BasketballStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D06E18C6EA6E00584B38 /* BasketballStats.m */; };
+		2B24D09318C6EA8E00584B38 /* eazesportzAVClip.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07218C6EA8E00584B38 /* eazesportzAVClip.m */; };
+		2B24D09418C6EA8E00584B38 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07418C6EA8E00584B38 /* Event.m */; };
+		2B24D09518C6EA8E00584B38 /* FootballDefenseStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07618C6EA8E00584B38 /* FootballDefenseStats.m */; };
+		2B24D09618C6EA8E00584B38 /* FootballKickerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07818C6EA8E00584B38 /* FootballKickerStats.m */; };
+		2B24D09718C6EA8E00584B38 /* FootballPassingStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07A18C6EA8E00584B38 /* FootballPassingStat.m */; };
+		2B24D09818C6EA8E00584B38 /* FootballPlaceKickerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07C18C6EA8E00584B38 /* FootballPlaceKickerStats.m */; };
+		2B24D09918C6EA8E00584B38 /* FootballPunterStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D07E18C6EA8E00584B38 /* FootballPunterStats.m */; };
+		2B24D09A18C6EA8E00584B38 /* FootballReceivingStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08018C6EA8E00584B38 /* FootballReceivingStat.m */; };
+		2B24D09B18C6EA8E00584B38 /* FootballReturnerStats.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08218C6EA8E00584B38 /* FootballReturnerStats.m */; };
+		2B24D09C18C6EA8E00584B38 /* FootballRushingStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08418C6EA8E00584B38 /* FootballRushingStat.m */; };
+		2B24D09D18C6EA8E00584B38 /* Gamelogs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08618C6EA8E00584B38 /* Gamelogs.m */; };
+		2B24D09E18C6EA8E00584B38 /* GameSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08818C6EA8E00584B38 /* GameSchedule.m */; };
+		2B24D09F18C6EA8E00584B38 /* Soccer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08A18C6EA8E00584B38 /* Soccer.m */; };
+		2B24D0A018C6EA8E00584B38 /* Sport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08C18C6EA8E00584B38 /* Sport.m */; };
+		2B24D0A118C6EA8E00584B38 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D08E18C6EA8E00584B38 /* Team.m */; };
+		2B24D0A218C6EA8E00584B38 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D09018C6EA8E00584B38 /* User.m */; };
+		2B24D0A318C6EA8E00584B38 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D09218C6EA8E00584B38 /* Video.m */; };
+		2B24D0A818C6EB0100584B38 /* eazesportzPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0A618C6EB0100584B38 /* eazesportzPlayerViewController.m */; };
+		2B24D0A918C6EB0100584B38 /* eazesportzPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0A718C6EB0100584B38 /* eazesportzPlayerViewController.xib */; };
+		2B24D0AC18C6EB1B00584B38 /* EazesportzLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0AB18C6EB1B00584B38 /* EazesportzLogin.m */; };
+		2B24D0AF18C6EB3500584B38 /* eazesportzGetGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0AE18C6EB3500584B38 /* eazesportzGetGame.m */; };
+		2B24D0B318C6EB6D00584B38 /* eazesportzMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0B118C6EB6D00584B38 /* eazesportzMasterViewController.m */; };
+		2B24D0B418C6EB6D00584B38 /* eazesportzMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0B218C6EB6D00584B38 /* eazesportzMasterViewController.xib */; };
+		2B24D0B718C6EBA100584B38 /* ShuffleAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0B618C6EBA100584B38 /* ShuffleAlphabet.m */; };
+		2B24D0BB18C6EBD400584B38 /* add-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0B918C6EBD400584B38 /* add-item.png */; };
+		2B24D0BC18C6EBD400584B38 /* arrow-big-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BA18C6EBD400584B38 /* arrow-big-01.png */; };
+		2B24D0C118C6EBE800584B38 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BD18C6EBE800584B38 /* calendar.png */; };
+		2B24D0C218C6EBE800584B38 /* copy-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BE18C6EBE800584B38 /* copy-item.png */; };
+		2B24D0C318C6EBE800584B38 /* delete-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0BF18C6EBE800584B38 /* delete-item.png */; };
+		2B24D0C418C6EBE800584B38 /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C018C6EBE800584B38 /* document.png */; };
+		2B24D0C618C6EC1F00584B38 /* film.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C518C6EC1F00584B38 /* film.png */; };
+		2B24D0D118C6EC3F00584B38 /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C718C6EC3F00584B38 /* newspaper.png */; };
+		2B24D0D218C6EC3F00584B38 /* photo_not_available.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C818C6EC3F00584B38 /* photo_not_available.png */; };
+		2B24D0D318C6EC3F00584B38 /* photo_processing.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0C918C6EC3F00584B38 /* photo_processing.png */; };
+		2B24D0D418C6EC3F00584B38 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CA18C6EC3F00584B38 /* photo.png */; };
+		2B24D0D518C6EC3F00584B38 /* power-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CB18C6EC3F00584B38 /* power-button.png */; };
+		2B24D0D618C6EC3F00584B38 /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CC18C6EC3F00584B38 /* reload.png */; };
+		2B24D0D718C6EC3F00584B38 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CD18C6EC3F00584B38 /* save.png */; };
+		2B24D0D818C6EC3F00584B38 /* scissor.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CE18C6EC3F00584B38 /* scissor.png */; };
+		2B24D0D918C6EC3F00584B38 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0CF18C6EC3F00584B38 /* screen.png */; };
+		2B24D0DA18C6EC3F00584B38 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0D018C6EC3F00584B38 /* search.png */; };
+		2B24D0DC18C6EC5E00584B38 /* shut-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0DB18C6EC5E00584B38 /* shut-down.png */; };
+		2B24D0EB18C6EC9D00584B38 /* eazesportzSelectGameWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0DE18C6EC9D00584B38 /* eazesportzSelectGameWindowController.m */; };
+		2B24D0EC18C6EC9D00584B38 /* eazesportzSelectGameWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0DF18C6EC9D00584B38 /* eazesportzSelectGameWindowController.xib */; };
+		2B24D0ED18C6EC9D00584B38 /* eazesportzSelectTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E118C6EC9D00584B38 /* eazesportzSelectTeamViewController.m */; };
+		2B24D0EE18C6EC9D00584B38 /* eazesportzSelectTeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0E218C6EC9D00584B38 /* eazesportzSelectTeamViewController.xib */; };
+		2B24D0EF18C6EC9D00584B38 /* eazesportzSelectTeamWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E418C6EC9D00584B38 /* eazesportzSelectTeamWindowController.m */; };
+		2B24D0F018C6EC9D00584B38 /* eazesportzSelectTeamWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0E518C6EC9D00584B38 /* eazesportzSelectTeamWindowController.xib */; };
+		2B24D0F218C6EC9D00584B38 /* eazesportzVideoFileWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0E918C6EC9D00584B38 /* eazesportzVideoFileWindowController.m */; };
+		2B24D0F318C6EC9D00584B38 /* eazesportzVideoFileWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0EA18C6EC9D00584B38 /* eazesportzVideoFileWindowController.xib */; };
+		2B24D0F718C6ECF000584B38 /* eazesportzLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0F518C6ECF000584B38 /* eazesportzLoginViewController.m */; };
+		2B24D0F818C6ECF000584B38 /* eazesportzLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0F618C6ECF000584B38 /* eazesportzLoginViewController.xib */; };
+		2B24D0FC18C6ED5700584B38 /* eazesportzMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0FA18C6ED5600584B38 /* eazesportzMainViewController.m */; };
+		2B24D0FD18C6ED5700584B38 /* eazesportzMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0FB18C6ED5700584B38 /* eazesportzMainViewController.xib */; };
+		2B24D0FF18C6EE4900584B38 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0FE18C6EE4900584B38 /* download.png */; };
+		2B24D10118C6EED500584B38 /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */; };
+		2B24D10318C6EF8300584B38 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10218C6EF8300584B38 /* AVKit.framework */; };
+		2B24D10518C6EF8D00584B38 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10418C6EF8D00584B38 /* AVFoundation.framework */; };
+		2B24D10718C6EFB100584B38 /* DVDPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10618C6EFB100584B38 /* DVDPlayback.framework */; };
+		2B24D10918C6EFF800584B38 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10818C6EFF800584B38 /* CoreMedia.framework */; };
+		2B24D14118C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10A18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
+		2B24D14218C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10B18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
+		2B24D14318C6F03100584B38 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10C18C6F02F00584B38 /* libavcodec.a */; };
+		2B24D14418C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
+		2B24D14518C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10E18C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
+		2B24D14618C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10F18C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
+		2B24D14718C6F03100584B38 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11018C6F02F00584B38 /* libavdevice.a */; };
+		2B24D14818C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
+		2B24D14918C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11218C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
+		2B24D14A18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11318C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
+		2B24D14B18C6F03100584B38 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11418C6F02F00584B38 /* libavfilter.a */; };
+		2B24D14C18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
+		2B24D14D18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11618C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
+		2B24D14E18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11718C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
+		2B24D14F18C6F03100584B38 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11818C6F02F00584B38 /* libavformat.a */; };
+		2B24D15018C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
+		2B24D15118C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11A18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
+		2B24D15218C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11B18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
+		2B24D15318C6F03100584B38 /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11C18C6F02F00584B38 /* libavresample.a */; };
+		2B24D15418C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
+		2B24D15518C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11E18C6F02F00584B38 /* libavutil.52.48.101.dylib */; };
+		2B24D15618C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11F18C6F02F00584B38 /* libavutil.52.48.101.dylib */; };
+		2B24D15718C6F03100584B38 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12018C6F03000584B38 /* libavutil.a */; };
+		2B24D15818C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
+		2B24D15918C6F03100584B38 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12218C6F03000584B38 /* libbluray.1.dylib */; };
+		2B24D15A18C6F03100584B38 /* libbluray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12318C6F03000584B38 /* libbluray.a */; };
+		2B24D15B18C6F03100584B38 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12418C6F03000584B38 /* libbluray.1.dylib */; };
+		2B24D15C18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12518C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B24D15D18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12618C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B24D15E18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12718C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B24D15F18C6F03100584B38 /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12818C6F03000584B38 /* libbz2.a */; };
+		2B24D16018C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
+		2B24D16118C6F03100584B38 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12A18C6F03000584B38 /* libcharset.1.dylib */; };
+		2B24D16218C6F03100584B38 /* libcharset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12B18C6F03000584B38 /* libcharset.a */; };
+		2B24D16318C6F03100584B38 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12C18C6F03000584B38 /* libcharset.1.dylib */; };
+		2B24D16418C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12D18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
+		2B24D16518C6F03100584B38 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12E18C6F03000584B38 /* libcrypto.a */; };
+		2B24D16618C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
+		2B24D16718C6F03100584B38 /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13018C6F03000584B38 /* libncurses.a */; };
+		2B24D16818C6F03100584B38 /* libncurses.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13118C6F03000584B38 /* libncurses.5.dylib */; };
+		2B24D16918C6F03100584B38 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13218C6F03000584B38 /* libedit.0.dylib */; };
+		2B24D16A18C6F03100584B38 /* libedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13318C6F03000584B38 /* libedit.a */; };
+		2B24D16B18C6F03100584B38 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13418C6F03000584B38 /* libedit.0.dylib */; };
+		2B24D16C18C6F03100584B38 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13518C6F03100584B38 /* libenca.0.dylib */; };
+		2B24D16D18C6F03100584B38 /* libenca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13618C6F03100584B38 /* libenca.a */; };
+		2B24D16E18C6F03100584B38 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13718C6F03100584B38 /* libenca.0.dylib */; };
+		2B24D16F18C6F03100584B38 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13818C6F03100584B38 /* libexpat.1.dylib */; };
+		2B24D17018C6F03100584B38 /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13918C6F03100584B38 /* libexpat.a */; };
+		2B24D17118C6F03100584B38 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13A18C6F03100584B38 /* libexpat.1.dylib */; };
+		2B24D17218C6F03100584B38 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13B18C6F03100584B38 /* libexslt.0.dylib */; };
+		2B24D17318C6F03100584B38 /* libexslt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13C18C6F03100584B38 /* libexslt.a */; };
+		2B24D17418C6F03100584B38 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13D18C6F03100584B38 /* libexslt.0.dylib */; };
+		2B24D17518C6F03100584B38 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13E18C6F03100584B38 /* libfaac.0.dylib */; };
+		2B24D17618C6F03100584B38 /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13F18C6F03100584B38 /* libfaac.a */; };
+		2B24D17718C6F03100584B38 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D14018C6F03100584B38 /* libfaac.0.dylib */; };
+		2B24D17918C6F23700584B38 /* Footballbkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17818C6F23700584B38 /* Footballbkg.png */; };
+		2B24D17C18C6F89900584B38 /* HighlightScript.command in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17A18C6F89900584B38 /* HighlightScript.command */; };
+		2B24D17D18C6F89900584B38 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17B18C6F89900584B38 /* home.png */; };
+		2B24D17F18C6FA9F00584B38 /* TranscodeClip.command in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */; };
+		2BB157AB18C822E7007B05AE /* StreamFile.command in Resources */ = {isa = PBXBuildFile; fileRef = 2BB157AA18C822E7007B05AE /* StreamFile.command */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2B0BECB618C817CC0040DB41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B24D01518C6E95700584B38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B0BEC9518C817CB0040DB41;
+			remoteInfo = EazesportzBroadcast;
+		};
 		2B24D04518C6E95700584B38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2B24D01518C6E95700584B38 /* Project object */;
@@ -32,6 +346,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0BEC8A18C7CACF0040DB41 /* eazesportzBroadcastScheduleTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzBroadcastScheduleTableCellView.h; sourceTree = "<group>"; };
+		2B0BEC8B18C7CACF0040DB41 /* eazesportzBroadcastScheduleTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzBroadcastScheduleTableCellView.m; sourceTree = "<group>"; };
+		2B0BEC8D18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzLiveHighlightViewController.h; sourceTree = "<group>"; };
+		2B0BEC8E18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzLiveHighlightViewController.m; sourceTree = "<group>"; };
+		2B0BEC8F18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzLiveHighlightViewController.xib; sourceTree = "<group>"; };
+		2B0BEC9618C817CB0040DB41 /* EazesportzBroadcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EazesportzBroadcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B0BEC9A18C817CC0040DB41 /* EazesportzBroadcast-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EazesportzBroadcast-Info.plist"; sourceTree = "<group>"; };
+		2B0BEC9C18C817CC0040DB41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B0BEC9E18C817CC0040DB41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2B0BECA018C817CC0040DB41 /* EazesportzBroadcast-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EazesportzBroadcast-Prefix.pch"; sourceTree = "<group>"; };
+		2B0BECA218C817CC0040DB41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2B0BECA818C817CC0040DB41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2B0BECAB18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EazesportzBroadcast.xcdatamodel; sourceTree = "<group>"; };
+		2B0BECAD18C817CC0040DB41 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2B0BECB318C817CC0040DB41 /* EazesportzBroadcastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EazesportzBroadcastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B0BECBA18C817CC0040DB41 /* EazesportzBroadcastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EazesportzBroadcastTests-Info.plist"; sourceTree = "<group>"; };
+		2B0BECBC18C817CC0040DB41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2B0BECBE18C817CC0040DB41 /* EazesportzBroadcastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EazesportzBroadcastTests.m; sourceTree = "<group>"; };
+		2B0BED0018C818360040DB41 /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
+		2B0BED0118C818360040DB41 /* libasprintf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libasprintf.a; path = ../../../../opt/local/lib/libasprintf.a; sourceTree = "<group>"; };
+		2B0BED0218C818360040DB41 /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
+		2B0BED0318C818360040DB41 /* libass.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libass.5.dylib; path = ../../../../opt/local/lib/libass.5.dylib; sourceTree = "<group>"; };
+		2B0BED0418C818360040DB41 /* libass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libass.a; path = ../../../../opt/local/lib/libass.a; sourceTree = "<group>"; };
+		2B0BED0518C818360040DB41 /* libass.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libass.5.dylib; path = ../../../../opt/local/lib/libass.5.dylib; sourceTree = "<group>"; };
+		2B0BED1118C818BB0040DB41 /* eazesportzAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzAppDelegate.h; sourceTree = "<group>"; };
+		2B0BED1218C818BB0040DB41 /* eazesportzAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzAppDelegate.m; sourceTree = "<group>"; };
+		2B0BED2918C818E80040DB41 /* eazesportzEditEventWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzEditEventWindowController.h; sourceTree = "<group>"; };
+		2B0BED2A18C818E80040DB41 /* eazesportzEditEventWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzEditEventWindowController.m; sourceTree = "<group>"; };
+		2B0BED2B18C818E80040DB41 /* eazesportzEditEventWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzEditEventWindowController.xib; sourceTree = "<group>"; };
+		2B0BED2F18C819160040DB41 /* eazesportzLiveVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzLiveVideoViewController.h; sourceTree = "<group>"; };
+		2B0BED3018C819160040DB41 /* eazesportzLiveVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzLiveVideoViewController.m; sourceTree = "<group>"; };
+		2B0BED3118C819160040DB41 /* eazesportzLiveVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzLiveVideoViewController.xib; sourceTree = "<group>"; };
+		2B0BED3418C819310040DB41 /* eazesportzScheduleBroadcastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzScheduleBroadcastViewController.h; sourceTree = "<group>"; };
+		2B0BED3518C819310040DB41 /* eazesportzScheduleBroadcastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzScheduleBroadcastViewController.m; sourceTree = "<group>"; };
+		2B0BED3618C819310040DB41 /* eazesportzScheduleBroadcastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzScheduleBroadcastViewController.xib; sourceTree = "<group>"; };
 		2B24D01D18C6E95700584B38 /* EazesportzHighlights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EazesportzHighlights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B24D02018C6E95700584B38 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		2B24D02318C6E95700584B38 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -52,13 +401,320 @@
 		2B24D04918C6E95700584B38 /* EazesportzHighlightsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EazesportzHighlightsTests-Info.plist"; sourceTree = "<group>"; };
 		2B24D04B18C6E95700584B38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B24D04D18C6E95700584B38 /* EazesportzHighlightsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EazesportzHighlightsTests.m; sourceTree = "<group>"; };
+		2B24D05818C6EA4200584B38 /* EazesportzRetrieveEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EazesportzRetrieveEvents.h; sourceTree = "<group>"; };
+		2B24D05918C6EA4200584B38 /* EazesportzRetrieveEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EazesportzRetrieveEvents.m; sourceTree = "<group>"; };
+		2B24D05A18C6EA4200584B38 /* EazesportzRetrieveGames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EazesportzRetrieveGames.h; sourceTree = "<group>"; };
+		2B24D05B18C6EA4200584B38 /* EazesportzRetrieveGames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EazesportzRetrieveGames.m; sourceTree = "<group>"; };
+		2B24D05C18C6EA4200584B38 /* EazesportzRetrievePlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EazesportzRetrievePlayers.h; sourceTree = "<group>"; };
+		2B24D05D18C6EA4200584B38 /* EazesportzRetrievePlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EazesportzRetrievePlayers.m; sourceTree = "<group>"; };
+		2B24D05E18C6EA4200584B38 /* EazesportzRetrieveSport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EazesportzRetrieveSport.h; sourceTree = "<group>"; };
+		2B24D05F18C6EA4200584B38 /* EazesportzRetrieveSport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EazesportzRetrieveSport.m; sourceTree = "<group>"; };
+		2B24D06018C6EA4200584B38 /* EazesportzRetrieveTeams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EazesportzRetrieveTeams.h; sourceTree = "<group>"; };
+		2B24D06118C6EA4200584B38 /* EazesportzRetrieveTeams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EazesportzRetrieveTeams.m; sourceTree = "<group>"; };
+		2B24D06218C6EA4200584B38 /* EazesportzRetrieveVideos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EazesportzRetrieveVideos.h; sourceTree = "<group>"; };
+		2B24D06318C6EA4200584B38 /* EazesportzRetrieveVideos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EazesportzRetrieveVideos.m; sourceTree = "<group>"; };
+		2B24D06B18C6EA6E00584B38 /* Athlete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Athlete.h; sourceTree = "<group>"; };
+		2B24D06C18C6EA6E00584B38 /* Athlete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Athlete.m; sourceTree = "<group>"; };
+		2B24D06D18C6EA6E00584B38 /* BasketballStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasketballStats.h; sourceTree = "<group>"; };
+		2B24D06E18C6EA6E00584B38 /* BasketballStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasketballStats.m; sourceTree = "<group>"; };
+		2B24D07118C6EA8E00584B38 /* eazesportzAVClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzAVClip.h; sourceTree = "<group>"; };
+		2B24D07218C6EA8E00584B38 /* eazesportzAVClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzAVClip.m; sourceTree = "<group>"; };
+		2B24D07318C6EA8E00584B38 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		2B24D07418C6EA8E00584B38 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		2B24D07518C6EA8E00584B38 /* FootballDefenseStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballDefenseStats.h; sourceTree = "<group>"; };
+		2B24D07618C6EA8E00584B38 /* FootballDefenseStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballDefenseStats.m; sourceTree = "<group>"; };
+		2B24D07718C6EA8E00584B38 /* FootballKickerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballKickerStats.h; sourceTree = "<group>"; };
+		2B24D07818C6EA8E00584B38 /* FootballKickerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballKickerStats.m; sourceTree = "<group>"; };
+		2B24D07918C6EA8E00584B38 /* FootballPassingStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballPassingStat.h; sourceTree = "<group>"; };
+		2B24D07A18C6EA8E00584B38 /* FootballPassingStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballPassingStat.m; sourceTree = "<group>"; };
+		2B24D07B18C6EA8E00584B38 /* FootballPlaceKickerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballPlaceKickerStats.h; sourceTree = "<group>"; };
+		2B24D07C18C6EA8E00584B38 /* FootballPlaceKickerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballPlaceKickerStats.m; sourceTree = "<group>"; };
+		2B24D07D18C6EA8E00584B38 /* FootballPunterStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballPunterStats.h; sourceTree = "<group>"; };
+		2B24D07E18C6EA8E00584B38 /* FootballPunterStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballPunterStats.m; sourceTree = "<group>"; };
+		2B24D07F18C6EA8E00584B38 /* FootballReceivingStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballReceivingStat.h; sourceTree = "<group>"; };
+		2B24D08018C6EA8E00584B38 /* FootballReceivingStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballReceivingStat.m; sourceTree = "<group>"; };
+		2B24D08118C6EA8E00584B38 /* FootballReturnerStats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballReturnerStats.h; sourceTree = "<group>"; };
+		2B24D08218C6EA8E00584B38 /* FootballReturnerStats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballReturnerStats.m; sourceTree = "<group>"; };
+		2B24D08318C6EA8E00584B38 /* FootballRushingStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FootballRushingStat.h; sourceTree = "<group>"; };
+		2B24D08418C6EA8E00584B38 /* FootballRushingStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FootballRushingStat.m; sourceTree = "<group>"; };
+		2B24D08518C6EA8E00584B38 /* Gamelogs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gamelogs.h; sourceTree = "<group>"; };
+		2B24D08618C6EA8E00584B38 /* Gamelogs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gamelogs.m; sourceTree = "<group>"; };
+		2B24D08718C6EA8E00584B38 /* GameSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSchedule.h; sourceTree = "<group>"; };
+		2B24D08818C6EA8E00584B38 /* GameSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSchedule.m; sourceTree = "<group>"; };
+		2B24D08918C6EA8E00584B38 /* Soccer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Soccer.h; sourceTree = "<group>"; };
+		2B24D08A18C6EA8E00584B38 /* Soccer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Soccer.m; sourceTree = "<group>"; };
+		2B24D08B18C6EA8E00584B38 /* Sport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sport.h; sourceTree = "<group>"; };
+		2B24D08C18C6EA8E00584B38 /* Sport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sport.m; sourceTree = "<group>"; };
+		2B24D08D18C6EA8E00584B38 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		2B24D08E18C6EA8E00584B38 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		2B24D08F18C6EA8E00584B38 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2B24D09018C6EA8E00584B38 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2B24D09118C6EA8E00584B38 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		2B24D09218C6EA8E00584B38 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		2B24D0A518C6EB0100584B38 /* eazesportzPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzPlayerViewController.h; sourceTree = "<group>"; };
+		2B24D0A618C6EB0100584B38 /* eazesportzPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzPlayerViewController.m; sourceTree = "<group>"; };
+		2B24D0A718C6EB0100584B38 /* eazesportzPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzPlayerViewController.xib; sourceTree = "<group>"; };
+		2B24D0AA18C6EB1B00584B38 /* EazesportzLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EazesportzLogin.h; sourceTree = "<group>"; };
+		2B24D0AB18C6EB1B00584B38 /* EazesportzLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EazesportzLogin.m; sourceTree = "<group>"; };
+		2B24D0AD18C6EB3500584B38 /* eazesportzGetGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzGetGame.h; sourceTree = "<group>"; };
+		2B24D0AE18C6EB3500584B38 /* eazesportzGetGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzGetGame.m; sourceTree = "<group>"; };
+		2B24D0B018C6EB6D00584B38 /* eazesportzMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzMasterViewController.h; sourceTree = "<group>"; };
+		2B24D0B118C6EB6D00584B38 /* eazesportzMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzMasterViewController.m; sourceTree = "<group>"; };
+		2B24D0B218C6EB6D00584B38 /* eazesportzMasterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzMasterViewController.xib; sourceTree = "<group>"; };
+		2B24D0B518C6EBA100584B38 /* ShuffleAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuffleAlphabet.h; sourceTree = "<group>"; };
+		2B24D0B618C6EBA100584B38 /* ShuffleAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuffleAlphabet.m; sourceTree = "<group>"; };
+		2B24D0B818C6EBB500584B38 /* sportzConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sportzConstants.h; sourceTree = "<group>"; };
+		2B24D0B918C6EBD400584B38 /* add-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-item.png"; sourceTree = "<group>"; };
+		2B24D0BA18C6EBD400584B38 /* arrow-big-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-big-01.png"; sourceTree = "<group>"; };
+		2B24D0BD18C6EBE800584B38 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		2B24D0BE18C6EBE800584B38 /* copy-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "copy-item.png"; sourceTree = "<group>"; };
+		2B24D0BF18C6EBE800584B38 /* delete-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-item.png"; sourceTree = "<group>"; };
+		2B24D0C018C6EBE800584B38 /* document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = document.png; sourceTree = "<group>"; };
+		2B24D0C518C6EC1F00584B38 /* film.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = film.png; sourceTree = "<group>"; };
+		2B24D0C718C6EC3F00584B38 /* newspaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newspaper.png; sourceTree = "<group>"; };
+		2B24D0C818C6EC3F00584B38 /* photo_not_available.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_not_available.png; sourceTree = "<group>"; };
+		2B24D0C918C6EC3F00584B38 /* photo_processing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_processing.png; sourceTree = "<group>"; };
+		2B24D0CA18C6EC3F00584B38 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		2B24D0CB18C6EC3F00584B38 /* power-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-button.png"; sourceTree = "<group>"; };
+		2B24D0CC18C6EC3F00584B38 /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
+		2B24D0CD18C6EC3F00584B38 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		2B24D0CE18C6EC3F00584B38 /* scissor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissor.png; sourceTree = "<group>"; };
+		2B24D0CF18C6EC3F00584B38 /* screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screen.png; sourceTree = "<group>"; };
+		2B24D0D018C6EC3F00584B38 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		2B24D0DB18C6EC5E00584B38 /* shut-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shut-down.png"; sourceTree = "<group>"; };
+		2B24D0DD18C6EC9D00584B38 /* eazesportzSelectGameWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzSelectGameWindowController.h; sourceTree = "<group>"; };
+		2B24D0DE18C6EC9D00584B38 /* eazesportzSelectGameWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzSelectGameWindowController.m; sourceTree = "<group>"; };
+		2B24D0DF18C6EC9D00584B38 /* eazesportzSelectGameWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzSelectGameWindowController.xib; sourceTree = "<group>"; };
+		2B24D0E018C6EC9D00584B38 /* eazesportzSelectTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzSelectTeamViewController.h; sourceTree = "<group>"; };
+		2B24D0E118C6EC9D00584B38 /* eazesportzSelectTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzSelectTeamViewController.m; sourceTree = "<group>"; };
+		2B24D0E218C6EC9D00584B38 /* eazesportzSelectTeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzSelectTeamViewController.xib; sourceTree = "<group>"; };
+		2B24D0E318C6EC9D00584B38 /* eazesportzSelectTeamWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzSelectTeamWindowController.h; sourceTree = "<group>"; };
+		2B24D0E418C6EC9D00584B38 /* eazesportzSelectTeamWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzSelectTeamWindowController.m; sourceTree = "<group>"; };
+		2B24D0E518C6EC9D00584B38 /* eazesportzSelectTeamWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzSelectTeamWindowController.xib; sourceTree = "<group>"; };
+		2B24D0E818C6EC9D00584B38 /* eazesportzVideoFileWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzVideoFileWindowController.h; sourceTree = "<group>"; };
+		2B24D0E918C6EC9D00584B38 /* eazesportzVideoFileWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzVideoFileWindowController.m; sourceTree = "<group>"; };
+		2B24D0EA18C6EC9D00584B38 /* eazesportzVideoFileWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzVideoFileWindowController.xib; sourceTree = "<group>"; };
+		2B24D0F418C6ECF000584B38 /* eazesportzLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzLoginViewController.h; sourceTree = "<group>"; };
+		2B24D0F518C6ECF000584B38 /* eazesportzLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzLoginViewController.m; sourceTree = "<group>"; };
+		2B24D0F618C6ECF000584B38 /* eazesportzLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzLoginViewController.xib; sourceTree = "<group>"; };
+		2B24D0F918C6ED5600584B38 /* eazesportzMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzMainViewController.h; sourceTree = "<group>"; };
+		2B24D0FA18C6ED5600584B38 /* eazesportzMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzMainViewController.m; sourceTree = "<group>"; };
+		2B24D0FB18C6ED5700584B38 /* eazesportzMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzMainViewController.xib; sourceTree = "<group>"; };
+		2B24D0FE18C6EE4900584B38 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSiOSSDK.framework; path = "../aws-sdk-ios-master/AWSiOSSDK.framework"; sourceTree = "<group>"; };
+		2B24D10218C6EF8300584B38 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		2B24D10418C6EF8D00584B38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2B24D10618C6EFB100584B38 /* DVDPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVDPlayback.framework; path = System/Library/Frameworks/DVDPlayback.framework; sourceTree = SDKROOT; };
+		2B24D10818C6EFF800584B38 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		2B24D10A18C6F02F00584B38 /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
+		2B24D10B18C6F02F00584B38 /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
+		2B24D10C18C6F02F00584B38 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ../../../../opt/local/lib/libavcodec.a; sourceTree = "<group>"; };
+		2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
+		2B24D10E18C6F02F00584B38 /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
+		2B24D10F18C6F02F00584B38 /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
+		2B24D11018C6F02F00584B38 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ../../../../opt/local/lib/libavdevice.a; sourceTree = "<group>"; };
+		2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
+		2B24D11218C6F02F00584B38 /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
+		2B24D11318C6F02F00584B38 /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
+		2B24D11418C6F02F00584B38 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ../../../../opt/local/lib/libavfilter.a; sourceTree = "<group>"; };
+		2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
+		2B24D11618C6F02F00584B38 /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
+		2B24D11718C6F02F00584B38 /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
+		2B24D11818C6F02F00584B38 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ../../../../opt/local/lib/libavformat.a; sourceTree = "<group>"; };
+		2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
+		2B24D11A18C6F02F00584B38 /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
+		2B24D11B18C6F02F00584B38 /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
+		2B24D11C18C6F02F00584B38 /* libavresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavresample.a; path = ../../../../opt/local/lib/libavresample.a; sourceTree = "<group>"; };
+		2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
+		2B24D11E18C6F02F00584B38 /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
+		2B24D11F18C6F02F00584B38 /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
+		2B24D12018C6F03000584B38 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ../../../../opt/local/lib/libavutil.a; sourceTree = "<group>"; };
+		2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
+		2B24D12218C6F03000584B38 /* libbluray.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbluray.1.dylib; path = ../../../../opt/local/lib/libbluray.1.dylib; sourceTree = "<group>"; };
+		2B24D12318C6F03000584B38 /* libbluray.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbluray.a; path = ../../../../opt/local/lib/libbluray.a; sourceTree = "<group>"; };
+		2B24D12418C6F03000584B38 /* libbluray.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbluray.1.dylib; path = ../../../../opt/local/lib/libbluray.1.dylib; sourceTree = "<group>"; };
+		2B24D12518C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		2B24D12618C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		2B24D12718C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		2B24D12818C6F03000584B38 /* libbz2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbz2.a; path = ../../../../opt/local/lib/libbz2.a; sourceTree = "<group>"; };
+		2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		2B24D12A18C6F03000584B38 /* libcharset.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcharset.1.dylib; path = ../../../../opt/local/lib/libcharset.1.dylib; sourceTree = "<group>"; };
+		2B24D12B18C6F03000584B38 /* libcharset.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcharset.a; path = ../../../../opt/local/lib/libcharset.a; sourceTree = "<group>"; };
+		2B24D12C18C6F03000584B38 /* libcharset.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcharset.1.dylib; path = ../../../../opt/local/lib/libcharset.1.dylib; sourceTree = "<group>"; };
+		2B24D12D18C6F03000584B38 /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.0.0.dylib; path = ../../../../opt/local/lib/libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
+		2B24D12E18C6F03000584B38 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../opt/local/lib/libcrypto.a; sourceTree = "<group>"; };
+		2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.0.0.dylib; path = ../../../../opt/local/lib/libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
+		2B24D13018C6F03000584B38 /* libncurses.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libncurses.a; path = ../../../../opt/local/lib/libncurses.a; sourceTree = "<group>"; };
+		2B24D13118C6F03000584B38 /* libncurses.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.5.dylib; path = ../../../../opt/local/lib/libncurses.5.dylib; sourceTree = "<group>"; };
+		2B24D13218C6F03000584B38 /* libedit.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libedit.0.dylib; path = ../../../../opt/local/lib/libedit.0.dylib; sourceTree = "<group>"; };
+		2B24D13318C6F03000584B38 /* libedit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libedit.a; path = ../../../../opt/local/lib/libedit.a; sourceTree = "<group>"; };
+		2B24D13418C6F03000584B38 /* libedit.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libedit.0.dylib; path = ../../../../opt/local/lib/libedit.0.dylib; sourceTree = "<group>"; };
+		2B24D13518C6F03100584B38 /* libenca.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libenca.0.dylib; path = ../../../../opt/local/lib/libenca.0.dylib; sourceTree = "<group>"; };
+		2B24D13618C6F03100584B38 /* libenca.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libenca.a; path = ../../../../opt/local/lib/libenca.a; sourceTree = "<group>"; };
+		2B24D13718C6F03100584B38 /* libenca.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libenca.0.dylib; path = ../../../../opt/local/lib/libenca.0.dylib; sourceTree = "<group>"; };
+		2B24D13818C6F03100584B38 /* libexpat.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.1.dylib; path = ../../../../opt/local/lib/libexpat.1.dylib; sourceTree = "<group>"; };
+		2B24D13918C6F03100584B38 /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexpat.a; path = ../../../../opt/local/lib/libexpat.a; sourceTree = "<group>"; };
+		2B24D13A18C6F03100584B38 /* libexpat.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.1.dylib; path = ../../../../opt/local/lib/libexpat.1.dylib; sourceTree = "<group>"; };
+		2B24D13B18C6F03100584B38 /* libexslt.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexslt.0.dylib; path = ../../../../opt/local/lib/libexslt.0.dylib; sourceTree = "<group>"; };
+		2B24D13C18C6F03100584B38 /* libexslt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexslt.a; path = ../../../../opt/local/lib/libexslt.a; sourceTree = "<group>"; };
+		2B24D13D18C6F03100584B38 /* libexslt.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexslt.0.dylib; path = ../../../../opt/local/lib/libexslt.0.dylib; sourceTree = "<group>"; };
+		2B24D13E18C6F03100584B38 /* libfaac.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfaac.0.dylib; path = ../../../../opt/local/lib/libfaac.0.dylib; sourceTree = "<group>"; };
+		2B24D13F18C6F03100584B38 /* libfaac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfaac.a; path = ../../../../opt/local/lib/libfaac.a; sourceTree = "<group>"; };
+		2B24D14018C6F03100584B38 /* libfaac.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfaac.0.dylib; path = ../../../../opt/local/lib/libfaac.0.dylib; sourceTree = "<group>"; };
+		2B24D17818C6F23700584B38 /* Footballbkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Footballbkg.png; path = "../../Eazesportz Broadcast Console/Eazesportz Broadcast Console/Footballbkg.png"; sourceTree = "<group>"; };
+		2B24D17A18C6F89900584B38 /* HighlightScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = HighlightScript.command; sourceTree = "<group>"; };
+		2B24D17B18C6F89900584B38 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = TranscodeClip.command; sourceTree = "<group>"; };
+		2BB157AA18C822E7007B05AE /* StreamFile.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = StreamFile.command; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B0BEC9318C817CB0040DB41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0BED0C18C818440040DB41 /* AWSiOSSDK.framework in Frameworks */,
+				2B0BED0618C818360040DB41 /* libasprintf.0.dylib in Frameworks */,
+				2B0BED0718C818360040DB41 /* libasprintf.a in Frameworks */,
+				2B0BED0818C818360040DB41 /* libasprintf.0.dylib in Frameworks */,
+				2B0BED0918C818360040DB41 /* libass.5.dylib in Frameworks */,
+				2B0BED0A18C818360040DB41 /* libass.a in Frameworks */,
+				2B0BED0B18C818360040DB41 /* libass.5.dylib in Frameworks */,
+				2B0BECC918C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */,
+				2B0BECCA18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */,
+				2B0BECCB18C818350040DB41 /* libavcodec.a in Frameworks */,
+				2B0BECCC18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */,
+				2B0BECCD18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */,
+				2B0BECCE18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */,
+				2B0BECCF18C818350040DB41 /* libavdevice.a in Frameworks */,
+				2B0BECD018C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */,
+				2B0BECD118C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */,
+				2B0BECD218C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */,
+				2B0BECD318C818350040DB41 /* libavfilter.a in Frameworks */,
+				2B0BECD418C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */,
+				2B0BECD518C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */,
+				2B0BECD618C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */,
+				2B0BECD718C818350040DB41 /* libavformat.a in Frameworks */,
+				2B0BECD818C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */,
+				2B0BECD918C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */,
+				2B0BECDA18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */,
+				2B0BECDB18C818350040DB41 /* libavresample.a in Frameworks */,
+				2B0BECDC18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */,
+				2B0BECDD18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */,
+				2B0BECDE18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */,
+				2B0BECDF18C818350040DB41 /* libavutil.a in Frameworks */,
+				2B0BECE018C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */,
+				2B0BECE118C818350040DB41 /* libbluray.1.dylib in Frameworks */,
+				2B0BECE218C818350040DB41 /* libbluray.a in Frameworks */,
+				2B0BECE318C818350040DB41 /* libbluray.1.dylib in Frameworks */,
+				2B0BECE418C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B0BECE518C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B0BECE618C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B0BECE718C818360040DB41 /* libbz2.a in Frameworks */,
+				2B0BECE818C818360040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B0BECE918C818360040DB41 /* libcharset.1.dylib in Frameworks */,
+				2B0BECEA18C818360040DB41 /* libcharset.a in Frameworks */,
+				2B0BECEB18C818360040DB41 /* libcharset.1.dylib in Frameworks */,
+				2B0BECEC18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */,
+				2B0BECED18C818360040DB41 /* libcrypto.a in Frameworks */,
+				2B0BECEE18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */,
+				2B0BECEF18C818360040DB41 /* libncurses.a in Frameworks */,
+				2B0BECF018C818360040DB41 /* libncurses.5.dylib in Frameworks */,
+				2B0BECF118C818360040DB41 /* libedit.0.dylib in Frameworks */,
+				2B0BECF218C818360040DB41 /* libedit.a in Frameworks */,
+				2B0BECF318C818360040DB41 /* libedit.0.dylib in Frameworks */,
+				2B0BECF418C818360040DB41 /* libenca.0.dylib in Frameworks */,
+				2B0BECF518C818360040DB41 /* libenca.a in Frameworks */,
+				2B0BECF618C818360040DB41 /* libenca.0.dylib in Frameworks */,
+				2B0BECF718C818360040DB41 /* libexpat.1.dylib in Frameworks */,
+				2B0BECF818C818360040DB41 /* libexpat.a in Frameworks */,
+				2B0BECF918C818360040DB41 /* libexpat.1.dylib in Frameworks */,
+				2B0BECFA18C818360040DB41 /* libexslt.0.dylib in Frameworks */,
+				2B0BECFB18C818360040DB41 /* libexslt.a in Frameworks */,
+				2B0BECFC18C818360040DB41 /* libexslt.0.dylib in Frameworks */,
+				2B0BECFD18C818360040DB41 /* libfaac.0.dylib in Frameworks */,
+				2B0BECFE18C818360040DB41 /* libfaac.a in Frameworks */,
+				2B0BECFF18C818360040DB41 /* libfaac.0.dylib in Frameworks */,
+				2B0BECC818C818140040DB41 /* CoreMedia.framework in Frameworks */,
+				2B0BECC618C817FE0040DB41 /* AVFoundation.framework in Frameworks */,
+				2B0BECC718C817FE0040DB41 /* AVKit.framework in Frameworks */,
+				2B0BEC9718C817CB0040DB41 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B0BECB018C817CC0040DB41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0BECB518C817CC0040DB41 /* Cocoa.framework in Frameworks */,
+				2B0BECB418C817CC0040DB41 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B24D01A18C6E95700584B38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B24D14118C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */,
+				2B24D14218C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */,
+				2B24D14318C6F03100584B38 /* libavcodec.a in Frameworks */,
+				2B24D14418C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */,
+				2B24D14518C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */,
+				2B24D14618C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */,
+				2B24D14718C6F03100584B38 /* libavdevice.a in Frameworks */,
+				2B24D14818C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */,
+				2B24D14918C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */,
+				2B24D14A18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */,
+				2B24D14B18C6F03100584B38 /* libavfilter.a in Frameworks */,
+				2B24D14C18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */,
+				2B24D14D18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */,
+				2B24D14E18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */,
+				2B24D14F18C6F03100584B38 /* libavformat.a in Frameworks */,
+				2B24D15018C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */,
+				2B24D15118C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */,
+				2B24D15218C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */,
+				2B24D15318C6F03100584B38 /* libavresample.a in Frameworks */,
+				2B24D15418C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */,
+				2B24D15518C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */,
+				2B24D15618C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */,
+				2B24D15718C6F03100584B38 /* libavutil.a in Frameworks */,
+				2B24D15818C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */,
+				2B24D15918C6F03100584B38 /* libbluray.1.dylib in Frameworks */,
+				2B24D15A18C6F03100584B38 /* libbluray.a in Frameworks */,
+				2B24D15B18C6F03100584B38 /* libbluray.1.dylib in Frameworks */,
+				2B24D15C18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B24D15D18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B24D15E18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B24D15F18C6F03100584B38 /* libbz2.a in Frameworks */,
+				2B24D16018C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
+				2B24D16118C6F03100584B38 /* libcharset.1.dylib in Frameworks */,
+				2B24D16218C6F03100584B38 /* libcharset.a in Frameworks */,
+				2B24D16318C6F03100584B38 /* libcharset.1.dylib in Frameworks */,
+				2B24D16418C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */,
+				2B24D16518C6F03100584B38 /* libcrypto.a in Frameworks */,
+				2B24D16618C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */,
+				2B24D16718C6F03100584B38 /* libncurses.a in Frameworks */,
+				2B24D16818C6F03100584B38 /* libncurses.5.dylib in Frameworks */,
+				2B24D16918C6F03100584B38 /* libedit.0.dylib in Frameworks */,
+				2B24D16A18C6F03100584B38 /* libedit.a in Frameworks */,
+				2B24D16B18C6F03100584B38 /* libedit.0.dylib in Frameworks */,
+				2B24D16C18C6F03100584B38 /* libenca.0.dylib in Frameworks */,
+				2B24D16D18C6F03100584B38 /* libenca.a in Frameworks */,
+				2B24D16E18C6F03100584B38 /* libenca.0.dylib in Frameworks */,
+				2B24D16F18C6F03100584B38 /* libexpat.1.dylib in Frameworks */,
+				2B24D17018C6F03100584B38 /* libexpat.a in Frameworks */,
+				2B24D17118C6F03100584B38 /* libexpat.1.dylib in Frameworks */,
+				2B24D17218C6F03100584B38 /* libexslt.0.dylib in Frameworks */,
+				2B24D17318C6F03100584B38 /* libexslt.a in Frameworks */,
+				2B24D17418C6F03100584B38 /* libexslt.0.dylib in Frameworks */,
+				2B24D17518C6F03100584B38 /* libfaac.0.dylib in Frameworks */,
+				2B24D17618C6F03100584B38 /* libfaac.a in Frameworks */,
+				2B24D17718C6F03100584B38 /* libfaac.0.dylib in Frameworks */,
+				2B24D10918C6EFF800584B38 /* CoreMedia.framework in Frameworks */,
+				2B24D10718C6EFB100584B38 /* DVDPlayback.framework in Frameworks */,
+				2B24D10518C6EF8D00584B38 /* AVFoundation.framework in Frameworks */,
+				2B24D10318C6EF8300584B38 /* AVKit.framework in Frameworks */,
+				2B24D10118C6EED500584B38 /* AWSiOSSDK.framework in Frameworks */,
 				2B24D02118C6E95700584B38 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,11 +731,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0BEC9818C817CC0040DB41 /* EazesportzBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				2BB157AA18C822E7007B05AE /* StreamFile.command */,
+				2B0BED2E18C818F90040DB41 /* GUI */,
+				2B0BED1118C818BB0040DB41 /* eazesportzAppDelegate.h */,
+				2B0BED1218C818BB0040DB41 /* eazesportzAppDelegate.m */,
+				2B0BED0D18C818690040DB41 /* Util */,
+				2B0BECA718C817CC0040DB41 /* MainMenu.xib */,
+				2B0BECAD18C817CC0040DB41 /* Images.xcassets */,
+				2B0BECAA18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodeld */,
+				2B0BEC9918C817CC0040DB41 /* Supporting Files */,
+			);
+			path = EazesportzBroadcast;
+			sourceTree = "<group>";
+		};
+		2B0BEC9918C817CC0040DB41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BEC9A18C817CC0040DB41 /* EazesportzBroadcast-Info.plist */,
+				2B0BEC9B18C817CC0040DB41 /* InfoPlist.strings */,
+				2B0BEC9E18C817CC0040DB41 /* main.m */,
+				2B0BECA018C817CC0040DB41 /* EazesportzBroadcast-Prefix.pch */,
+				2B0BECA118C817CC0040DB41 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B0BECB818C817CC0040DB41 /* EazesportzBroadcastTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BECBE18C817CC0040DB41 /* EazesportzBroadcastTests.m */,
+				2B0BECB918C817CC0040DB41 /* Supporting Files */,
+			);
+			path = EazesportzBroadcastTests;
+			sourceTree = "<group>";
+		};
+		2B0BECB918C817CC0040DB41 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BECBA18C817CC0040DB41 /* EazesportzBroadcastTests-Info.plist */,
+				2B0BECBB18C817CC0040DB41 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B0BED0D18C818690040DB41 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		2B0BED2E18C818F90040DB41 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BED3418C819310040DB41 /* eazesportzScheduleBroadcastViewController.h */,
+				2B0BED3518C819310040DB41 /* eazesportzScheduleBroadcastViewController.m */,
+				2B0BED3618C819310040DB41 /* eazesportzScheduleBroadcastViewController.xib */,
+				2B0BED2F18C819160040DB41 /* eazesportzLiveVideoViewController.h */,
+				2B0BED3018C819160040DB41 /* eazesportzLiveVideoViewController.m */,
+				2B0BED3118C819160040DB41 /* eazesportzLiveVideoViewController.xib */,
+				2B0BED2918C818E80040DB41 /* eazesportzEditEventWindowController.h */,
+				2B0BED2A18C818E80040DB41 /* eazesportzEditEventWindowController.m */,
+				2B0BED2B18C818E80040DB41 /* eazesportzEditEventWindowController.xib */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
 		2B24D01418C6E95700584B38 = {
 			isa = PBXGroup;
 			children = (
 				2B24D02618C6E95700584B38 /* EazesportzHighlights */,
 				2B24D04718C6E95700584B38 /* EazesportzHighlightsTests */,
+				2B0BEC9818C817CC0040DB41 /* EazesportzBroadcast */,
+				2B0BECB818C817CC0040DB41 /* EazesportzBroadcastTests */,
 				2B24D01F18C6E95700584B38 /* Frameworks */,
 				2B24D01E18C6E95700584B38 /* Products */,
 			);
@@ -90,6 +817,8 @@
 			children = (
 				2B24D01D18C6E95700584B38 /* EazesportzHighlights.app */,
 				2B24D04118C6E95700584B38 /* EazesportzHighlightsTests.xctest */,
+				2B0BEC9618C817CB0040DB41 /* EazesportzBroadcast.app */,
+				2B0BECB318C817CC0040DB41 /* EazesportzBroadcastTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +826,72 @@
 		2B24D01F18C6E95700584B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B0BED0018C818360040DB41 /* libasprintf.0.dylib */,
+				2B0BED0118C818360040DB41 /* libasprintf.a */,
+				2B0BED0218C818360040DB41 /* libasprintf.0.dylib */,
+				2B0BED0318C818360040DB41 /* libass.5.dylib */,
+				2B0BED0418C818360040DB41 /* libass.a */,
+				2B0BED0518C818360040DB41 /* libass.5.dylib */,
+				2B24D10A18C6F02F00584B38 /* libavcodec.55.39.101.dylib */,
+				2B24D10B18C6F02F00584B38 /* libavcodec.55.39.101.dylib */,
+				2B24D10C18C6F02F00584B38 /* libavcodec.a */,
+				2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */,
+				2B24D10E18C6F02F00584B38 /* libavdevice.55.5.100.dylib */,
+				2B24D10F18C6F02F00584B38 /* libavdevice.55.5.100.dylib */,
+				2B24D11018C6F02F00584B38 /* libavdevice.a */,
+				2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */,
+				2B24D11218C6F02F00584B38 /* libavfilter.3.90.100.dylib */,
+				2B24D11318C6F02F00584B38 /* libavfilter.3.90.100.dylib */,
+				2B24D11418C6F02F00584B38 /* libavfilter.a */,
+				2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */,
+				2B24D11618C6F02F00584B38 /* libavformat.55.19.104.dylib */,
+				2B24D11718C6F02F00584B38 /* libavformat.55.19.104.dylib */,
+				2B24D11818C6F02F00584B38 /* libavformat.a */,
+				2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */,
+				2B24D11A18C6F02F00584B38 /* libavresample.1.1.0.dylib */,
+				2B24D11B18C6F02F00584B38 /* libavresample.1.1.0.dylib */,
+				2B24D11C18C6F02F00584B38 /* libavresample.a */,
+				2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */,
+				2B24D11E18C6F02F00584B38 /* libavutil.52.48.101.dylib */,
+				2B24D11F18C6F02F00584B38 /* libavutil.52.48.101.dylib */,
+				2B24D12018C6F03000584B38 /* libavutil.a */,
+				2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */,
+				2B24D12218C6F03000584B38 /* libbluray.1.dylib */,
+				2B24D12318C6F03000584B38 /* libbluray.a */,
+				2B24D12418C6F03000584B38 /* libbluray.1.dylib */,
+				2B24D12518C6F03000584B38 /* libbz2.1.0.6.dylib */,
+				2B24D12618C6F03000584B38 /* libbz2.1.0.6.dylib */,
+				2B24D12718C6F03000584B38 /* libbz2.1.0.6.dylib */,
+				2B24D12818C6F03000584B38 /* libbz2.a */,
+				2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */,
+				2B24D12A18C6F03000584B38 /* libcharset.1.dylib */,
+				2B24D12B18C6F03000584B38 /* libcharset.a */,
+				2B24D12C18C6F03000584B38 /* libcharset.1.dylib */,
+				2B24D12D18C6F03000584B38 /* libcrypto.1.0.0.dylib */,
+				2B24D12E18C6F03000584B38 /* libcrypto.a */,
+				2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */,
+				2B24D13018C6F03000584B38 /* libncurses.a */,
+				2B24D13118C6F03000584B38 /* libncurses.5.dylib */,
+				2B24D13218C6F03000584B38 /* libedit.0.dylib */,
+				2B24D13318C6F03000584B38 /* libedit.a */,
+				2B24D13418C6F03000584B38 /* libedit.0.dylib */,
+				2B24D13518C6F03100584B38 /* libenca.0.dylib */,
+				2B24D13618C6F03100584B38 /* libenca.a */,
+				2B24D13718C6F03100584B38 /* libenca.0.dylib */,
+				2B24D13818C6F03100584B38 /* libexpat.1.dylib */,
+				2B24D13918C6F03100584B38 /* libexpat.a */,
+				2B24D13A18C6F03100584B38 /* libexpat.1.dylib */,
+				2B24D13B18C6F03100584B38 /* libexslt.0.dylib */,
+				2B24D13C18C6F03100584B38 /* libexslt.a */,
+				2B24D13D18C6F03100584B38 /* libexslt.0.dylib */,
+				2B24D13E18C6F03100584B38 /* libfaac.0.dylib */,
+				2B24D13F18C6F03100584B38 /* libfaac.a */,
+				2B24D14018C6F03100584B38 /* libfaac.0.dylib */,
+				2B24D10818C6EFF800584B38 /* CoreMedia.framework */,
+				2B24D10618C6EFB100584B38 /* DVDPlayback.framework */,
+				2B24D10418C6EF8D00584B38 /* AVFoundation.framework */,
+				2B24D10218C6EF8300584B38 /* AVKit.framework */,
+				2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */,
 				2B24D02018C6E95700584B38 /* Cocoa.framework */,
 				2B24D04218C6E95700584B38 /* XCTest.framework */,
 				2B24D02218C6E95700584B38 /* Other Frameworks */,
@@ -117,9 +912,35 @@
 		2B24D02618C6E95700584B38 /* EazesportzHighlights */ = {
 			isa = PBXGroup;
 			children = (
+				2B24D17818C6F23700584B38 /* Footballbkg.png */,
+				2B24D0B918C6EBD400584B38 /* add-item.png */,
+				2B24D0BA18C6EBD400584B38 /* arrow-big-01.png */,
+				2B24D0BD18C6EBE800584B38 /* calendar.png */,
+				2B24D0BE18C6EBE800584B38 /* copy-item.png */,
+				2B24D0BF18C6EBE800584B38 /* delete-item.png */,
+				2B24D0C018C6EBE800584B38 /* document.png */,
+				2B24D0FE18C6EE4900584B38 /* download.png */,
+				2B24D0C518C6EC1F00584B38 /* film.png */,
+				2B24D17B18C6F89900584B38 /* home.png */,
+				2B24D0C718C6EC3F00584B38 /* newspaper.png */,
+				2B24D0C818C6EC3F00584B38 /* photo_not_available.png */,
+				2B24D0C918C6EC3F00584B38 /* photo_processing.png */,
+				2B24D0CA18C6EC3F00584B38 /* photo.png */,
+				2B24D0CB18C6EC3F00584B38 /* power-button.png */,
+				2B24D0CC18C6EC3F00584B38 /* reload.png */,
+				2B24D0CD18C6EC3F00584B38 /* save.png */,
+				2B24D0CE18C6EC3F00584B38 /* scissor.png */,
+				2B24D0CF18C6EC3F00584B38 /* screen.png */,
+				2B24D0D018C6EC3F00584B38 /* search.png */,
+				2B24D0DB18C6EC5E00584B38 /* shut-down.png */,
 				2B24D03218C6E95700584B38 /* eazesportzAppDelegate.h */,
 				2B24D03318C6E95700584B38 /* eazesportzAppDelegate.m */,
 				2B24D03518C6E95700584B38 /* MainMenu.xib */,
+				2B24D17A18C6F89900584B38 /* HighlightScript.command */,
+				2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */,
+				2B24D0A418C6EAB000584B38 /* GUI */,
+				2B24D06A18C6EA4D00584B38 /* Model */,
+				2B24D05718C6EA0400584B38 /* Util */,
 				2B24D03B18C6E95700584B38 /* Images.xcassets */,
 				2B24D03818C6E95700584B38 /* EazesportzHighlights.xcdatamodeld */,
 				2B24D02718C6E95700584B38 /* Supporting Files */,
@@ -157,9 +978,151 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2B24D05718C6EA0400584B38 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2B24D0AD18C6EB3500584B38 /* eazesportzGetGame.h */,
+				2B24D0AE18C6EB3500584B38 /* eazesportzGetGame.m */,
+				2B24D0AA18C6EB1B00584B38 /* EazesportzLogin.h */,
+				2B24D0AB18C6EB1B00584B38 /* EazesportzLogin.m */,
+				2B24D05818C6EA4200584B38 /* EazesportzRetrieveEvents.h */,
+				2B24D05918C6EA4200584B38 /* EazesportzRetrieveEvents.m */,
+				2B24D05A18C6EA4200584B38 /* EazesportzRetrieveGames.h */,
+				2B24D05B18C6EA4200584B38 /* EazesportzRetrieveGames.m */,
+				2B24D05C18C6EA4200584B38 /* EazesportzRetrievePlayers.h */,
+				2B24D05D18C6EA4200584B38 /* EazesportzRetrievePlayers.m */,
+				2B24D05E18C6EA4200584B38 /* EazesportzRetrieveSport.h */,
+				2B24D05F18C6EA4200584B38 /* EazesportzRetrieveSport.m */,
+				2B24D06018C6EA4200584B38 /* EazesportzRetrieveTeams.h */,
+				2B24D06118C6EA4200584B38 /* EazesportzRetrieveTeams.m */,
+				2B24D06218C6EA4200584B38 /* EazesportzRetrieveVideos.h */,
+				2B24D06318C6EA4200584B38 /* EazesportzRetrieveVideos.m */,
+				2B24D0B518C6EBA100584B38 /* ShuffleAlphabet.h */,
+				2B24D0B618C6EBA100584B38 /* ShuffleAlphabet.m */,
+				2B24D0B818C6EBB500584B38 /* sportzConstants.h */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		2B24D06A18C6EA4D00584B38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B24D06B18C6EA6E00584B38 /* Athlete.h */,
+				2B24D06C18C6EA6E00584B38 /* Athlete.m */,
+				2B24D06D18C6EA6E00584B38 /* BasketballStats.h */,
+				2B24D06E18C6EA6E00584B38 /* BasketballStats.m */,
+				2B24D07118C6EA8E00584B38 /* eazesportzAVClip.h */,
+				2B24D07218C6EA8E00584B38 /* eazesportzAVClip.m */,
+				2B24D07318C6EA8E00584B38 /* Event.h */,
+				2B24D07418C6EA8E00584B38 /* Event.m */,
+				2B24D07518C6EA8E00584B38 /* FootballDefenseStats.h */,
+				2B24D07618C6EA8E00584B38 /* FootballDefenseStats.m */,
+				2B24D07718C6EA8E00584B38 /* FootballKickerStats.h */,
+				2B24D07818C6EA8E00584B38 /* FootballKickerStats.m */,
+				2B24D07918C6EA8E00584B38 /* FootballPassingStat.h */,
+				2B24D07A18C6EA8E00584B38 /* FootballPassingStat.m */,
+				2B24D07B18C6EA8E00584B38 /* FootballPlaceKickerStats.h */,
+				2B24D07C18C6EA8E00584B38 /* FootballPlaceKickerStats.m */,
+				2B24D07D18C6EA8E00584B38 /* FootballPunterStats.h */,
+				2B24D07E18C6EA8E00584B38 /* FootballPunterStats.m */,
+				2B24D07F18C6EA8E00584B38 /* FootballReceivingStat.h */,
+				2B24D08018C6EA8E00584B38 /* FootballReceivingStat.m */,
+				2B24D08118C6EA8E00584B38 /* FootballReturnerStats.h */,
+				2B24D08218C6EA8E00584B38 /* FootballReturnerStats.m */,
+				2B24D08318C6EA8E00584B38 /* FootballRushingStat.h */,
+				2B24D08418C6EA8E00584B38 /* FootballRushingStat.m */,
+				2B24D08518C6EA8E00584B38 /* Gamelogs.h */,
+				2B24D08618C6EA8E00584B38 /* Gamelogs.m */,
+				2B24D08718C6EA8E00584B38 /* GameSchedule.h */,
+				2B24D08818C6EA8E00584B38 /* GameSchedule.m */,
+				2B24D08918C6EA8E00584B38 /* Soccer.h */,
+				2B24D08A18C6EA8E00584B38 /* Soccer.m */,
+				2B24D08B18C6EA8E00584B38 /* Sport.h */,
+				2B24D08C18C6EA8E00584B38 /* Sport.m */,
+				2B24D08D18C6EA8E00584B38 /* Team.h */,
+				2B24D08E18C6EA8E00584B38 /* Team.m */,
+				2B24D08F18C6EA8E00584B38 /* User.h */,
+				2B24D09018C6EA8E00584B38 /* User.m */,
+				2B24D09118C6EA8E00584B38 /* Video.h */,
+				2B24D09218C6EA8E00584B38 /* Video.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2B24D0A418C6EAB000584B38 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				2B0BEC8A18C7CACF0040DB41 /* eazesportzBroadcastScheduleTableCellView.h */,
+				2B0BEC8B18C7CACF0040DB41 /* eazesportzBroadcastScheduleTableCellView.m */,
+				2B0BEC8D18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.h */,
+				2B0BEC8E18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.m */,
+				2B0BEC8F18C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.xib */,
+				2B24D0F418C6ECF000584B38 /* eazesportzLoginViewController.h */,
+				2B24D0F518C6ECF000584B38 /* eazesportzLoginViewController.m */,
+				2B24D0F618C6ECF000584B38 /* eazesportzLoginViewController.xib */,
+				2B24D0F918C6ED5600584B38 /* eazesportzMainViewController.h */,
+				2B24D0FA18C6ED5600584B38 /* eazesportzMainViewController.m */,
+				2B24D0FB18C6ED5700584B38 /* eazesportzMainViewController.xib */,
+				2B24D0B018C6EB6D00584B38 /* eazesportzMasterViewController.h */,
+				2B24D0B118C6EB6D00584B38 /* eazesportzMasterViewController.m */,
+				2B24D0B218C6EB6D00584B38 /* eazesportzMasterViewController.xib */,
+				2B24D0A518C6EB0100584B38 /* eazesportzPlayerViewController.h */,
+				2B24D0A618C6EB0100584B38 /* eazesportzPlayerViewController.m */,
+				2B24D0A718C6EB0100584B38 /* eazesportzPlayerViewController.xib */,
+				2B24D0DD18C6EC9D00584B38 /* eazesportzSelectGameWindowController.h */,
+				2B24D0DE18C6EC9D00584B38 /* eazesportzSelectGameWindowController.m */,
+				2B24D0DF18C6EC9D00584B38 /* eazesportzSelectGameWindowController.xib */,
+				2B24D0E018C6EC9D00584B38 /* eazesportzSelectTeamViewController.h */,
+				2B24D0E118C6EC9D00584B38 /* eazesportzSelectTeamViewController.m */,
+				2B24D0E218C6EC9D00584B38 /* eazesportzSelectTeamViewController.xib */,
+				2B24D0E318C6EC9D00584B38 /* eazesportzSelectTeamWindowController.h */,
+				2B24D0E418C6EC9D00584B38 /* eazesportzSelectTeamWindowController.m */,
+				2B24D0E518C6EC9D00584B38 /* eazesportzSelectTeamWindowController.xib */,
+				2B24D0E818C6EC9D00584B38 /* eazesportzVideoFileWindowController.h */,
+				2B24D0E918C6EC9D00584B38 /* eazesportzVideoFileWindowController.m */,
+				2B24D0EA18C6EC9D00584B38 /* eazesportzVideoFileWindowController.xib */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B0BEC9518C817CB0040DB41 /* EazesportzBroadcast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B0BECC018C817CD0040DB41 /* Build configuration list for PBXNativeTarget "EazesportzBroadcast" */;
+			buildPhases = (
+				2B0BEC9218C817CB0040DB41 /* Sources */,
+				2B0BEC9318C817CB0040DB41 /* Frameworks */,
+				2B0BEC9418C817CB0040DB41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EazesportzBroadcast;
+			productName = EazesportzBroadcast;
+			productReference = 2B0BEC9618C817CB0040DB41 /* EazesportzBroadcast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2B0BECB218C817CC0040DB41 /* EazesportzBroadcastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B0BECC318C817CD0040DB41 /* Build configuration list for PBXNativeTarget "EazesportzBroadcastTests" */;
+			buildPhases = (
+				2B0BECAF18C817CC0040DB41 /* Sources */,
+				2B0BECB018C817CC0040DB41 /* Frameworks */,
+				2B0BECB118C817CC0040DB41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B0BECB718C817CC0040DB41 /* PBXTargetDependency */,
+			);
+			name = EazesportzBroadcastTests;
+			productName = EazesportzBroadcastTests;
+			productReference = 2B0BECB318C817CC0040DB41 /* EazesportzBroadcastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2B24D01C18C6E95700584B38 /* EazesportzHighlights */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B24D05118C6E95700584B38 /* Build configuration list for PBXNativeTarget "EazesportzHighlights" */;
@@ -205,6 +1168,12 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Gilbert Zaldivar";
 				TargetAttributes = {
+					2B0BEC9518C817CB0040DB41 = {
+						DevelopmentTeam = MA242X4XDT;
+					};
+					2B0BECB218C817CC0040DB41 = {
+						TestTargetID = 2B24D01C18C6E95700584B38;
+					};
 					2B24D04018C6E95700584B38 = {
 						TestTargetID = 2B24D01C18C6E95700584B38;
 					};
@@ -225,19 +1194,97 @@
 			targets = (
 				2B24D01C18C6E95700584B38 /* EazesportzHighlights */,
 				2B24D04018C6E95700584B38 /* EazesportzHighlightsTests */,
+				2B0BEC9518C817CB0040DB41 /* EazesportzBroadcast */,
+				2B0BECB218C817CC0040DB41 /* EazesportzBroadcastTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B0BEC9418C817CB0040DB41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0BED1418C818CB0040DB41 /* Footballbkg.png in Resources */,
+				2B0BED1518C818CB0040DB41 /* add-item.png in Resources */,
+				2B0BED1618C818CB0040DB41 /* arrow-big-01.png in Resources */,
+				2B0BED1718C818CB0040DB41 /* calendar.png in Resources */,
+				2B0BED1818C818CB0040DB41 /* copy-item.png in Resources */,
+				2B0BED1918C818CB0040DB41 /* delete-item.png in Resources */,
+				2B0BED1A18C818CB0040DB41 /* document.png in Resources */,
+				2B0BED1B18C818CB0040DB41 /* download.png in Resources */,
+				2B0BED1C18C818CB0040DB41 /* film.png in Resources */,
+				2B0BED1D18C818CB0040DB41 /* home.png in Resources */,
+				2B0BED1E18C818CB0040DB41 /* newspaper.png in Resources */,
+				2B0BED1F18C818CB0040DB41 /* photo_not_available.png in Resources */,
+				2B0BED2018C818CB0040DB41 /* photo_processing.png in Resources */,
+				2B0BED2118C818CB0040DB41 /* photo.png in Resources */,
+				2B0BED2218C818CB0040DB41 /* power-button.png in Resources */,
+				2B0BED2318C818CB0040DB41 /* reload.png in Resources */,
+				2B0BED2418C818CB0040DB41 /* save.png in Resources */,
+				2B0BED2518C818CB0040DB41 /* scissor.png in Resources */,
+				2B0BED2618C818CB0040DB41 /* screen.png in Resources */,
+				2B0BED2718C818CB0040DB41 /* search.png in Resources */,
+				2B0BED2818C818CB0040DB41 /* shut-down.png in Resources */,
+				2B0BED3318C819160040DB41 /* eazesportzLiveVideoViewController.xib in Resources */,
+				2B0BEC9D18C817CC0040DB41 /* InfoPlist.strings in Resources */,
+				2B0BECAE18C817CC0040DB41 /* Images.xcassets in Resources */,
+				2B0BED3818C819310040DB41 /* eazesportzScheduleBroadcastViewController.xib in Resources */,
+				2B0BECA318C817CC0040DB41 /* Credits.rtf in Resources */,
+				2B0BECA918C817CC0040DB41 /* MainMenu.xib in Resources */,
+				2B0BED2D18C818E80040DB41 /* eazesportzEditEventWindowController.xib in Resources */,
+				2BB157AB18C822E7007B05AE /* StreamFile.command in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B0BECB118C817CC0040DB41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0BECBD18C817CC0040DB41 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B24D01B18C6E95700584B38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B24D0FD18C6ED5700584B38 /* eazesportzMainViewController.xib in Resources */,
+				2B24D0F018C6EC9D00584B38 /* eazesportzSelectTeamWindowController.xib in Resources */,
+				2B24D0EE18C6EC9D00584B38 /* eazesportzSelectTeamViewController.xib in Resources */,
+				2B0BEC9118C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.xib in Resources */,
+				2B24D0C618C6EC1F00584B38 /* film.png in Resources */,
+				2B24D0D518C6EC3F00584B38 /* power-button.png in Resources */,
+				2B24D0D818C6EC3F00584B38 /* scissor.png in Resources */,
+				2B24D17D18C6F89900584B38 /* home.png in Resources */,
+				2B24D0D418C6EC3F00584B38 /* photo.png in Resources */,
+				2B24D0F818C6ECF000584B38 /* eazesportzLoginViewController.xib in Resources */,
 				2B24D02B18C6E95700584B38 /* InfoPlist.strings in Resources */,
+				2B24D17918C6F23700584B38 /* Footballbkg.png in Resources */,
+				2B24D0D918C6EC3F00584B38 /* screen.png in Resources */,
 				2B24D03C18C6E95700584B38 /* Images.xcassets in Resources */,
+				2B24D0C318C6EBE800584B38 /* delete-item.png in Resources */,
+				2B24D0D718C6EC3F00584B38 /* save.png in Resources */,
+				2B24D0FF18C6EE4900584B38 /* download.png in Resources */,
+				2B24D0DC18C6EC5E00584B38 /* shut-down.png in Resources */,
+				2B24D17C18C6F89900584B38 /* HighlightScript.command in Resources */,
+				2B24D0A918C6EB0100584B38 /* eazesportzPlayerViewController.xib in Resources */,
+				2B24D0BC18C6EBD400584B38 /* arrow-big-01.png in Resources */,
+				2B24D0D618C6EC3F00584B38 /* reload.png in Resources */,
+				2B24D0C118C6EBE800584B38 /* calendar.png in Resources */,
+				2B24D0C418C6EBE800584B38 /* document.png in Resources */,
+				2B24D0EC18C6EC9D00584B38 /* eazesportzSelectGameWindowController.xib in Resources */,
 				2B24D03118C6E95700584B38 /* Credits.rtf in Resources */,
+				2B24D0D218C6EC3F00584B38 /* photo_not_available.png in Resources */,
+				2B24D0D118C6EC3F00584B38 /* newspaper.png in Resources */,
+				2B24D0BB18C6EBD400584B38 /* add-item.png in Resources */,
+				2B24D0F318C6EC9D00584B38 /* eazesportzVideoFileWindowController.xib in Resources */,
+				2B24D0C218C6EBE800584B38 /* copy-item.png in Resources */,
+				2B24D0D318C6EC3F00584B38 /* photo_processing.png in Resources */,
 				2B24D03718C6E95700584B38 /* MainMenu.xib in Resources */,
+				2B24D0B418C6EB6D00584B38 /* eazesportzMasterViewController.xib in Resources */,
+				2B24D17F18C6FA9F00584B38 /* TranscodeClip.command in Resources */,
+				2B24D0DA18C6EC3F00584B38 /* search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,13 +1299,144 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B0BEC9218C817CB0040DB41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0BED6E18C81E440040DB41 /* eazesportzGetGame.h in Sources */,
+				2B0BED6F18C81E440040DB41 /* eazesportzGetGame.m in Sources */,
+				2B0BED7018C81E440040DB41 /* EazesportzLogin.h in Sources */,
+				2B0BED7118C81E440040DB41 /* EazesportzLogin.m in Sources */,
+				2B0BED7218C81E440040DB41 /* EazesportzRetrieveEvents.h in Sources */,
+				2B0BED7318C81E440040DB41 /* EazesportzRetrieveEvents.m in Sources */,
+				2B0BED7418C81E440040DB41 /* EazesportzRetrieveGames.h in Sources */,
+				2B0BED7518C81E440040DB41 /* EazesportzRetrieveGames.m in Sources */,
+				2B0BED7618C81E440040DB41 /* EazesportzRetrievePlayers.h in Sources */,
+				2B0BED7718C81E440040DB41 /* EazesportzRetrievePlayers.m in Sources */,
+				2B0BED7818C81E440040DB41 /* EazesportzRetrieveSport.h in Sources */,
+				2B0BED7918C81E440040DB41 /* EazesportzRetrieveSport.m in Sources */,
+				2B0BED7A18C81E440040DB41 /* EazesportzRetrieveTeams.h in Sources */,
+				2B0BED7B18C81E440040DB41 /* EazesportzRetrieveTeams.m in Sources */,
+				2B0BED7C18C81E440040DB41 /* EazesportzRetrieveVideos.h in Sources */,
+				2B0BED7D18C81E440040DB41 /* EazesportzRetrieveVideos.m in Sources */,
+				2B0BED7E18C81E440040DB41 /* ShuffleAlphabet.h in Sources */,
+				2B0BED7F18C81E440040DB41 /* ShuffleAlphabet.m in Sources */,
+				2B0BED8018C81E440040DB41 /* sportzConstants.h in Sources */,
+				2B0BED4818C81E350040DB41 /* Athlete.h in Sources */,
+				2B0BED4918C81E350040DB41 /* Athlete.m in Sources */,
+				2B0BED4A18C81E350040DB41 /* BasketballStats.h in Sources */,
+				2B0BED4B18C81E350040DB41 /* BasketballStats.m in Sources */,
+				2B0BED4C18C81E350040DB41 /* eazesportzAVClip.h in Sources */,
+				2B0BED4D18C81E350040DB41 /* eazesportzAVClip.m in Sources */,
+				2B0BED4E18C81E350040DB41 /* Event.h in Sources */,
+				2B0BED4F18C81E350040DB41 /* Event.m in Sources */,
+				2B0BED5018C81E350040DB41 /* FootballDefenseStats.h in Sources */,
+				2B0BED5118C81E350040DB41 /* FootballDefenseStats.m in Sources */,
+				2B0BED5218C81E350040DB41 /* FootballKickerStats.h in Sources */,
+				2B0BED5318C81E350040DB41 /* FootballKickerStats.m in Sources */,
+				2B0BED5418C81E350040DB41 /* FootballPassingStat.h in Sources */,
+				2B0BED5518C81E350040DB41 /* FootballPassingStat.m in Sources */,
+				2B0BED5618C81E350040DB41 /* FootballPlaceKickerStats.h in Sources */,
+				2B0BED5718C81E350040DB41 /* FootballPlaceKickerStats.m in Sources */,
+				2B0BED5818C81E350040DB41 /* FootballPunterStats.h in Sources */,
+				2B0BED5918C81E350040DB41 /* FootballPunterStats.m in Sources */,
+				2B0BED5A18C81E350040DB41 /* FootballReceivingStat.h in Sources */,
+				2B0BED5B18C81E350040DB41 /* FootballReceivingStat.m in Sources */,
+				2B0BED5C18C81E350040DB41 /* FootballReturnerStats.h in Sources */,
+				2B0BED5D18C81E350040DB41 /* FootballReturnerStats.m in Sources */,
+				2B0BED5E18C81E350040DB41 /* FootballRushingStat.h in Sources */,
+				2B0BED5F18C81E350040DB41 /* FootballRushingStat.m in Sources */,
+				2B0BED6018C81E350040DB41 /* Gamelogs.h in Sources */,
+				2B0BED6118C81E350040DB41 /* Gamelogs.m in Sources */,
+				2B0BED6218C81E350040DB41 /* GameSchedule.h in Sources */,
+				2B0BED6318C81E350040DB41 /* GameSchedule.m in Sources */,
+				2B0BED6418C81E350040DB41 /* Soccer.h in Sources */,
+				2B0BED6518C81E350040DB41 /* Soccer.m in Sources */,
+				2B0BED6618C81E350040DB41 /* Sport.h in Sources */,
+				2B0BED6718C81E350040DB41 /* Sport.m in Sources */,
+				2B0BED6818C81E360040DB41 /* Team.h in Sources */,
+				2B0BED6918C81E360040DB41 /* Team.m in Sources */,
+				2B0BED6A18C81E360040DB41 /* User.h in Sources */,
+				2B0BED6B18C81E360040DB41 /* User.m in Sources */,
+				2B0BED6C18C81E360040DB41 /* Video.h in Sources */,
+				2B0BED6D18C81E360040DB41 /* Video.m in Sources */,
+				2B0BED3C18C81E220040DB41 /* eazesportzSelectGameWindowController.h in Sources */,
+				2B0BED3D18C81E220040DB41 /* eazesportzSelectGameWindowController.m in Sources */,
+				2B0BED3E18C81E220040DB41 /* eazesportzSelectGameWindowController.xib in Sources */,
+				2B0BED3F18C81E220040DB41 /* eazesportzSelectTeamViewController.h in Sources */,
+				2B0BED4018C81E220040DB41 /* eazesportzSelectTeamViewController.m in Sources */,
+				2B0BED4118C81E220040DB41 /* eazesportzSelectTeamViewController.xib in Sources */,
+				2B0BED4218C81E220040DB41 /* eazesportzSelectTeamWindowController.h in Sources */,
+				2B0BED4318C81E220040DB41 /* eazesportzSelectTeamWindowController.m in Sources */,
+				2B0BED4418C81E220040DB41 /* eazesportzSelectTeamWindowController.xib in Sources */,
+				2B0BED4518C81E220040DB41 /* eazesportzVideoFileWindowController.h in Sources */,
+				2B0BED4618C81E220040DB41 /* eazesportzVideoFileWindowController.m in Sources */,
+				2B0BED4718C81E220040DB41 /* eazesportzVideoFileWindowController.xib in Sources */,
+				2B0BED3918C81E000040DB41 /* eazesportzLoginViewController.h in Sources */,
+				2B0BED3A18C81E000040DB41 /* eazesportzLoginViewController.m in Sources */,
+				2B0BED3B18C81E000040DB41 /* eazesportzLoginViewController.xib in Sources */,
+				2B0BEC9F18C817CC0040DB41 /* main.m in Sources */,
+				2B0BED3218C819160040DB41 /* eazesportzLiveVideoViewController.m in Sources */,
+				2B0BED1318C818BB0040DB41 /* eazesportzAppDelegate.m in Sources */,
+				2B0BECAC18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodeld in Sources */,
+				2B0BED3718C819310040DB41 /* eazesportzScheduleBroadcastViewController.m in Sources */,
+				2B0BED2C18C818E80040DB41 /* eazesportzEditEventWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B0BECAF18C817CC0040DB41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0BECBF18C817CC0040DB41 /* EazesportzBroadcastTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B24D01918C6E95700584B38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B24D0AF18C6EB3500584B38 /* eazesportzGetGame.m in Sources */,
+				2B24D0A818C6EB0100584B38 /* eazesportzPlayerViewController.m in Sources */,
+				2B24D0B718C6EBA100584B38 /* ShuffleAlphabet.m in Sources */,
+				2B24D0F718C6ECF000584B38 /* eazesportzLoginViewController.m in Sources */,
+				2B24D0EF18C6EC9D00584B38 /* eazesportzSelectTeamWindowController.m in Sources */,
+				2B24D0A118C6EA8E00584B38 /* Team.m in Sources */,
 				2B24D02D18C6E95700584B38 /* main.m in Sources */,
+				2B24D0A218C6EA8E00584B38 /* User.m in Sources */,
+				2B24D06618C6EA4200584B38 /* EazesportzRetrievePlayers.m in Sources */,
+				2B24D09A18C6EA8E00584B38 /* FootballReceivingStat.m in Sources */,
+				2B24D06718C6EA4200584B38 /* EazesportzRetrieveSport.m in Sources */,
+				2B24D09418C6EA8E00584B38 /* Event.m in Sources */,
+				2B24D09718C6EA8E00584B38 /* FootballPassingStat.m in Sources */,
+				2B0BEC9018C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.m in Sources */,
+				2B24D0F218C6EC9D00584B38 /* eazesportzVideoFileWindowController.m in Sources */,
+				2B24D09D18C6EA8E00584B38 /* Gamelogs.m in Sources */,
+				2B24D09318C6EA8E00584B38 /* eazesportzAVClip.m in Sources */,
+				2B24D06F18C6EA6E00584B38 /* Athlete.m in Sources */,
+				2B24D07018C6EA6E00584B38 /* BasketballStats.m in Sources */,
+				2B24D09F18C6EA8E00584B38 /* Soccer.m in Sources */,
+				2B24D0A318C6EA8E00584B38 /* Video.m in Sources */,
+				2B24D0A018C6EA8E00584B38 /* Sport.m in Sources */,
+				2B24D09618C6EA8E00584B38 /* FootballKickerStats.m in Sources */,
+				2B24D06818C6EA4200584B38 /* EazesportzRetrieveTeams.m in Sources */,
+				2B24D09B18C6EA8E00584B38 /* FootballReturnerStats.m in Sources */,
 				2B24D03418C6E95700584B38 /* eazesportzAppDelegate.m in Sources */,
+				2B24D09E18C6EA8E00584B38 /* GameSchedule.m in Sources */,
+				2B24D06518C6EA4200584B38 /* EazesportzRetrieveGames.m in Sources */,
+				2B24D0EB18C6EC9D00584B38 /* eazesportzSelectGameWindowController.m in Sources */,
+				2B24D0AC18C6EB1B00584B38 /* EazesportzLogin.m in Sources */,
+				2B24D09918C6EA8E00584B38 /* FootballPunterStats.m in Sources */,
+				2B24D09818C6EA8E00584B38 /* FootballPlaceKickerStats.m in Sources */,
+				2B0BEC8C18C7CACF0040DB41 /* eazesportzBroadcastScheduleTableCellView.m in Sources */,
+				2B24D0FC18C6ED5700584B38 /* eazesportzMainViewController.m in Sources */,
+				2B24D0B318C6EB6D00584B38 /* eazesportzMasterViewController.m in Sources */,
+				2B24D06918C6EA4200584B38 /* EazesportzRetrieveVideos.m in Sources */,
+				2B24D09C18C6EA8E00584B38 /* FootballRushingStat.m in Sources */,
+				2B24D09518C6EA8E00584B38 /* FootballDefenseStats.m in Sources */,
 				2B24D03A18C6E95700584B38 /* EazesportzHighlights.xcdatamodeld in Sources */,
+				2B24D0ED18C6EC9D00584B38 /* eazesportzSelectTeamViewController.m in Sources */,
+				2B24D06418C6EA4200584B38 /* EazesportzRetrieveEvents.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +1451,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2B0BECB718C817CC0040DB41 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B0BEC9518C817CB0040DB41 /* EazesportzBroadcast */;
+			targetProxy = 2B0BECB618C817CC0040DB41 /* PBXContainerItemProxy */;
+		};
 		2B24D04618C6E95700584B38 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2B24D01C18C6E95700584B38 /* EazesportzHighlights */;
@@ -281,6 +1464,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2B0BEC9B18C817CC0040DB41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B0BEC9C18C817CC0040DB41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2B0BECA118C817CC0040DB41 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B0BECA218C817CC0040DB41 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2B0BECA718C817CC0040DB41 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B0BECA818C817CC0040DB41 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2B0BECBB18C817CC0040DB41 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B0BECBC18C817CC0040DB41 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		2B24D02918C6E95700584B38 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -316,6 +1531,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2B0BECC118C817CD0040DB41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EazesportzBroadcast/EazesportzBroadcast-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2B0BECC218C817CD0040DB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
+				INFOPLIST_FILE = "EazesportzBroadcast/EazesportzBroadcast-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2B0BECC418C817CD0040DB41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EazesportzHighlights.app/Contents/MacOS/EazesportzHighlights";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "EazesportzBroadcastTests/EazesportzBroadcastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2B0BECC518C817CD0040DB41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/EazesportzHighlights.app/Contents/MacOS/EazesportzHighlights";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
+				INFOPLIST_FILE = "EazesportzBroadcastTests/EazesportzBroadcastTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		2B24D04F18C6E95700584B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -388,10 +1689,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzHighlights/EazesportzHighlights-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
 				INFOPLIST_FILE = "EazesportzHighlights/EazesportzHighlights-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -401,10 +1716,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzHighlights/EazesportzHighlights-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/opt/local/include,
+				);
 				INFOPLIST_FILE = "EazesportzHighlights/EazesportzHighlights-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -453,6 +1782,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B0BECC018C817CD0040DB41 /* Build configuration list for PBXNativeTarget "EazesportzBroadcast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B0BECC118C817CD0040DB41 /* Debug */,
+				2B0BECC218C817CD0040DB41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B0BECC318C817CD0040DB41 /* Build configuration list for PBXNativeTarget "EazesportzBroadcastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B0BECC418C817CD0040DB41 /* Debug */,
+				2B0BECC518C817CD0040DB41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2B24D01818C6E95700584B38 /* Build configuration list for PBXProject "EazesportzHighlights" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -469,6 +1816,7 @@
 				2B24D05318C6E95700584B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B24D05418C6E95700584B38 /* Build configuration list for PBXNativeTarget "EazesportzHighlightsTests" */ = {
 			isa = XCConfigurationList;
@@ -477,10 +1825,21 @@
 				2B24D05618C6E95700584B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		2B0BECAA18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2B0BECAB18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodel */,
+			);
+			currentVersion = 2B0BECAB18C817CC0040DB41 /* EazesportzBroadcast.xcdatamodel */;
+			path = EazesportzBroadcast.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		2B24D03818C6E95700584B38 /* EazesportzHighlights.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
