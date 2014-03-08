@@ -14,6 +14,7 @@
 #import "eazesportzPlayerViewController.h"
 #import "eazesportzMainViewController.h"
 #import "eazesportzLiveHighlightViewController.h"
+#import "eazesportzSelectLiveHighlightsViewController.h"
 
 #import "eazesportzSelectTeamWindowController.h"
 
@@ -26,6 +27,7 @@
 @property (nonatomic, strong) IBOutlet eazesportzPlayerViewController *playerController;
 @property (nonatomic, strong) IBOutlet eazesportzMainViewController *processVideoController;
 @property (nonatomic, strong) IBOutlet eazesportzLiveHighlightViewController *liveHighlightsController;
+@property (nonatomic, strong) IBOutlet eazesportzSelectLiveHighlightsViewController *selectLiveHighlightsController;
 
 @end
 
@@ -48,6 +50,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processVideoView:) name:@"DisplayProcessVideoNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeView:) name:@"DisplayMainViewController" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(highlightClips:) name:@"CreateLiveHighlightsNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(liveHighlights:) name:@"DisplayLiveHighlightsNotification" object:nil];
     
     [self.window setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"Footballbkg.png"]]];
     
@@ -247,6 +250,8 @@
         self.playerController = nil;
     } else if ([[[notification userInfo] objectForKey:@"Message"] isEqualToString:@"SelectOpponentView"]) {
         [self.masterViewController.view removeFromSuperview];
+    } else if ([[[notification userInfo] objectForKey:@"Message"] isEqualToString:@"LiveView"]) {
+        [self.liveHighlightsController.view removeFromSuperview];
     }
     
     [self.processVideoController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
@@ -303,6 +308,17 @@
     [self.liveHighlightsController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     [self resizeWindowForContentSize:[self.liveHighlightsController.view frame].size];
     [self.window.contentView addSubview:self.liveHighlightsController.view];
+}
+
+- (void)liveHighlights:(NSNotification *)notification {
+    [self.liveHighlightsController.view removeFromSuperview];
+    self.selectLiveHighlightsController =
+            [[eazesportzSelectLiveHighlightsViewController alloc] initWithNibName:@"eazesportzSelectLiveHighlightsViewController" bundle:nil];
+    self.selectLiveHighlightsController.sport = getSport.sport;
+    self.selectLiveHighlightsController.user = self.loginViewController.user;
+    [self.selectLiveHighlightsController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
+    [self resizeWindowForContentSize:[self.selectLiveHighlightsController.view frame].size];
+    [self.window.contentView addSubview:self.selectLiveHighlightsController.view];
 }
 
 @end

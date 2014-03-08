@@ -72,7 +72,7 @@
             [_stoptimeDatePicker setDateValue:[[NSDate alloc] init]];
         }
         event = [[Event alloc] init];
-        event.videoevent = [NSNumber numberWithInt:0];
+        event.videoevent = [NSNumber numberWithInt:1];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gameSelected:) name:@"GameSelectedNotification" object:nil];

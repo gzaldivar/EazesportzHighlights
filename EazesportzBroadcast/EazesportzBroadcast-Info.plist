@@ -44,7 +44,9 @@
 	<string>http://eazesportzstreaming.s3-website-us-east-1.amazonaws.com</string>
 	<key>streamingdirectory</key>
 	<string>/eazesportzstreaming</string>
-	<key>highlightsDirectory</key>
+	<key>highlightsdirectory</key>
 	<string>/eazesportzhighlights</string>
+	<key>BroadcastTestUrl</key>
+	<string></string>
 </dict>
 </plist>

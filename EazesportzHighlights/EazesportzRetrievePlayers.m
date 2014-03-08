@@ -60,10 +60,10 @@
             [roster addObject:[[Athlete alloc] initWithDictionary:[serverData objectAtIndex:i] Sport:thesport]];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:@"RosterChangedNotification" object:nil
-                        userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Result", @"Success", nil]];
+                        userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Success", @"Result", nil]];
     } else {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"RosterChangedNotification" object:nil
-                                                          userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Result", @"Error retrieving roster", nil]];
+                                                          userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Error retrieving roster", @"Result", nil]];
     }
 }
 

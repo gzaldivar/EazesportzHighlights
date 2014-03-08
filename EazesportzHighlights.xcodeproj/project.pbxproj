@@ -24,68 +24,6 @@
 		2B0BECC618C817FE0040DB41 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10418C6EF8D00584B38 /* AVFoundation.framework */; };
 		2B0BECC718C817FE0040DB41 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10218C6EF8300584B38 /* AVKit.framework */; };
 		2B0BECC818C818140040DB41 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10818C6EFF800584B38 /* CoreMedia.framework */; };
-		2B0BECC918C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
-		2B0BECCA18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
-		2B0BECCB18C818350040DB41 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10C18C6F02F00584B38 /* libavcodec.a */; };
-		2B0BECCC18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
-		2B0BECCD18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
-		2B0BECCE18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
-		2B0BECCF18C818350040DB41 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11018C6F02F00584B38 /* libavdevice.a */; };
-		2B0BECD018C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
-		2B0BECD118C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
-		2B0BECD218C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
-		2B0BECD318C818350040DB41 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11418C6F02F00584B38 /* libavfilter.a */; };
-		2B0BECD418C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
-		2B0BECD518C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
-		2B0BECD618C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
-		2B0BECD718C818350040DB41 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11818C6F02F00584B38 /* libavformat.a */; };
-		2B0BECD818C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
-		2B0BECD918C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
-		2B0BECDA18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
-		2B0BECDB18C818350040DB41 /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11C18C6F02F00584B38 /* libavresample.a */; };
-		2B0BECDC18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
-		2B0BECDD18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
-		2B0BECDE18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
-		2B0BECDF18C818350040DB41 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12018C6F03000584B38 /* libavutil.a */; };
-		2B0BECE018C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
-		2B0BECE118C818350040DB41 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12418C6F03000584B38 /* libbluray.1.dylib */; };
-		2B0BECE218C818350040DB41 /* libbluray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12318C6F03000584B38 /* libbluray.a */; };
-		2B0BECE318C818350040DB41 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12418C6F03000584B38 /* libbluray.1.dylib */; };
-		2B0BECE418C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B0BECE518C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B0BECE618C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B0BECE718C818360040DB41 /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12818C6F03000584B38 /* libbz2.a */; };
-		2B0BECE818C818360040DB41 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B0BECE918C818360040DB41 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12C18C6F03000584B38 /* libcharset.1.dylib */; };
-		2B0BECEA18C818360040DB41 /* libcharset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12B18C6F03000584B38 /* libcharset.a */; };
-		2B0BECEB18C818360040DB41 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12C18C6F03000584B38 /* libcharset.1.dylib */; };
-		2B0BECEC18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
-		2B0BECED18C818360040DB41 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12E18C6F03000584B38 /* libcrypto.a */; };
-		2B0BECEE18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
-		2B0BECEF18C818360040DB41 /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13018C6F03000584B38 /* libncurses.a */; };
-		2B0BECF018C818360040DB41 /* libncurses.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13118C6F03000584B38 /* libncurses.5.dylib */; };
-		2B0BECF118C818360040DB41 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13418C6F03000584B38 /* libedit.0.dylib */; };
-		2B0BECF218C818360040DB41 /* libedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13318C6F03000584B38 /* libedit.a */; };
-		2B0BECF318C818360040DB41 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13418C6F03000584B38 /* libedit.0.dylib */; };
-		2B0BECF418C818360040DB41 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13718C6F03100584B38 /* libenca.0.dylib */; };
-		2B0BECF518C818360040DB41 /* libenca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13618C6F03100584B38 /* libenca.a */; };
-		2B0BECF618C818360040DB41 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13718C6F03100584B38 /* libenca.0.dylib */; };
-		2B0BECF718C818360040DB41 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13A18C6F03100584B38 /* libexpat.1.dylib */; };
-		2B0BECF818C818360040DB41 /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13918C6F03100584B38 /* libexpat.a */; };
-		2B0BECF918C818360040DB41 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13A18C6F03100584B38 /* libexpat.1.dylib */; };
-		2B0BECFA18C818360040DB41 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13D18C6F03100584B38 /* libexslt.0.dylib */; };
-		2B0BECFB18C818360040DB41 /* libexslt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13C18C6F03100584B38 /* libexslt.a */; };
-		2B0BECFC18C818360040DB41 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13D18C6F03100584B38 /* libexslt.0.dylib */; };
-		2B0BECFD18C818360040DB41 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D14018C6F03100584B38 /* libfaac.0.dylib */; };
-		2B0BECFE18C818360040DB41 /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13F18C6F03100584B38 /* libfaac.a */; };
-		2B0BECFF18C818360040DB41 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D14018C6F03100584B38 /* libfaac.0.dylib */; };
-		2B0BED0618C818360040DB41 /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0018C818360040DB41 /* libasprintf.0.dylib */; };
-		2B0BED0718C818360040DB41 /* libasprintf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0118C818360040DB41 /* libasprintf.a */; };
-		2B0BED0818C818360040DB41 /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0218C818360040DB41 /* libasprintf.0.dylib */; };
-		2B0BED0918C818360040DB41 /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0318C818360040DB41 /* libass.5.dylib */; };
-		2B0BED0A18C818360040DB41 /* libass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0418C818360040DB41 /* libass.a */; };
-		2B0BED0B18C818360040DB41 /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0BED0518C818360040DB41 /* libass.5.dylib */; };
-		2B0BED0C18C818440040DB41 /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */; };
 		2B0BED1318C818BB0040DB41 /* eazesportzAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BED1218C818BB0040DB41 /* eazesportzAppDelegate.m */; };
 		2B0BED1418C818CB0040DB41 /* Footballbkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17818C6F23700584B38 /* Footballbkg.png */; };
 		2B0BED1518C818CB0040DB41 /* add-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0B918C6EBD400584B38 /* add-item.png */; };
@@ -261,71 +199,147 @@
 		2B24D0FC18C6ED5700584B38 /* eazesportzMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B24D0FA18C6ED5600584B38 /* eazesportzMainViewController.m */; };
 		2B24D0FD18C6ED5700584B38 /* eazesportzMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0FB18C6ED5700584B38 /* eazesportzMainViewController.xib */; };
 		2B24D0FF18C6EE4900584B38 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D0FE18C6EE4900584B38 /* download.png */; };
-		2B24D10118C6EED500584B38 /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */; };
 		2B24D10318C6EF8300584B38 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10218C6EF8300584B38 /* AVKit.framework */; };
 		2B24D10518C6EF8D00584B38 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10418C6EF8D00584B38 /* AVFoundation.framework */; };
 		2B24D10718C6EFB100584B38 /* DVDPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10618C6EFB100584B38 /* DVDPlayback.framework */; };
 		2B24D10918C6EFF800584B38 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10818C6EFF800584B38 /* CoreMedia.framework */; };
-		2B24D14118C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10A18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
-		2B24D14218C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10B18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
-		2B24D14318C6F03100584B38 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10C18C6F02F00584B38 /* libavcodec.a */; };
-		2B24D14418C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */; };
-		2B24D14518C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10E18C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
-		2B24D14618C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D10F18C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
-		2B24D14718C6F03100584B38 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11018C6F02F00584B38 /* libavdevice.a */; };
-		2B24D14818C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */; };
-		2B24D14918C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11218C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
-		2B24D14A18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11318C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
-		2B24D14B18C6F03100584B38 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11418C6F02F00584B38 /* libavfilter.a */; };
-		2B24D14C18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */; };
-		2B24D14D18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11618C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
-		2B24D14E18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11718C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
-		2B24D14F18C6F03100584B38 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11818C6F02F00584B38 /* libavformat.a */; };
-		2B24D15018C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */; };
-		2B24D15118C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11A18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
-		2B24D15218C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11B18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
-		2B24D15318C6F03100584B38 /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11C18C6F02F00584B38 /* libavresample.a */; };
-		2B24D15418C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */; };
-		2B24D15518C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11E18C6F02F00584B38 /* libavutil.52.48.101.dylib */; };
-		2B24D15618C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D11F18C6F02F00584B38 /* libavutil.52.48.101.dylib */; };
-		2B24D15718C6F03100584B38 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12018C6F03000584B38 /* libavutil.a */; };
-		2B24D15818C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */; };
-		2B24D15918C6F03100584B38 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12218C6F03000584B38 /* libbluray.1.dylib */; };
-		2B24D15A18C6F03100584B38 /* libbluray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12318C6F03000584B38 /* libbluray.a */; };
-		2B24D15B18C6F03100584B38 /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12418C6F03000584B38 /* libbluray.1.dylib */; };
-		2B24D15C18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12518C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B24D15D18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12618C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B24D15E18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12718C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B24D15F18C6F03100584B38 /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12818C6F03000584B38 /* libbz2.a */; };
-		2B24D16018C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */; };
-		2B24D16118C6F03100584B38 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12A18C6F03000584B38 /* libcharset.1.dylib */; };
-		2B24D16218C6F03100584B38 /* libcharset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12B18C6F03000584B38 /* libcharset.a */; };
-		2B24D16318C6F03100584B38 /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12C18C6F03000584B38 /* libcharset.1.dylib */; };
-		2B24D16418C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12D18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
-		2B24D16518C6F03100584B38 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12E18C6F03000584B38 /* libcrypto.a */; };
-		2B24D16618C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */; };
-		2B24D16718C6F03100584B38 /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13018C6F03000584B38 /* libncurses.a */; };
-		2B24D16818C6F03100584B38 /* libncurses.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13118C6F03000584B38 /* libncurses.5.dylib */; };
-		2B24D16918C6F03100584B38 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13218C6F03000584B38 /* libedit.0.dylib */; };
-		2B24D16A18C6F03100584B38 /* libedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13318C6F03000584B38 /* libedit.a */; };
-		2B24D16B18C6F03100584B38 /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13418C6F03000584B38 /* libedit.0.dylib */; };
-		2B24D16C18C6F03100584B38 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13518C6F03100584B38 /* libenca.0.dylib */; };
-		2B24D16D18C6F03100584B38 /* libenca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13618C6F03100584B38 /* libenca.a */; };
-		2B24D16E18C6F03100584B38 /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13718C6F03100584B38 /* libenca.0.dylib */; };
-		2B24D16F18C6F03100584B38 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13818C6F03100584B38 /* libexpat.1.dylib */; };
-		2B24D17018C6F03100584B38 /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13918C6F03100584B38 /* libexpat.a */; };
-		2B24D17118C6F03100584B38 /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13A18C6F03100584B38 /* libexpat.1.dylib */; };
-		2B24D17218C6F03100584B38 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13B18C6F03100584B38 /* libexslt.0.dylib */; };
-		2B24D17318C6F03100584B38 /* libexslt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13C18C6F03100584B38 /* libexslt.a */; };
-		2B24D17418C6F03100584B38 /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13D18C6F03100584B38 /* libexslt.0.dylib */; };
-		2B24D17518C6F03100584B38 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13E18C6F03100584B38 /* libfaac.0.dylib */; };
-		2B24D17618C6F03100584B38 /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D13F18C6F03100584B38 /* libfaac.a */; };
-		2B24D17718C6F03100584B38 /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24D14018C6F03100584B38 /* libfaac.0.dylib */; };
 		2B24D17918C6F23700584B38 /* Footballbkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17818C6F23700584B38 /* Footballbkg.png */; };
 		2B24D17C18C6F89900584B38 /* HighlightScript.command in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17A18C6F89900584B38 /* HighlightScript.command */; };
 		2B24D17D18C6F89900584B38 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17B18C6F89900584B38 /* home.png */; };
 		2B24D17F18C6FA9F00584B38 /* TranscodeClip.command in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */; };
 		2BB157AB18C822E7007B05AE /* StreamFile.command in Resources */ = {isa = PBXBuildFile; fileRef = 2BB157AA18C822E7007B05AE /* StreamFile.command */; };
+		B45CB1E518CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */; };
+		B45CB1E618CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */; };
+		B4A45C1F18C999D300BD94A9 /* PosterScript.command in Resources */ = {isa = PBXBuildFile; fileRef = B4A45C1E18C999D300BD94A9 /* PosterScript.command */; };
+		B4A45C2218C999F100BD94A9 /* eazesportzUploadHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A45C2118C999F100BD94A9 /* eazesportzUploadHighlight.m */; };
+		B4B8993918C8321A00830EED /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FA18C8321800830EED /* libasprintf.0.dylib */; };
+		B4B8993A18C8321A00830EED /* libasprintf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FB18C8321800830EED /* libasprintf.a */; };
+		B4B8993B18C8321A00830EED /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FC18C8321800830EED /* libasprintf.0.dylib */; };
+		B4B8993C18C8321A00830EED /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FD18C8321800830EED /* libass.5.dylib */; };
+		B4B8993D18C8321A00830EED /* libass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FE18C8321800830EED /* libass.a */; };
+		B4B8993E18C8321A00830EED /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FF18C8321800830EED /* libass.5.dylib */; };
+		B4B8993F18C8321A00830EED /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990018C8321800830EED /* libavcodec.55.39.101.dylib */; };
+		B4B8994018C8321A00830EED /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990118C8321800830EED /* libavcodec.55.39.101.dylib */; };
+		B4B8994118C8321A00830EED /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990218C8321800830EED /* libavcodec.a */; };
+		B4B8994218C8321A00830EED /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990318C8321800830EED /* libavcodec.55.39.101.dylib */; };
+		B4B8994318C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990418C8321800830EED /* libavdevice.55.5.100.dylib */; };
+		B4B8994418C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990518C8321900830EED /* libavdevice.55.5.100.dylib */; };
+		B4B8994518C8321A00830EED /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990618C8321900830EED /* libavdevice.a */; };
+		B4B8994618C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990718C8321900830EED /* libavdevice.55.5.100.dylib */; };
+		B4B8994718C8321A00830EED /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990818C8321900830EED /* libavfilter.3.90.100.dylib */; };
+		B4B8994818C8321A00830EED /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990918C8321900830EED /* libavfilter.3.90.100.dylib */; };
+		B4B8994918C8321A00830EED /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990A18C8321900830EED /* libavfilter.a */; };
+		B4B8994A18C8321A00830EED /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990B18C8321900830EED /* libavfilter.3.90.100.dylib */; };
+		B4B8994B18C8321A00830EED /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990C18C8321900830EED /* libavformat.55.19.104.dylib */; };
+		B4B8994C18C8321A00830EED /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990D18C8321900830EED /* libavformat.55.19.104.dylib */; };
+		B4B8994D18C8321A00830EED /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990E18C8321900830EED /* libavformat.a */; };
+		B4B8994E18C8321A00830EED /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990F18C8321900830EED /* libavformat.55.19.104.dylib */; };
+		B4B8994F18C8321A00830EED /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991018C8321900830EED /* libavresample.1.1.0.dylib */; };
+		B4B8995018C8321A00830EED /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991118C8321900830EED /* libavresample.1.1.0.dylib */; };
+		B4B8995118C8321A00830EED /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991218C8321900830EED /* libavresample.a */; };
+		B4B8995218C8321A00830EED /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991318C8321900830EED /* libavresample.1.1.0.dylib */; };
+		B4B8995318C8321A00830EED /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991418C8321900830EED /* libavutil.52.48.101.dylib */; };
+		B4B8995418C8321A00830EED /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991518C8321900830EED /* libavutil.52.48.101.dylib */; };
+		B4B8995518C8321A00830EED /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991618C8321900830EED /* libavutil.a */; };
+		B4B8995618C8321A00830EED /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991718C8321900830EED /* libavutil.52.48.101.dylib */; };
+		B4B8995718C8321A00830EED /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991818C8321900830EED /* libbluray.1.dylib */; };
+		B4B8995818C8321A00830EED /* libbluray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991918C8321900830EED /* libbluray.a */; };
+		B4B8995918C8321A00830EED /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991A18C8321900830EED /* libbluray.1.dylib */; };
+		B4B8995A18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991B18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B8995B18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991C18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B8995C18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991D18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B8995D18C8321A00830EED /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991E18C8321900830EED /* libbz2.a */; };
+		B4B8995E18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991F18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B8995F18C8321A00830EED /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992018C8321900830EED /* libcharset.1.dylib */; };
+		B4B8996018C8321A00830EED /* libcharset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992118C8321900830EED /* libcharset.a */; };
+		B4B8996118C8321A00830EED /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992218C8321900830EED /* libcharset.1.dylib */; };
+		B4B8996218C8321A00830EED /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992318C8321900830EED /* libcrypto.1.0.0.dylib */; };
+		B4B8996318C8321A00830EED /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992418C8321900830EED /* libcrypto.a */; };
+		B4B8996418C8321A00830EED /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992518C8321900830EED /* libcrypto.1.0.0.dylib */; };
+		B4B8996518C8321A00830EED /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992618C8321A00830EED /* libncurses.a */; };
+		B4B8996618C8321A00830EED /* libncurses.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992718C8321A00830EED /* libncurses.5.dylib */; };
+		B4B8996718C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992818C8321A00830EED /* libdjvulibre.21.dylib */; };
+		B4B8996818C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992918C8321A00830EED /* libdjvulibre.21.dylib */; };
+		B4B8996918C8321A00830EED /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992A18C8321A00830EED /* libedit.0.dylib */; };
+		B4B8996A18C8321A00830EED /* libedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992B18C8321A00830EED /* libedit.a */; };
+		B4B8996B18C8321A00830EED /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992C18C8321A00830EED /* libedit.0.dylib */; };
+		B4B8996C18C8321A00830EED /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992D18C8321A00830EED /* libenca.0.dylib */; };
+		B4B8996D18C8321A00830EED /* libenca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992E18C8321A00830EED /* libenca.a */; };
+		B4B8996E18C8321A00830EED /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992F18C8321A00830EED /* libenca.0.dylib */; };
+		B4B8996F18C8321A00830EED /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993018C8321A00830EED /* libexpat.1.dylib */; };
+		B4B8997018C8321A00830EED /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993118C8321A00830EED /* libexpat.a */; };
+		B4B8997118C8321A00830EED /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993218C8321A00830EED /* libexpat.1.dylib */; };
+		B4B8997218C8321A00830EED /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993318C8321A00830EED /* libexslt.0.dylib */; };
+		B4B8997318C8321A00830EED /* libexslt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993418C8321A00830EED /* libexslt.a */; };
+		B4B8997418C8321A00830EED /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993518C8321A00830EED /* libexslt.0.dylib */; };
+		B4B8997518C8321A00830EED /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993618C8321A00830EED /* libfaac.0.dylib */; };
+		B4B8997618C8321A00830EED /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993718C8321A00830EED /* libfaac.a */; };
+		B4B8997718C8321A00830EED /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993818C8321A00830EED /* libfaac.0.dylib */; };
+		B4B8997D18C8328D00830EED /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FC18C8321800830EED /* libasprintf.0.dylib */; };
+		B4B8997E18C8328D00830EED /* libasprintf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FB18C8321800830EED /* libasprintf.a */; };
+		B4B8997F18C8328D00830EED /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FC18C8321800830EED /* libasprintf.0.dylib */; };
+		B4B8998018C8328D00830EED /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FF18C8321800830EED /* libass.5.dylib */; };
+		B4B8998118C8328D00830EED /* libass.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FE18C8321800830EED /* libass.a */; };
+		B4B8998218C8328D00830EED /* libass.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FF18C8321800830EED /* libass.5.dylib */; };
+		B4B8998318C8328D00830EED /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990318C8321800830EED /* libavcodec.55.39.101.dylib */; };
+		B4B8998418C8328D00830EED /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990318C8321800830EED /* libavcodec.55.39.101.dylib */; };
+		B4B8998518C8328D00830EED /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990218C8321800830EED /* libavcodec.a */; };
+		B4B8998618C8328D00830EED /* libavcodec.55.39.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990318C8321800830EED /* libavcodec.55.39.101.dylib */; };
+		B4B8998718C8328D00830EED /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990718C8321900830EED /* libavdevice.55.5.100.dylib */; };
+		B4B8998818C8328D00830EED /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990718C8321900830EED /* libavdevice.55.5.100.dylib */; };
+		B4B8998918C8328D00830EED /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990618C8321900830EED /* libavdevice.a */; };
+		B4B8998A18C8328D00830EED /* libavdevice.55.5.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990718C8321900830EED /* libavdevice.55.5.100.dylib */; };
+		B4B8998B18C8328D00830EED /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990B18C8321900830EED /* libavfilter.3.90.100.dylib */; };
+		B4B8998C18C8328D00830EED /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990B18C8321900830EED /* libavfilter.3.90.100.dylib */; };
+		B4B8998D18C8328D00830EED /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990A18C8321900830EED /* libavfilter.a */; };
+		B4B8998E18C8328D00830EED /* libavfilter.3.90.100.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990B18C8321900830EED /* libavfilter.3.90.100.dylib */; };
+		B4B8998F18C8328D00830EED /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990F18C8321900830EED /* libavformat.55.19.104.dylib */; };
+		B4B8999018C8328D00830EED /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990F18C8321900830EED /* libavformat.55.19.104.dylib */; };
+		B4B8999118C8328D00830EED /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990E18C8321900830EED /* libavformat.a */; };
+		B4B8999218C8328D00830EED /* libavformat.55.19.104.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8990F18C8321900830EED /* libavformat.55.19.104.dylib */; };
+		B4B8999318C8328D00830EED /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991318C8321900830EED /* libavresample.1.1.0.dylib */; };
+		B4B8999418C8328D00830EED /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991318C8321900830EED /* libavresample.1.1.0.dylib */; };
+		B4B8999518C8328D00830EED /* libavresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991218C8321900830EED /* libavresample.a */; };
+		B4B8999618C8328D00830EED /* libavresample.1.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991318C8321900830EED /* libavresample.1.1.0.dylib */; };
+		B4B8999718C8328D00830EED /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991718C8321900830EED /* libavutil.52.48.101.dylib */; };
+		B4B8999818C8328D00830EED /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991718C8321900830EED /* libavutil.52.48.101.dylib */; };
+		B4B8999918C8328D00830EED /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991618C8321900830EED /* libavutil.a */; };
+		B4B8999A18C8328D00830EED /* libavutil.52.48.101.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991718C8321900830EED /* libavutil.52.48.101.dylib */; };
+		B4B8999B18C8328D00830EED /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991A18C8321900830EED /* libbluray.1.dylib */; };
+		B4B8999C18C8328D00830EED /* libbluray.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991918C8321900830EED /* libbluray.a */; };
+		B4B8999D18C8328D00830EED /* libbluray.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991A18C8321900830EED /* libbluray.1.dylib */; };
+		B4B8999E18C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991F18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B8999F18C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991F18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B899A018C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991F18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B899A118C8328D00830EED /* libbz2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991E18C8321900830EED /* libbz2.a */; };
+		B4B899A218C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8991F18C8321900830EED /* libbz2.1.0.6.dylib */; };
+		B4B899A318C8328D00830EED /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992218C8321900830EED /* libcharset.1.dylib */; };
+		B4B899A418C8328D00830EED /* libcharset.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992118C8321900830EED /* libcharset.a */; };
+		B4B899A518C8328D00830EED /* libcharset.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992218C8321900830EED /* libcharset.1.dylib */; };
+		B4B899A618C8328D00830EED /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992518C8321900830EED /* libcrypto.1.0.0.dylib */; };
+		B4B899A718C8328D00830EED /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992418C8321900830EED /* libcrypto.a */; };
+		B4B899A818C8328D00830EED /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992518C8321900830EED /* libcrypto.1.0.0.dylib */; };
+		B4B899A918C8328D00830EED /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992618C8321A00830EED /* libncurses.a */; };
+		B4B899AA18C8328D00830EED /* libncurses.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992718C8321A00830EED /* libncurses.5.dylib */; };
+		B4B899AB18C8328D00830EED /* libdjvulibre.21.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992918C8321A00830EED /* libdjvulibre.21.dylib */; };
+		B4B899AC18C8328D00830EED /* libdjvulibre.21.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992918C8321A00830EED /* libdjvulibre.21.dylib */; };
+		B4B899AD18C8328D00830EED /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992C18C8321A00830EED /* libedit.0.dylib */; };
+		B4B899AE18C8328D00830EED /* libedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992B18C8321A00830EED /* libedit.a */; };
+		B4B899AF18C8328D00830EED /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992C18C8321A00830EED /* libedit.0.dylib */; };
+		B4B899B018C8328D00830EED /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992F18C8321A00830EED /* libenca.0.dylib */; };
+		B4B899B118C8328D00830EED /* libenca.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992E18C8321A00830EED /* libenca.a */; };
+		B4B899B218C8328D00830EED /* libenca.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992F18C8321A00830EED /* libenca.0.dylib */; };
+		B4B899B318C8328D00830EED /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993218C8321A00830EED /* libexpat.1.dylib */; };
+		B4B899B418C8328D00830EED /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993118C8321A00830EED /* libexpat.a */; };
+		B4B899B518C8328D00830EED /* libexpat.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993218C8321A00830EED /* libexpat.1.dylib */; };
+		B4B899B618C8328D00830EED /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993518C8321A00830EED /* libexslt.0.dylib */; };
+		B4B899B718C8328D00830EED /* libexslt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993418C8321A00830EED /* libexslt.a */; };
+		B4B899B818C8328D00830EED /* libexslt.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993518C8321A00830EED /* libexslt.0.dylib */; };
+		B4B899B918C8328D00830EED /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993818C8321A00830EED /* libfaac.0.dylib */; };
+		B4B899BA18C8328D00830EED /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993718C8321A00830EED /* libfaac.a */; };
+		B4B899BB18C8328D00830EED /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993818C8321A00830EED /* libfaac.0.dylib */; };
+		B4B899BD18C837D700830EED /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B899BC18C837D700830EED /* AWSiOSSDK.framework */; };
+		B4CC63DC18C83F6900B5BF0C /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -364,12 +378,6 @@
 		2B0BECBA18C817CC0040DB41 /* EazesportzBroadcastTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EazesportzBroadcastTests-Info.plist"; sourceTree = "<group>"; };
 		2B0BECBC18C817CC0040DB41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B0BECBE18C817CC0040DB41 /* EazesportzBroadcastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EazesportzBroadcastTests.m; sourceTree = "<group>"; };
-		2B0BED0018C818360040DB41 /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
-		2B0BED0118C818360040DB41 /* libasprintf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libasprintf.a; path = ../../../../opt/local/lib/libasprintf.a; sourceTree = "<group>"; };
-		2B0BED0218C818360040DB41 /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
-		2B0BED0318C818360040DB41 /* libass.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libass.5.dylib; path = ../../../../opt/local/lib/libass.5.dylib; sourceTree = "<group>"; };
-		2B0BED0418C818360040DB41 /* libass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libass.a; path = ../../../../opt/local/lib/libass.a; sourceTree = "<group>"; };
-		2B0BED0518C818360040DB41 /* libass.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libass.5.dylib; path = ../../../../opt/local/lib/libass.5.dylib; sourceTree = "<group>"; };
 		2B0BED1118C818BB0040DB41 /* eazesportzAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzAppDelegate.h; sourceTree = "<group>"; };
 		2B0BED1218C818BB0040DB41 /* eazesportzAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzAppDelegate.m; sourceTree = "<group>"; };
 		2B0BED2918C818E80040DB41 /* eazesportzEditEventWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzEditEventWindowController.h; sourceTree = "<group>"; };
@@ -501,71 +509,87 @@
 		2B24D0FA18C6ED5600584B38 /* eazesportzMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzMainViewController.m; sourceTree = "<group>"; };
 		2B24D0FB18C6ED5700584B38 /* eazesportzMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzMainViewController.xib; sourceTree = "<group>"; };
 		2B24D0FE18C6EE4900584B38 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
-		2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSiOSSDK.framework; path = "../aws-sdk-ios-master/AWSiOSSDK.framework"; sourceTree = "<group>"; };
 		2B24D10218C6EF8300584B38 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		2B24D10418C6EF8D00584B38 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2B24D10618C6EFB100584B38 /* DVDPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DVDPlayback.framework; path = System/Library/Frameworks/DVDPlayback.framework; sourceTree = SDKROOT; };
 		2B24D10818C6EFF800584B38 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		2B24D10A18C6F02F00584B38 /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
-		2B24D10B18C6F02F00584B38 /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
-		2B24D10C18C6F02F00584B38 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ../../../../opt/local/lib/libavcodec.a; sourceTree = "<group>"; };
-		2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
-		2B24D10E18C6F02F00584B38 /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
-		2B24D10F18C6F02F00584B38 /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
-		2B24D11018C6F02F00584B38 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ../../../../opt/local/lib/libavdevice.a; sourceTree = "<group>"; };
-		2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
-		2B24D11218C6F02F00584B38 /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
-		2B24D11318C6F02F00584B38 /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
-		2B24D11418C6F02F00584B38 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ../../../../opt/local/lib/libavfilter.a; sourceTree = "<group>"; };
-		2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
-		2B24D11618C6F02F00584B38 /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
-		2B24D11718C6F02F00584B38 /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
-		2B24D11818C6F02F00584B38 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ../../../../opt/local/lib/libavformat.a; sourceTree = "<group>"; };
-		2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
-		2B24D11A18C6F02F00584B38 /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
-		2B24D11B18C6F02F00584B38 /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
-		2B24D11C18C6F02F00584B38 /* libavresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavresample.a; path = ../../../../opt/local/lib/libavresample.a; sourceTree = "<group>"; };
-		2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
-		2B24D11E18C6F02F00584B38 /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
-		2B24D11F18C6F02F00584B38 /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
-		2B24D12018C6F03000584B38 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ../../../../opt/local/lib/libavutil.a; sourceTree = "<group>"; };
-		2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
-		2B24D12218C6F03000584B38 /* libbluray.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbluray.1.dylib; path = ../../../../opt/local/lib/libbluray.1.dylib; sourceTree = "<group>"; };
-		2B24D12318C6F03000584B38 /* libbluray.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbluray.a; path = ../../../../opt/local/lib/libbluray.a; sourceTree = "<group>"; };
-		2B24D12418C6F03000584B38 /* libbluray.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbluray.1.dylib; path = ../../../../opt/local/lib/libbluray.1.dylib; sourceTree = "<group>"; };
-		2B24D12518C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
-		2B24D12618C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
-		2B24D12718C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
-		2B24D12818C6F03000584B38 /* libbz2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbz2.a; path = ../../../../opt/local/lib/libbz2.a; sourceTree = "<group>"; };
-		2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
-		2B24D12A18C6F03000584B38 /* libcharset.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcharset.1.dylib; path = ../../../../opt/local/lib/libcharset.1.dylib; sourceTree = "<group>"; };
-		2B24D12B18C6F03000584B38 /* libcharset.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcharset.a; path = ../../../../opt/local/lib/libcharset.a; sourceTree = "<group>"; };
-		2B24D12C18C6F03000584B38 /* libcharset.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcharset.1.dylib; path = ../../../../opt/local/lib/libcharset.1.dylib; sourceTree = "<group>"; };
-		2B24D12D18C6F03000584B38 /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.0.0.dylib; path = ../../../../opt/local/lib/libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
-		2B24D12E18C6F03000584B38 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../opt/local/lib/libcrypto.a; sourceTree = "<group>"; };
-		2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.0.0.dylib; path = ../../../../opt/local/lib/libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
-		2B24D13018C6F03000584B38 /* libncurses.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libncurses.a; path = ../../../../opt/local/lib/libncurses.a; sourceTree = "<group>"; };
-		2B24D13118C6F03000584B38 /* libncurses.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.5.dylib; path = ../../../../opt/local/lib/libncurses.5.dylib; sourceTree = "<group>"; };
-		2B24D13218C6F03000584B38 /* libedit.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libedit.0.dylib; path = ../../../../opt/local/lib/libedit.0.dylib; sourceTree = "<group>"; };
-		2B24D13318C6F03000584B38 /* libedit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libedit.a; path = ../../../../opt/local/lib/libedit.a; sourceTree = "<group>"; };
-		2B24D13418C6F03000584B38 /* libedit.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libedit.0.dylib; path = ../../../../opt/local/lib/libedit.0.dylib; sourceTree = "<group>"; };
-		2B24D13518C6F03100584B38 /* libenca.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libenca.0.dylib; path = ../../../../opt/local/lib/libenca.0.dylib; sourceTree = "<group>"; };
-		2B24D13618C6F03100584B38 /* libenca.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libenca.a; path = ../../../../opt/local/lib/libenca.a; sourceTree = "<group>"; };
-		2B24D13718C6F03100584B38 /* libenca.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libenca.0.dylib; path = ../../../../opt/local/lib/libenca.0.dylib; sourceTree = "<group>"; };
-		2B24D13818C6F03100584B38 /* libexpat.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.1.dylib; path = ../../../../opt/local/lib/libexpat.1.dylib; sourceTree = "<group>"; };
-		2B24D13918C6F03100584B38 /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexpat.a; path = ../../../../opt/local/lib/libexpat.a; sourceTree = "<group>"; };
-		2B24D13A18C6F03100584B38 /* libexpat.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.1.dylib; path = ../../../../opt/local/lib/libexpat.1.dylib; sourceTree = "<group>"; };
-		2B24D13B18C6F03100584B38 /* libexslt.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexslt.0.dylib; path = ../../../../opt/local/lib/libexslt.0.dylib; sourceTree = "<group>"; };
-		2B24D13C18C6F03100584B38 /* libexslt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexslt.a; path = ../../../../opt/local/lib/libexslt.a; sourceTree = "<group>"; };
-		2B24D13D18C6F03100584B38 /* libexslt.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexslt.0.dylib; path = ../../../../opt/local/lib/libexslt.0.dylib; sourceTree = "<group>"; };
-		2B24D13E18C6F03100584B38 /* libfaac.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfaac.0.dylib; path = ../../../../opt/local/lib/libfaac.0.dylib; sourceTree = "<group>"; };
-		2B24D13F18C6F03100584B38 /* libfaac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfaac.a; path = ../../../../opt/local/lib/libfaac.a; sourceTree = "<group>"; };
-		2B24D14018C6F03100584B38 /* libfaac.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfaac.0.dylib; path = ../../../../opt/local/lib/libfaac.0.dylib; sourceTree = "<group>"; };
 		2B24D17818C6F23700584B38 /* Footballbkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Footballbkg.png; path = "../../Eazesportz Broadcast Console/Eazesportz Broadcast Console/Footballbkg.png"; sourceTree = "<group>"; };
 		2B24D17A18C6F89900584B38 /* HighlightScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = HighlightScript.command; sourceTree = "<group>"; };
 		2B24D17B18C6F89900584B38 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = TranscodeClip.command; sourceTree = "<group>"; };
 		2BB157AA18C822E7007B05AE /* StreamFile.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = StreamFile.command; sourceTree = "<group>"; };
+		B45CB1E218CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzSelectLiveHighlightsViewController.h; sourceTree = "<group>"; };
+		B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzSelectLiveHighlightsViewController.m; sourceTree = "<group>"; };
+		B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzSelectLiveHighlightsViewController.xib; sourceTree = "<group>"; };
+		B4A45C1E18C999D300BD94A9 /* PosterScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PosterScript.command; sourceTree = "<group>"; };
+		B4A45C2018C999F100BD94A9 /* eazesportzUploadHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzUploadHighlight.h; sourceTree = "<group>"; };
+		B4A45C2118C999F100BD94A9 /* eazesportzUploadHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzUploadHighlight.m; sourceTree = "<group>"; };
+		B4B898FA18C8321800830EED /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
+		B4B898FB18C8321800830EED /* libasprintf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libasprintf.a; path = ../../../../../opt/local/lib/libasprintf.a; sourceTree = "<group>"; };
+		B4B898FC18C8321800830EED /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
+		B4B898FD18C8321800830EED /* libass.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libass.5.dylib; path = ../../../../../opt/local/lib/libass.5.dylib; sourceTree = "<group>"; };
+		B4B898FE18C8321800830EED /* libass.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libass.a; path = ../../../../../opt/local/lib/libass.a; sourceTree = "<group>"; };
+		B4B898FF18C8321800830EED /* libass.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libass.5.dylib; path = ../../../../../opt/local/lib/libass.5.dylib; sourceTree = "<group>"; };
+		B4B8990018C8321800830EED /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
+		B4B8990118C8321800830EED /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
+		B4B8990218C8321800830EED /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ../../../../../opt/local/lib/libavcodec.a; sourceTree = "<group>"; };
+		B4B8990318C8321800830EED /* libavcodec.55.39.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavcodec.55.39.101.dylib; path = ../../../../../opt/local/lib/libavcodec.55.39.101.dylib; sourceTree = "<group>"; };
+		B4B8990418C8321800830EED /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
+		B4B8990518C8321900830EED /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
+		B4B8990618C8321900830EED /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = ../../../../../opt/local/lib/libavdevice.a; sourceTree = "<group>"; };
+		B4B8990718C8321900830EED /* libavdevice.55.5.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavdevice.55.5.100.dylib; path = ../../../../../opt/local/lib/libavdevice.55.5.100.dylib; sourceTree = "<group>"; };
+		B4B8990818C8321900830EED /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
+		B4B8990918C8321900830EED /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
+		B4B8990A18C8321900830EED /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = ../../../../../opt/local/lib/libavfilter.a; sourceTree = "<group>"; };
+		B4B8990B18C8321900830EED /* libavfilter.3.90.100.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavfilter.3.90.100.dylib; path = ../../../../../opt/local/lib/libavfilter.3.90.100.dylib; sourceTree = "<group>"; };
+		B4B8990C18C8321900830EED /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
+		B4B8990D18C8321900830EED /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
+		B4B8990E18C8321900830EED /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ../../../../../opt/local/lib/libavformat.a; sourceTree = "<group>"; };
+		B4B8990F18C8321900830EED /* libavformat.55.19.104.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavformat.55.19.104.dylib; path = ../../../../../opt/local/lib/libavformat.55.19.104.dylib; sourceTree = "<group>"; };
+		B4B8991018C8321900830EED /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
+		B4B8991118C8321900830EED /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
+		B4B8991218C8321900830EED /* libavresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavresample.a; path = ../../../../../opt/local/lib/libavresample.a; sourceTree = "<group>"; };
+		B4B8991318C8321900830EED /* libavresample.1.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavresample.1.1.0.dylib; path = ../../../../../opt/local/lib/libavresample.1.1.0.dylib; sourceTree = "<group>"; };
+		B4B8991418C8321900830EED /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
+		B4B8991518C8321900830EED /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
+		B4B8991618C8321900830EED /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ../../../../../opt/local/lib/libavutil.a; sourceTree = "<group>"; };
+		B4B8991718C8321900830EED /* libavutil.52.48.101.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libavutil.52.48.101.dylib; path = ../../../../../opt/local/lib/libavutil.52.48.101.dylib; sourceTree = "<group>"; };
+		B4B8991818C8321900830EED /* libbluray.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbluray.1.dylib; path = ../../../../../opt/local/lib/libbluray.1.dylib; sourceTree = "<group>"; };
+		B4B8991918C8321900830EED /* libbluray.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbluray.a; path = ../../../../../opt/local/lib/libbluray.a; sourceTree = "<group>"; };
+		B4B8991A18C8321900830EED /* libbluray.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbluray.1.dylib; path = ../../../../../opt/local/lib/libbluray.1.dylib; sourceTree = "<group>"; };
+		B4B8991B18C8321900830EED /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		B4B8991C18C8321900830EED /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		B4B8991D18C8321900830EED /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		B4B8991E18C8321900830EED /* libbz2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbz2.a; path = ../../../../../opt/local/lib/libbz2.a; sourceTree = "<group>"; };
+		B4B8991F18C8321900830EED /* libbz2.1.0.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.6.dylib; path = ../../../../../opt/local/lib/libbz2.1.0.6.dylib; sourceTree = "<group>"; };
+		B4B8992018C8321900830EED /* libcharset.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcharset.1.dylib; path = ../../../../../opt/local/lib/libcharset.1.dylib; sourceTree = "<group>"; };
+		B4B8992118C8321900830EED /* libcharset.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcharset.a; path = ../../../../../opt/local/lib/libcharset.a; sourceTree = "<group>"; };
+		B4B8992218C8321900830EED /* libcharset.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcharset.1.dylib; path = ../../../../../opt/local/lib/libcharset.1.dylib; sourceTree = "<group>"; };
+		B4B8992318C8321900830EED /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.0.0.dylib; path = ../../../../../opt/local/lib/libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
+		B4B8992418C8321900830EED /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../../opt/local/lib/libcrypto.a; sourceTree = "<group>"; };
+		B4B8992518C8321900830EED /* libcrypto.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.1.0.0.dylib; path = ../../../../../opt/local/lib/libcrypto.1.0.0.dylib; sourceTree = "<group>"; };
+		B4B8992618C8321A00830EED /* libncurses.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libncurses.a; path = ../../../../../opt/local/lib/libncurses.a; sourceTree = "<group>"; };
+		B4B8992718C8321A00830EED /* libncurses.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.5.dylib; path = ../../../../../opt/local/lib/libncurses.5.dylib; sourceTree = "<group>"; };
+		B4B8992818C8321A00830EED /* libdjvulibre.21.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdjvulibre.21.dylib; path = ../../../../../opt/local/lib/libdjvulibre.21.dylib; sourceTree = "<group>"; };
+		B4B8992918C8321A00830EED /* libdjvulibre.21.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libdjvulibre.21.dylib; path = ../../../../../opt/local/lib/libdjvulibre.21.dylib; sourceTree = "<group>"; };
+		B4B8992A18C8321A00830EED /* libedit.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libedit.0.dylib; path = ../../../../../opt/local/lib/libedit.0.dylib; sourceTree = "<group>"; };
+		B4B8992B18C8321A00830EED /* libedit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libedit.a; path = ../../../../../opt/local/lib/libedit.a; sourceTree = "<group>"; };
+		B4B8992C18C8321A00830EED /* libedit.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libedit.0.dylib; path = ../../../../../opt/local/lib/libedit.0.dylib; sourceTree = "<group>"; };
+		B4B8992D18C8321A00830EED /* libenca.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libenca.0.dylib; path = ../../../../../opt/local/lib/libenca.0.dylib; sourceTree = "<group>"; };
+		B4B8992E18C8321A00830EED /* libenca.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libenca.a; path = ../../../../../opt/local/lib/libenca.a; sourceTree = "<group>"; };
+		B4B8992F18C8321A00830EED /* libenca.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libenca.0.dylib; path = ../../../../../opt/local/lib/libenca.0.dylib; sourceTree = "<group>"; };
+		B4B8993018C8321A00830EED /* libexpat.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.1.dylib; path = ../../../../../opt/local/lib/libexpat.1.dylib; sourceTree = "<group>"; };
+		B4B8993118C8321A00830EED /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexpat.a; path = ../../../../../opt/local/lib/libexpat.a; sourceTree = "<group>"; };
+		B4B8993218C8321A00830EED /* libexpat.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexpat.1.dylib; path = ../../../../../opt/local/lib/libexpat.1.dylib; sourceTree = "<group>"; };
+		B4B8993318C8321A00830EED /* libexslt.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexslt.0.dylib; path = ../../../../../opt/local/lib/libexslt.0.dylib; sourceTree = "<group>"; };
+		B4B8993418C8321A00830EED /* libexslt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexslt.a; path = ../../../../../opt/local/lib/libexslt.a; sourceTree = "<group>"; };
+		B4B8993518C8321A00830EED /* libexslt.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libexslt.0.dylib; path = ../../../../../opt/local/lib/libexslt.0.dylib; sourceTree = "<group>"; };
+		B4B8993618C8321A00830EED /* libfaac.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfaac.0.dylib; path = ../../../../../opt/local/lib/libfaac.0.dylib; sourceTree = "<group>"; };
+		B4B8993718C8321A00830EED /* libfaac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfaac.a; path = ../../../../../opt/local/lib/libfaac.a; sourceTree = "<group>"; };
+		B4B8993818C8321A00830EED /* libfaac.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfaac.0.dylib; path = ../../../../../opt/local/lib/libfaac.0.dylib; sourceTree = "<group>"; };
+		B4B8997A18C8326100830EED /* EazesportzHighlights.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = EazesportzHighlights.xcodeproj; sourceTree = "<group>"; };
+		B4B899BC18C837D700830EED /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSiOSSDK.framework; sourceTree = "<group>"; };
+		B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSiOSSDK.framework; path = "../aws-sdk-ios-master/AWSiOSSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,68 +597,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B0BED0C18C818440040DB41 /* AWSiOSSDK.framework in Frameworks */,
-				2B0BED0618C818360040DB41 /* libasprintf.0.dylib in Frameworks */,
-				2B0BED0718C818360040DB41 /* libasprintf.a in Frameworks */,
-				2B0BED0818C818360040DB41 /* libasprintf.0.dylib in Frameworks */,
-				2B0BED0918C818360040DB41 /* libass.5.dylib in Frameworks */,
-				2B0BED0A18C818360040DB41 /* libass.a in Frameworks */,
-				2B0BED0B18C818360040DB41 /* libass.5.dylib in Frameworks */,
-				2B0BECC918C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */,
-				2B0BECCA18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */,
-				2B0BECCB18C818350040DB41 /* libavcodec.a in Frameworks */,
-				2B0BECCC18C818350040DB41 /* libavcodec.55.39.101.dylib in Frameworks */,
-				2B0BECCD18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */,
-				2B0BECCE18C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */,
-				2B0BECCF18C818350040DB41 /* libavdevice.a in Frameworks */,
-				2B0BECD018C818350040DB41 /* libavdevice.55.5.100.dylib in Frameworks */,
-				2B0BECD118C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */,
-				2B0BECD218C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */,
-				2B0BECD318C818350040DB41 /* libavfilter.a in Frameworks */,
-				2B0BECD418C818350040DB41 /* libavfilter.3.90.100.dylib in Frameworks */,
-				2B0BECD518C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */,
-				2B0BECD618C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */,
-				2B0BECD718C818350040DB41 /* libavformat.a in Frameworks */,
-				2B0BECD818C818350040DB41 /* libavformat.55.19.104.dylib in Frameworks */,
-				2B0BECD918C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */,
-				2B0BECDA18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */,
-				2B0BECDB18C818350040DB41 /* libavresample.a in Frameworks */,
-				2B0BECDC18C818350040DB41 /* libavresample.1.1.0.dylib in Frameworks */,
-				2B0BECDD18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */,
-				2B0BECDE18C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */,
-				2B0BECDF18C818350040DB41 /* libavutil.a in Frameworks */,
-				2B0BECE018C818350040DB41 /* libavutil.52.48.101.dylib in Frameworks */,
-				2B0BECE118C818350040DB41 /* libbluray.1.dylib in Frameworks */,
-				2B0BECE218C818350040DB41 /* libbluray.a in Frameworks */,
-				2B0BECE318C818350040DB41 /* libbluray.1.dylib in Frameworks */,
-				2B0BECE418C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B0BECE518C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B0BECE618C818350040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B0BECE718C818360040DB41 /* libbz2.a in Frameworks */,
-				2B0BECE818C818360040DB41 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B0BECE918C818360040DB41 /* libcharset.1.dylib in Frameworks */,
-				2B0BECEA18C818360040DB41 /* libcharset.a in Frameworks */,
-				2B0BECEB18C818360040DB41 /* libcharset.1.dylib in Frameworks */,
-				2B0BECEC18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */,
-				2B0BECED18C818360040DB41 /* libcrypto.a in Frameworks */,
-				2B0BECEE18C818360040DB41 /* libcrypto.1.0.0.dylib in Frameworks */,
-				2B0BECEF18C818360040DB41 /* libncurses.a in Frameworks */,
-				2B0BECF018C818360040DB41 /* libncurses.5.dylib in Frameworks */,
-				2B0BECF118C818360040DB41 /* libedit.0.dylib in Frameworks */,
-				2B0BECF218C818360040DB41 /* libedit.a in Frameworks */,
-				2B0BECF318C818360040DB41 /* libedit.0.dylib in Frameworks */,
-				2B0BECF418C818360040DB41 /* libenca.0.dylib in Frameworks */,
-				2B0BECF518C818360040DB41 /* libenca.a in Frameworks */,
-				2B0BECF618C818360040DB41 /* libenca.0.dylib in Frameworks */,
-				2B0BECF718C818360040DB41 /* libexpat.1.dylib in Frameworks */,
-				2B0BECF818C818360040DB41 /* libexpat.a in Frameworks */,
-				2B0BECF918C818360040DB41 /* libexpat.1.dylib in Frameworks */,
-				2B0BECFA18C818360040DB41 /* libexslt.0.dylib in Frameworks */,
-				2B0BECFB18C818360040DB41 /* libexslt.a in Frameworks */,
-				2B0BECFC18C818360040DB41 /* libexslt.0.dylib in Frameworks */,
-				2B0BECFD18C818360040DB41 /* libfaac.0.dylib in Frameworks */,
-				2B0BECFE18C818360040DB41 /* libfaac.a in Frameworks */,
-				2B0BECFF18C818360040DB41 /* libfaac.0.dylib in Frameworks */,
+				B4CC63DC18C83F6900B5BF0C /* AWSiOSSDK.framework in Frameworks */,
+				B4B8997D18C8328D00830EED /* libasprintf.0.dylib in Frameworks */,
+				B4B8997E18C8328D00830EED /* libasprintf.a in Frameworks */,
+				B4B8997F18C8328D00830EED /* libasprintf.0.dylib in Frameworks */,
+				B4B8998018C8328D00830EED /* libass.5.dylib in Frameworks */,
+				B4B8998118C8328D00830EED /* libass.a in Frameworks */,
+				B4B8998218C8328D00830EED /* libass.5.dylib in Frameworks */,
+				B4B8998318C8328D00830EED /* libavcodec.55.39.101.dylib in Frameworks */,
+				B4B8998418C8328D00830EED /* libavcodec.55.39.101.dylib in Frameworks */,
+				B4B8998518C8328D00830EED /* libavcodec.a in Frameworks */,
+				B4B8998618C8328D00830EED /* libavcodec.55.39.101.dylib in Frameworks */,
+				B4B8998718C8328D00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
+				B4B8998818C8328D00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
+				B4B8998918C8328D00830EED /* libavdevice.a in Frameworks */,
+				B4B8998A18C8328D00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
+				B4B8998B18C8328D00830EED /* libavfilter.3.90.100.dylib in Frameworks */,
+				B4B8998C18C8328D00830EED /* libavfilter.3.90.100.dylib in Frameworks */,
+				B4B8998D18C8328D00830EED /* libavfilter.a in Frameworks */,
+				B4B8998E18C8328D00830EED /* libavfilter.3.90.100.dylib in Frameworks */,
+				B4B8998F18C8328D00830EED /* libavformat.55.19.104.dylib in Frameworks */,
+				B4B8999018C8328D00830EED /* libavformat.55.19.104.dylib in Frameworks */,
+				B4B8999118C8328D00830EED /* libavformat.a in Frameworks */,
+				B4B8999218C8328D00830EED /* libavformat.55.19.104.dylib in Frameworks */,
+				B4B8999318C8328D00830EED /* libavresample.1.1.0.dylib in Frameworks */,
+				B4B8999418C8328D00830EED /* libavresample.1.1.0.dylib in Frameworks */,
+				B4B8999518C8328D00830EED /* libavresample.a in Frameworks */,
+				B4B8999618C8328D00830EED /* libavresample.1.1.0.dylib in Frameworks */,
+				B4B8999718C8328D00830EED /* libavutil.52.48.101.dylib in Frameworks */,
+				B4B8999818C8328D00830EED /* libavutil.52.48.101.dylib in Frameworks */,
+				B4B8999918C8328D00830EED /* libavutil.a in Frameworks */,
+				B4B8999A18C8328D00830EED /* libavutil.52.48.101.dylib in Frameworks */,
+				B4B8999B18C8328D00830EED /* libbluray.1.dylib in Frameworks */,
+				B4B8999C18C8328D00830EED /* libbluray.a in Frameworks */,
+				B4B8999D18C8328D00830EED /* libbluray.1.dylib in Frameworks */,
+				B4B8999E18C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B8999F18C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B899A018C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B899A118C8328D00830EED /* libbz2.a in Frameworks */,
+				B4B899A218C8328D00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B899A318C8328D00830EED /* libcharset.1.dylib in Frameworks */,
+				B4B899A418C8328D00830EED /* libcharset.a in Frameworks */,
+				B4B899A518C8328D00830EED /* libcharset.1.dylib in Frameworks */,
+				B4B899A618C8328D00830EED /* libcrypto.1.0.0.dylib in Frameworks */,
+				B4B899A718C8328D00830EED /* libcrypto.a in Frameworks */,
+				B4B899A818C8328D00830EED /* libcrypto.1.0.0.dylib in Frameworks */,
+				B4B899A918C8328D00830EED /* libncurses.a in Frameworks */,
+				B4B899AA18C8328D00830EED /* libncurses.5.dylib in Frameworks */,
+				B4B899AB18C8328D00830EED /* libdjvulibre.21.dylib in Frameworks */,
+				B4B899AC18C8328D00830EED /* libdjvulibre.21.dylib in Frameworks */,
+				B4B899AD18C8328D00830EED /* libedit.0.dylib in Frameworks */,
+				B4B899AE18C8328D00830EED /* libedit.a in Frameworks */,
+				B4B899AF18C8328D00830EED /* libedit.0.dylib in Frameworks */,
+				B4B899B018C8328D00830EED /* libenca.0.dylib in Frameworks */,
+				B4B899B118C8328D00830EED /* libenca.a in Frameworks */,
+				B4B899B218C8328D00830EED /* libenca.0.dylib in Frameworks */,
+				B4B899B318C8328D00830EED /* libexpat.1.dylib in Frameworks */,
+				B4B899B418C8328D00830EED /* libexpat.a in Frameworks */,
+				B4B899B518C8328D00830EED /* libexpat.1.dylib in Frameworks */,
+				B4B899B618C8328D00830EED /* libexslt.0.dylib in Frameworks */,
+				B4B899B718C8328D00830EED /* libexslt.a in Frameworks */,
+				B4B899B818C8328D00830EED /* libexslt.0.dylib in Frameworks */,
+				B4B899B918C8328D00830EED /* libfaac.0.dylib in Frameworks */,
+				B4B899BA18C8328D00830EED /* libfaac.a in Frameworks */,
+				B4B899BB18C8328D00830EED /* libfaac.0.dylib in Frameworks */,
 				2B0BECC818C818140040DB41 /* CoreMedia.framework in Frameworks */,
 				2B0BECC618C817FE0040DB41 /* AVFoundation.framework in Frameworks */,
 				2B0BECC718C817FE0040DB41 /* AVKit.framework in Frameworks */,
@@ -655,66 +681,74 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B24D14118C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */,
-				2B24D14218C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */,
-				2B24D14318C6F03100584B38 /* libavcodec.a in Frameworks */,
-				2B24D14418C6F03100584B38 /* libavcodec.55.39.101.dylib in Frameworks */,
-				2B24D14518C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */,
-				2B24D14618C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */,
-				2B24D14718C6F03100584B38 /* libavdevice.a in Frameworks */,
-				2B24D14818C6F03100584B38 /* libavdevice.55.5.100.dylib in Frameworks */,
-				2B24D14918C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */,
-				2B24D14A18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */,
-				2B24D14B18C6F03100584B38 /* libavfilter.a in Frameworks */,
-				2B24D14C18C6F03100584B38 /* libavfilter.3.90.100.dylib in Frameworks */,
-				2B24D14D18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */,
-				2B24D14E18C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */,
-				2B24D14F18C6F03100584B38 /* libavformat.a in Frameworks */,
-				2B24D15018C6F03100584B38 /* libavformat.55.19.104.dylib in Frameworks */,
-				2B24D15118C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */,
-				2B24D15218C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */,
-				2B24D15318C6F03100584B38 /* libavresample.a in Frameworks */,
-				2B24D15418C6F03100584B38 /* libavresample.1.1.0.dylib in Frameworks */,
-				2B24D15518C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */,
-				2B24D15618C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */,
-				2B24D15718C6F03100584B38 /* libavutil.a in Frameworks */,
-				2B24D15818C6F03100584B38 /* libavutil.52.48.101.dylib in Frameworks */,
-				2B24D15918C6F03100584B38 /* libbluray.1.dylib in Frameworks */,
-				2B24D15A18C6F03100584B38 /* libbluray.a in Frameworks */,
-				2B24D15B18C6F03100584B38 /* libbluray.1.dylib in Frameworks */,
-				2B24D15C18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B24D15D18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B24D15E18C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B24D15F18C6F03100584B38 /* libbz2.a in Frameworks */,
-				2B24D16018C6F03100584B38 /* libbz2.1.0.6.dylib in Frameworks */,
-				2B24D16118C6F03100584B38 /* libcharset.1.dylib in Frameworks */,
-				2B24D16218C6F03100584B38 /* libcharset.a in Frameworks */,
-				2B24D16318C6F03100584B38 /* libcharset.1.dylib in Frameworks */,
-				2B24D16418C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */,
-				2B24D16518C6F03100584B38 /* libcrypto.a in Frameworks */,
-				2B24D16618C6F03100584B38 /* libcrypto.1.0.0.dylib in Frameworks */,
-				2B24D16718C6F03100584B38 /* libncurses.a in Frameworks */,
-				2B24D16818C6F03100584B38 /* libncurses.5.dylib in Frameworks */,
-				2B24D16918C6F03100584B38 /* libedit.0.dylib in Frameworks */,
-				2B24D16A18C6F03100584B38 /* libedit.a in Frameworks */,
-				2B24D16B18C6F03100584B38 /* libedit.0.dylib in Frameworks */,
-				2B24D16C18C6F03100584B38 /* libenca.0.dylib in Frameworks */,
-				2B24D16D18C6F03100584B38 /* libenca.a in Frameworks */,
-				2B24D16E18C6F03100584B38 /* libenca.0.dylib in Frameworks */,
-				2B24D16F18C6F03100584B38 /* libexpat.1.dylib in Frameworks */,
-				2B24D17018C6F03100584B38 /* libexpat.a in Frameworks */,
-				2B24D17118C6F03100584B38 /* libexpat.1.dylib in Frameworks */,
-				2B24D17218C6F03100584B38 /* libexslt.0.dylib in Frameworks */,
-				2B24D17318C6F03100584B38 /* libexslt.a in Frameworks */,
-				2B24D17418C6F03100584B38 /* libexslt.0.dylib in Frameworks */,
-				2B24D17518C6F03100584B38 /* libfaac.0.dylib in Frameworks */,
-				2B24D17618C6F03100584B38 /* libfaac.a in Frameworks */,
-				2B24D17718C6F03100584B38 /* libfaac.0.dylib in Frameworks */,
+				B4B8993918C8321A00830EED /* libasprintf.0.dylib in Frameworks */,
+				B4B8993A18C8321A00830EED /* libasprintf.a in Frameworks */,
+				B4B8993B18C8321A00830EED /* libasprintf.0.dylib in Frameworks */,
+				B4B8993C18C8321A00830EED /* libass.5.dylib in Frameworks */,
+				B4B8993D18C8321A00830EED /* libass.a in Frameworks */,
+				B4B8993E18C8321A00830EED /* libass.5.dylib in Frameworks */,
+				B4B8993F18C8321A00830EED /* libavcodec.55.39.101.dylib in Frameworks */,
+				B4B8994018C8321A00830EED /* libavcodec.55.39.101.dylib in Frameworks */,
+				B4B8994118C8321A00830EED /* libavcodec.a in Frameworks */,
+				B4B8994218C8321A00830EED /* libavcodec.55.39.101.dylib in Frameworks */,
+				B4B8994318C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
+				B4B8994418C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
+				B4B8994518C8321A00830EED /* libavdevice.a in Frameworks */,
+				B4B8994618C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
+				B4B8994718C8321A00830EED /* libavfilter.3.90.100.dylib in Frameworks */,
+				B4B8994818C8321A00830EED /* libavfilter.3.90.100.dylib in Frameworks */,
+				B4B8994918C8321A00830EED /* libavfilter.a in Frameworks */,
+				B4B8994A18C8321A00830EED /* libavfilter.3.90.100.dylib in Frameworks */,
+				B4B8994B18C8321A00830EED /* libavformat.55.19.104.dylib in Frameworks */,
+				B4B8994C18C8321A00830EED /* libavformat.55.19.104.dylib in Frameworks */,
+				B4B8994D18C8321A00830EED /* libavformat.a in Frameworks */,
+				B4B8994E18C8321A00830EED /* libavformat.55.19.104.dylib in Frameworks */,
+				B4B8994F18C8321A00830EED /* libavresample.1.1.0.dylib in Frameworks */,
+				B4B8995018C8321A00830EED /* libavresample.1.1.0.dylib in Frameworks */,
+				B4B8995118C8321A00830EED /* libavresample.a in Frameworks */,
+				B4B8995218C8321A00830EED /* libavresample.1.1.0.dylib in Frameworks */,
+				B4B8995318C8321A00830EED /* libavutil.52.48.101.dylib in Frameworks */,
+				B4B8995418C8321A00830EED /* libavutil.52.48.101.dylib in Frameworks */,
+				B4B8995518C8321A00830EED /* libavutil.a in Frameworks */,
+				B4B8995618C8321A00830EED /* libavutil.52.48.101.dylib in Frameworks */,
+				B4B8995718C8321A00830EED /* libbluray.1.dylib in Frameworks */,
+				B4B8995818C8321A00830EED /* libbluray.a in Frameworks */,
+				B4B899BD18C837D700830EED /* AWSiOSSDK.framework in Frameworks */,
+				B4B8995918C8321A00830EED /* libbluray.1.dylib in Frameworks */,
+				B4B8995A18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B8995B18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B8995C18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B8995D18C8321A00830EED /* libbz2.a in Frameworks */,
+				B4B8995E18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */,
+				B4B8995F18C8321A00830EED /* libcharset.1.dylib in Frameworks */,
+				B4B8996018C8321A00830EED /* libcharset.a in Frameworks */,
+				B4B8996118C8321A00830EED /* libcharset.1.dylib in Frameworks */,
+				B4B8996218C8321A00830EED /* libcrypto.1.0.0.dylib in Frameworks */,
+				B4B8996318C8321A00830EED /* libcrypto.a in Frameworks */,
+				B4B8996418C8321A00830EED /* libcrypto.1.0.0.dylib in Frameworks */,
+				B4B8996518C8321A00830EED /* libncurses.a in Frameworks */,
+				B4B8996618C8321A00830EED /* libncurses.5.dylib in Frameworks */,
+				B4B8996718C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */,
+				B4B8996818C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */,
+				B4B8996918C8321A00830EED /* libedit.0.dylib in Frameworks */,
+				B4B8996A18C8321A00830EED /* libedit.a in Frameworks */,
+				B4B8996B18C8321A00830EED /* libedit.0.dylib in Frameworks */,
+				B4B8996C18C8321A00830EED /* libenca.0.dylib in Frameworks */,
+				B4B8996D18C8321A00830EED /* libenca.a in Frameworks */,
+				B4B8996E18C8321A00830EED /* libenca.0.dylib in Frameworks */,
+				B4B8996F18C8321A00830EED /* libexpat.1.dylib in Frameworks */,
+				B4B8997018C8321A00830EED /* libexpat.a in Frameworks */,
+				B4B8997118C8321A00830EED /* libexpat.1.dylib in Frameworks */,
+				B4B8997218C8321A00830EED /* libexslt.0.dylib in Frameworks */,
+				B4B8997318C8321A00830EED /* libexslt.a in Frameworks */,
+				B4B8997418C8321A00830EED /* libexslt.0.dylib in Frameworks */,
+				B4B8997518C8321A00830EED /* libfaac.0.dylib in Frameworks */,
+				B4B8997618C8321A00830EED /* libfaac.a in Frameworks */,
+				B4B8997718C8321A00830EED /* libfaac.0.dylib in Frameworks */,
 				2B24D10918C6EFF800584B38 /* CoreMedia.framework in Frameworks */,
 				2B24D10718C6EFB100584B38 /* DVDPlayback.framework in Frameworks */,
 				2B24D10518C6EF8D00584B38 /* AVFoundation.framework in Frameworks */,
 				2B24D10318C6EF8300584B38 /* AVKit.framework in Frameworks */,
-				2B24D10118C6EED500584B38 /* AWSiOSSDK.framework in Frameworks */,
 				2B24D02118C6E95700584B38 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -826,72 +860,76 @@
 		2B24D01F18C6E95700584B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2B0BED0018C818360040DB41 /* libasprintf.0.dylib */,
-				2B0BED0118C818360040DB41 /* libasprintf.a */,
-				2B0BED0218C818360040DB41 /* libasprintf.0.dylib */,
-				2B0BED0318C818360040DB41 /* libass.5.dylib */,
-				2B0BED0418C818360040DB41 /* libass.a */,
-				2B0BED0518C818360040DB41 /* libass.5.dylib */,
-				2B24D10A18C6F02F00584B38 /* libavcodec.55.39.101.dylib */,
-				2B24D10B18C6F02F00584B38 /* libavcodec.55.39.101.dylib */,
-				2B24D10C18C6F02F00584B38 /* libavcodec.a */,
-				2B24D10D18C6F02F00584B38 /* libavcodec.55.39.101.dylib */,
-				2B24D10E18C6F02F00584B38 /* libavdevice.55.5.100.dylib */,
-				2B24D10F18C6F02F00584B38 /* libavdevice.55.5.100.dylib */,
-				2B24D11018C6F02F00584B38 /* libavdevice.a */,
-				2B24D11118C6F02F00584B38 /* libavdevice.55.5.100.dylib */,
-				2B24D11218C6F02F00584B38 /* libavfilter.3.90.100.dylib */,
-				2B24D11318C6F02F00584B38 /* libavfilter.3.90.100.dylib */,
-				2B24D11418C6F02F00584B38 /* libavfilter.a */,
-				2B24D11518C6F02F00584B38 /* libavfilter.3.90.100.dylib */,
-				2B24D11618C6F02F00584B38 /* libavformat.55.19.104.dylib */,
-				2B24D11718C6F02F00584B38 /* libavformat.55.19.104.dylib */,
-				2B24D11818C6F02F00584B38 /* libavformat.a */,
-				2B24D11918C6F02F00584B38 /* libavformat.55.19.104.dylib */,
-				2B24D11A18C6F02F00584B38 /* libavresample.1.1.0.dylib */,
-				2B24D11B18C6F02F00584B38 /* libavresample.1.1.0.dylib */,
-				2B24D11C18C6F02F00584B38 /* libavresample.a */,
-				2B24D11D18C6F02F00584B38 /* libavresample.1.1.0.dylib */,
-				2B24D11E18C6F02F00584B38 /* libavutil.52.48.101.dylib */,
-				2B24D11F18C6F02F00584B38 /* libavutil.52.48.101.dylib */,
-				2B24D12018C6F03000584B38 /* libavutil.a */,
-				2B24D12118C6F03000584B38 /* libavutil.52.48.101.dylib */,
-				2B24D12218C6F03000584B38 /* libbluray.1.dylib */,
-				2B24D12318C6F03000584B38 /* libbluray.a */,
-				2B24D12418C6F03000584B38 /* libbluray.1.dylib */,
-				2B24D12518C6F03000584B38 /* libbz2.1.0.6.dylib */,
-				2B24D12618C6F03000584B38 /* libbz2.1.0.6.dylib */,
-				2B24D12718C6F03000584B38 /* libbz2.1.0.6.dylib */,
-				2B24D12818C6F03000584B38 /* libbz2.a */,
-				2B24D12918C6F03000584B38 /* libbz2.1.0.6.dylib */,
-				2B24D12A18C6F03000584B38 /* libcharset.1.dylib */,
-				2B24D12B18C6F03000584B38 /* libcharset.a */,
-				2B24D12C18C6F03000584B38 /* libcharset.1.dylib */,
-				2B24D12D18C6F03000584B38 /* libcrypto.1.0.0.dylib */,
-				2B24D12E18C6F03000584B38 /* libcrypto.a */,
-				2B24D12F18C6F03000584B38 /* libcrypto.1.0.0.dylib */,
-				2B24D13018C6F03000584B38 /* libncurses.a */,
-				2B24D13118C6F03000584B38 /* libncurses.5.dylib */,
-				2B24D13218C6F03000584B38 /* libedit.0.dylib */,
-				2B24D13318C6F03000584B38 /* libedit.a */,
-				2B24D13418C6F03000584B38 /* libedit.0.dylib */,
-				2B24D13518C6F03100584B38 /* libenca.0.dylib */,
-				2B24D13618C6F03100584B38 /* libenca.a */,
-				2B24D13718C6F03100584B38 /* libenca.0.dylib */,
-				2B24D13818C6F03100584B38 /* libexpat.1.dylib */,
-				2B24D13918C6F03100584B38 /* libexpat.a */,
-				2B24D13A18C6F03100584B38 /* libexpat.1.dylib */,
-				2B24D13B18C6F03100584B38 /* libexslt.0.dylib */,
-				2B24D13C18C6F03100584B38 /* libexslt.a */,
-				2B24D13D18C6F03100584B38 /* libexslt.0.dylib */,
-				2B24D13E18C6F03100584B38 /* libfaac.0.dylib */,
-				2B24D13F18C6F03100584B38 /* libfaac.a */,
-				2B24D14018C6F03100584B38 /* libfaac.0.dylib */,
+				B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */,
+				B4B899BC18C837D700830EED /* AWSiOSSDK.framework */,
+				B4B8997A18C8326100830EED /* EazesportzHighlights.xcodeproj */,
+				B4B898FA18C8321800830EED /* libasprintf.0.dylib */,
+				B4B898FB18C8321800830EED /* libasprintf.a */,
+				B4B898FC18C8321800830EED /* libasprintf.0.dylib */,
+				B4B898FD18C8321800830EED /* libass.5.dylib */,
+				B4B898FE18C8321800830EED /* libass.a */,
+				B4B898FF18C8321800830EED /* libass.5.dylib */,
+				B4B8990018C8321800830EED /* libavcodec.55.39.101.dylib */,
+				B4B8990118C8321800830EED /* libavcodec.55.39.101.dylib */,
+				B4B8990218C8321800830EED /* libavcodec.a */,
+				B4B8990318C8321800830EED /* libavcodec.55.39.101.dylib */,
+				B4B8990418C8321800830EED /* libavdevice.55.5.100.dylib */,
+				B4B8990518C8321900830EED /* libavdevice.55.5.100.dylib */,
+				B4B8990618C8321900830EED /* libavdevice.a */,
+				B4B8990718C8321900830EED /* libavdevice.55.5.100.dylib */,
+				B4B8990818C8321900830EED /* libavfilter.3.90.100.dylib */,
+				B4B8990918C8321900830EED /* libavfilter.3.90.100.dylib */,
+				B4B8990A18C8321900830EED /* libavfilter.a */,
+				B4B8990B18C8321900830EED /* libavfilter.3.90.100.dylib */,
+				B4B8990C18C8321900830EED /* libavformat.55.19.104.dylib */,
+				B4B8990D18C8321900830EED /* libavformat.55.19.104.dylib */,
+				B4B8990E18C8321900830EED /* libavformat.a */,
+				B4B8990F18C8321900830EED /* libavformat.55.19.104.dylib */,
+				B4B8991018C8321900830EED /* libavresample.1.1.0.dylib */,
+				B4B8991118C8321900830EED /* libavresample.1.1.0.dylib */,
+				B4B8991218C8321900830EED /* libavresample.a */,
+				B4B8991318C8321900830EED /* libavresample.1.1.0.dylib */,
+				B4B8991418C8321900830EED /* libavutil.52.48.101.dylib */,
+				B4B8991518C8321900830EED /* libavutil.52.48.101.dylib */,
+				B4B8991618C8321900830EED /* libavutil.a */,
+				B4B8991718C8321900830EED /* libavutil.52.48.101.dylib */,
+				B4B8991818C8321900830EED /* libbluray.1.dylib */,
+				B4B8991918C8321900830EED /* libbluray.a */,
+				B4B8991A18C8321900830EED /* libbluray.1.dylib */,
+				B4B8991B18C8321900830EED /* libbz2.1.0.6.dylib */,
+				B4B8991C18C8321900830EED /* libbz2.1.0.6.dylib */,
+				B4B8991D18C8321900830EED /* libbz2.1.0.6.dylib */,
+				B4B8991E18C8321900830EED /* libbz2.a */,
+				B4B8991F18C8321900830EED /* libbz2.1.0.6.dylib */,
+				B4B8992018C8321900830EED /* libcharset.1.dylib */,
+				B4B8992118C8321900830EED /* libcharset.a */,
+				B4B8992218C8321900830EED /* libcharset.1.dylib */,
+				B4B8992318C8321900830EED /* libcrypto.1.0.0.dylib */,
+				B4B8992418C8321900830EED /* libcrypto.a */,
+				B4B8992518C8321900830EED /* libcrypto.1.0.0.dylib */,
+				B4B8992618C8321A00830EED /* libncurses.a */,
+				B4B8992718C8321A00830EED /* libncurses.5.dylib */,
+				B4B8992818C8321A00830EED /* libdjvulibre.21.dylib */,
+				B4B8992918C8321A00830EED /* libdjvulibre.21.dylib */,
+				B4B8992A18C8321A00830EED /* libedit.0.dylib */,
+				B4B8992B18C8321A00830EED /* libedit.a */,
+				B4B8992C18C8321A00830EED /* libedit.0.dylib */,
+				B4B8992D18C8321A00830EED /* libenca.0.dylib */,
+				B4B8992E18C8321A00830EED /* libenca.a */,
+				B4B8992F18C8321A00830EED /* libenca.0.dylib */,
+				B4B8993018C8321A00830EED /* libexpat.1.dylib */,
+				B4B8993118C8321A00830EED /* libexpat.a */,
+				B4B8993218C8321A00830EED /* libexpat.1.dylib */,
+				B4B8993318C8321A00830EED /* libexslt.0.dylib */,
+				B4B8993418C8321A00830EED /* libexslt.a */,
+				B4B8993518C8321A00830EED /* libexslt.0.dylib */,
+				B4B8993618C8321A00830EED /* libfaac.0.dylib */,
+				B4B8993718C8321A00830EED /* libfaac.a */,
+				B4B8993818C8321A00830EED /* libfaac.0.dylib */,
 				2B24D10818C6EFF800584B38 /* CoreMedia.framework */,
 				2B24D10618C6EFB100584B38 /* DVDPlayback.framework */,
 				2B24D10418C6EF8D00584B38 /* AVFoundation.framework */,
 				2B24D10218C6EF8300584B38 /* AVKit.framework */,
-				2B24D10018C6EED500584B38 /* AWSiOSSDK.framework */,
 				2B24D02018C6E95700584B38 /* Cocoa.framework */,
 				2B24D04218C6E95700584B38 /* XCTest.framework */,
 				2B24D02218C6E95700584B38 /* Other Frameworks */,
@@ -937,6 +975,7 @@
 				2B24D03318C6E95700584B38 /* eazesportzAppDelegate.m */,
 				2B24D03518C6E95700584B38 /* MainMenu.xib */,
 				2B24D17A18C6F89900584B38 /* HighlightScript.command */,
+				B4A45C1E18C999D300BD94A9 /* PosterScript.command */,
 				2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */,
 				2B24D0A418C6EAB000584B38 /* GUI */,
 				2B24D06A18C6EA4D00584B38 /* Model */,
@@ -997,6 +1036,8 @@
 				2B24D06118C6EA4200584B38 /* EazesportzRetrieveTeams.m */,
 				2B24D06218C6EA4200584B38 /* EazesportzRetrieveVideos.h */,
 				2B24D06318C6EA4200584B38 /* EazesportzRetrieveVideos.m */,
+				B4A45C2018C999F100BD94A9 /* eazesportzUploadHighlight.h */,
+				B4A45C2118C999F100BD94A9 /* eazesportzUploadHighlight.m */,
 				2B24D0B518C6EBA100584B38 /* ShuffleAlphabet.h */,
 				2B24D0B618C6EBA100584B38 /* ShuffleAlphabet.m */,
 				2B24D0B818C6EBB500584B38 /* sportzConstants.h */,
@@ -1081,8 +1122,16 @@
 				2B24D0E818C6EC9D00584B38 /* eazesportzVideoFileWindowController.h */,
 				2B24D0E918C6EC9D00584B38 /* eazesportzVideoFileWindowController.m */,
 				2B24D0EA18C6EC9D00584B38 /* eazesportzVideoFileWindowController.xib */,
+				B45CB1E218CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.h */,
+				B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */,
+				B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */,
 			);
 			name = GUI;
+			sourceTree = "<group>";
+		};
+		B4B8997B18C8326100830EED /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1190,6 +1239,12 @@
 			mainGroup = 2B24D01418C6E95700584B38;
 			productRefGroup = 2B24D01E18C6E95700584B38 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B4B8997B18C8326100830EED /* Products */;
+					ProjectRef = B4B8997A18C8326100830EED /* EazesportzHighlights.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2B24D01C18C6E95700584B38 /* EazesportzHighlights */,
@@ -1251,6 +1306,7 @@
 			files = (
 				2B24D0FD18C6ED5700584B38 /* eazesportzMainViewController.xib in Resources */,
 				2B24D0F018C6EC9D00584B38 /* eazesportzSelectTeamWindowController.xib in Resources */,
+				B45CB1E618CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib in Resources */,
 				2B24D0EE18C6EC9D00584B38 /* eazesportzSelectTeamViewController.xib in Resources */,
 				2B0BEC9118C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.xib in Resources */,
 				2B24D0C618C6EC1F00584B38 /* film.png in Resources */,
@@ -1285,6 +1341,7 @@
 				2B24D0B418C6EB6D00584B38 /* eazesportzMasterViewController.xib in Resources */,
 				2B24D17F18C6FA9F00584B38 /* TranscodeClip.command in Resources */,
 				2B24D0DA18C6EC3F00584B38 /* search.png in Resources */,
+				B4A45C1F18C999D300BD94A9 /* PosterScript.command in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,6 +1469,7 @@
 				2B0BEC9018C7DD3A0040DB41 /* eazesportzLiveHighlightViewController.m in Sources */,
 				2B24D0F218C6EC9D00584B38 /* eazesportzVideoFileWindowController.m in Sources */,
 				2B24D09D18C6EA8E00584B38 /* Gamelogs.m in Sources */,
+				B45CB1E518CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m in Sources */,
 				2B24D09318C6EA8E00584B38 /* eazesportzAVClip.m in Sources */,
 				2B24D06F18C6EA6E00584B38 /* Athlete.m in Sources */,
 				2B24D07018C6EA6E00584B38 /* BasketballStats.m in Sources */,
@@ -1432,6 +1490,7 @@
 				2B24D0FC18C6ED5700584B38 /* eazesportzMainViewController.m in Sources */,
 				2B24D0B318C6EB6D00584B38 /* eazesportzMasterViewController.m in Sources */,
 				2B24D06918C6EA4200584B38 /* EazesportzRetrieveVideos.m in Sources */,
+				B4A45C2218C999F100BD94A9 /* eazesportzUploadHighlight.m in Sources */,
 				2B24D09C18C6EA8E00584B38 /* FootballRushingStat.m in Sources */,
 				2B24D09518C6EA8E00584B38 /* FootballDefenseStats.m in Sources */,
 				2B24D03A18C6E95700584B38 /* EazesportzHighlights.xcdatamodeld in Sources */,
@@ -1539,6 +1598,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
@@ -1564,6 +1624,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
@@ -1689,11 +1750,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
+					/Users/dirctdt/Development/MacDevelopment/EazesportzHighlights,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzHighlights/EazesportzHighlights-Prefix.pch";
@@ -1716,11 +1778,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
+					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
+					/Users/dirctdt/Development/MacDevelopment/EazesportzHighlights,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzHighlights/EazesportzHighlights-Prefix.pch";

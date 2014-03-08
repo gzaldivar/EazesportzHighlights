@@ -67,7 +67,7 @@
 @property(nonatomic, strong) NSNumber *socceroppsaves;
 
 @property(nonatomic, strong) NSMutableArray *gamelogs;
-@property(nonatomic, strong) NSMutableArray *liveevents;
+@property(nonatomic, assign) BOOL liveevent;
 
 @property(nonatomic, strong) NSString *httperror;
 
@@ -77,7 +77,6 @@
 
 - (void)deleteGame:(Sport *)sport Team:(Team *)team User:(User *)user;
 
-- (BOOL)isaLiveGame;
 - (NSImage *)opponentImage;
 
 - (Gamelogs *)findGamelog:(NSString *)gamelogid;

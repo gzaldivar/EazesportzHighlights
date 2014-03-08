@@ -11,7 +11,6 @@
 #import "Sport.h"
 #import "User.h"
 #import "Team.h"
-#import "Event.h"
 
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
@@ -20,13 +19,12 @@
 
 @property (nonatomic, strong) Sport *sport;
 @property (nonatomic, strong) User *user;
-@property (nonatomic, strong) Event *event;
 
 @property (nonatomic, assign) BOOL highdef;
 @property (weak) IBOutlet NSTextField *teamLabel;
 @property (weak) IBOutlet NSTextField *gameLabel;
 - (IBAction)homeButtonClicked:(id)sender;
-- (IBAction)gameButtonClicked:(id)sender;
+- (IBAction)eventButtonClicked:(id)sender;
 - (IBAction)teamButtonClicked:(id)sender;
 
 @property (nonatomic, strong) __block NSTask *buildTask;
@@ -38,9 +36,15 @@
 @property (nonatomic, strong) NSPipe *createclipPipe;
 
 @property (weak) IBOutlet AVPlayerView *playerView;
-@property (weak) IBOutlet NSTextField *eventLabel;
 - (IBAction)clipButtonClicked:(id)sender;
 @property (weak) IBOutlet NSButton *clipButton;
 @property (weak) IBOutlet NSTextField *highlightsDir;
+@property (weak) IBOutlet NSDatePicker *eventStartDatePicker;
+@property (weak) IBOutlet NSDatePicker *eventendDatePicker;
+@property (weak) IBOutlet NSTableView *eventTableView;
+@property (weak) IBOutlet NSTextField *highlightNameTextField;
+- (IBAction)uploadHighlighButtonClicked:(id)sender;
+@property (weak) IBOutlet NSButton *uploadButton;
+@property (weak) IBOutlet NSComboBox *uploadComboBox;
 
 @end

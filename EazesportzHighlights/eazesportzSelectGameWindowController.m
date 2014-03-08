@@ -67,7 +67,7 @@
     } else if ([tableColumn.identifier isEqualToString:@"LiveNowColumn"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"LiveTableCell" owner:self];
         
-        if ([agame isaLiveGame]) {
+        if (agame.liveevent) {
             [cellView.textField setTextColor:[NSColor redColor]];
             cellView.textField.stringValue = @"Live";
         } else {

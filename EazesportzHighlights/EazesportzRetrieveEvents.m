@@ -83,10 +83,10 @@
         }
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"EventListChangedNotification" object:nil
-                                                          userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Result", @"Success", nil]];
+                                                          userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Success", @"Result", nil]];
     } else {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"EventListChangedNotification" object:nil
-                                                          userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Result", @"Error", nil]];
+                                                          userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Error", @"Result", nil]];
     }
 }
 

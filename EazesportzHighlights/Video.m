@@ -58,8 +58,12 @@
         self.displayName = [items objectForKey:@"displayname"];
         self.teamid = [items objectForKey:@"team_id"];
         self.schedule = [items objectForKey:@"gameschedule"];
-        self.videoid = [items objectForKey:@"id"];
-        self.videoid = [items objectForKey:@"_id"];
+        
+        if ([items objectForKey:@"id"])
+            self.videoid = [items objectForKey:@"id"];
+        else
+            self.videoid = [items objectForKey:@"_id"];
+        
         self.players = [items objectForKey:@"players"];
         self.userid = [items objectForKey:@"user_id"];
         self.resolution = [items objectForKey:@"resolution"];

@@ -11,6 +11,8 @@
 
 #import "Video.h"
 
+#import <AWSiOSSDK/S3/AmazonS3Client.h>
+
 @interface eazesportzAVClip : NSObject
 
 @property (nonatomic, strong) NSNumber *clipNumber;

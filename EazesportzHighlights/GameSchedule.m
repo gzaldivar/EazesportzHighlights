@@ -76,7 +76,7 @@
 @synthesize period;
 
 @synthesize gamelogs;
-@synthesize liveevents;
+@synthesize liveevent;
 
 @synthesize socceroppck;
 @synthesize socceroppsaves;
@@ -182,6 +182,7 @@
         visitorbonus = [[gameScheduleDictionary objectForKey:@"visitorbonus"] boolValue];
         visitorfouls = [gameScheduleDictionary objectForKey:@"opponentfouls"];
         period = [gameScheduleDictionary objectForKey:@"currentperiod"];
+        liveevent = [[gameScheduleDictionary objectForKey:@"liveevent"] boolValue];
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss+00:00"];
@@ -201,32 +202,10 @@
             [self sortGamelog];
         }
         
-        NSMutableArray *events = [gameScheduleDictionary objectForKey:@"events"];
-        
-        for (int i = 0; i < events.count; i++) {
-            [liveevents addObject:[[Event alloc] initWithDictionary:[events objectAtIndex:i] Sport:sport]];
-        }
-        
         return self;
     } else {
         return nil;
     }
-}
-
-- (BOOL)isaLiveGame {
-    BOOL found = NO;
-    
-    for (int i = 0; i < liveevents.count; i++) {
-        Event *anevent = [liveevents objectAtIndex:i];
-        NSDate *eventdate = anevent.startdate;
-        
-        if (([[[liveevents objectAtIndex:i] gameschedule_id] isEqualToString:id]) && ([eventdate compare:gamedatetime] == NSEqualToComparison)) {
-            found = YES;
-            break;
-        }
-    }
-    
-    return found;
 }
 
 - (void)sortGamelog {

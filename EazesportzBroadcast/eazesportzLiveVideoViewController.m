@@ -59,8 +59,12 @@
 - (void)loadView {
     [super loadView];
     bucket = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingbucket"];
-    // Initialize the S3 Client.
-    s3 = [[AmazonS3Client alloc] initWithAccessKey:user.awskeyid withSecretKey:user.awssecretkey];
+    
+    if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"BroadcastTesturl"] length] == 0) {
+        // Initialize the S3 Client.
+        s3 = [[AmazonS3Client alloc] initWithAccessKey:user.awskeyid withSecretKey:user.awssecretkey];
+    }
+    
     self.IsBroadcasting = NO;
     _teamLabel.stringValue = team.team_name;
     _gameLabel.stringValue = [[event getGame:sport Team:team User:user] vsOpponent];
@@ -68,7 +72,6 @@
 
     if ([event.videoevent intValue] > 1) {
         videoUrl = [NSURL fileURLWithPath:event.eventurl];
-    } else {
     }
     
     videoname = team.teamid;
@@ -84,17 +87,9 @@
         NSMutableArray *arguments = [[NSMutableArray alloc] init];
         NSString *videopath = [videoUrl path];
         [arguments addObject:videopath];
+        
         [self streamFileScript:arguments];
         
-        NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingurl"],
-                                    event.event_id, team.teamid];
-        playbackstring = [playbackstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSURL *playbackurl = [NSURL URLWithString:playbackstring];
-        NSLog(@"%@", playbackurl);
-        AVAsset *asset = [AVAsset assetWithURL:playbackurl];
-        playerItem = [AVPlayerItem playerItemWithAsset:asset];
-        AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
-        [_playerView setPlayer:player];
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
                                            otherButton:nil informativeTextWithFormat:@"No video asset has been selected for streaming!"];
@@ -133,7 +128,13 @@
     dispatch_async(taskQueue, ^{
         
         @try {
-            NSString *path  = [NSString stringWithFormat:@"%@", [[NSBundle mainBundle] pathForResource:@"StreamFile" ofType:@"command"]];
+            NSString *path;
+            
+            if (videoUrl) {
+                path  = [NSString stringWithFormat:@"%@", [[NSBundle mainBundle] pathForResource:@"StreamFile" ofType:@"command"]];
+            } else {
+                
+            }
             
             NSString *streamingPath = [documentsPath stringByAppendingPathComponent:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"streamingdirectory"]];
             streamingPath = [streamingPath stringByAppendingPathComponent:videoname];
@@ -170,50 +171,63 @@
                     int counter = 0;
                     NSString *lastfile = @"";
                     NSString *videofile;
-                    [_playerView.player play];
                     
-                    while (self.IsBroadcasting) {
-                        @try {
-                            if ([filemgr fileExistsAtPath:[streamingPath stringByAppendingPathComponent:segmentfile]]) {
-                                NSString *stringdata = [NSString stringWithContentsOfFile:[streamingPath stringByAppendingPathComponent:segmentfile]
-                                                                                 encoding:NSUTF8StringEncoding error:nil];
-                                if (stringdata.length > 0) {
-                                    NSArray *m3u8array = [stringdata componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-                                    long pos = m3u8array.count - 2;
-                                    videofile = [m3u8array objectAtIndex:pos];
-                                }
-                            
-                                if (![lastfile isEqualToString:videofile]) {
-                                    NSString *segmentfile = [NSString stringWithFormat:@"%@.m3u8", videoname];
-                                    NSData *videoData = [[NSData alloc] initWithContentsOfFile:[streamingPath stringByAppendingPathComponent:videofile]];
-                                    NSData *segmentData = [stringdata dataUsingEncoding:NSUTF8StringEncoding];
+                    if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"BroadcastTestUrl"] length] == 0) {
+                        while (self.IsBroadcasting) {
+                            @try {
+                                if ([filemgr fileExistsAtPath:[streamingPath stringByAppendingPathComponent:segmentfile]]) {
+                                    NSString *stringdata = [NSString stringWithContentsOfFile:[streamingPath stringByAppendingPathComponent:segmentfile]
+                                                                                     encoding:NSUTF8StringEncoding error:nil];
+                                    if (stringdata.length > 0) {
+                                        NSArray *m3u8array = [stringdata componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+                                        long pos = m3u8array.count - 2;
+                                        videofile = [m3u8array objectAtIndex:pos];
+                                    }
+                                
+                                    if (![lastfile isEqualToString:videofile]) {
+                                        NSString *segmentfile = [NSString stringWithFormat:@"%@.m3u8", videoname];
+                                        NSData *videoData = [[NSData alloc] initWithContentsOfFile:[streamingPath stringByAppendingPathComponent:videofile]];
+                                        NSData *segmentData = [stringdata dataUsingEncoding:NSUTF8StringEncoding];
 
-                                    NSString *s3path = [NSString stringWithFormat:@"%@/%@", event.event_id, videofile];
-                                    S3PutObjectRequest *por = [[S3PutObjectRequest alloc] initWithKey:s3path inBucket:bucket];
-                                    por.contentType = @"video/mp4";
-                                    por.contentDisposition = @"inline";
-                                    por.data = videoData;
-                                    [s3 putObject:por];
-                                    
-                                    s3path = [NSString stringWithFormat:@"%@/%@", event.event_id, segmentfile];
-                                    S3PutObjectRequest *seg = [[S3PutObjectRequest alloc] initWithKey:s3path inBucket:bucket];
-                                    seg.contentType = @"video/mp4";
-                                    seg.contentDisposition = @"inline";
-                                    seg.data = segmentData;
-                                    [s3 putObject:seg];
-                                    
-                                    if (counter == 4)
-                                        counter = 0;
-                                    else
+                                        NSString *s3path = [NSString stringWithFormat:@"%@/%@", event.event_id, videofile];
+                                        S3PutObjectRequest *por = [[S3PutObjectRequest alloc] initWithKey:s3path inBucket:bucket];
+                                        por.contentType = @"video/mp4";
+                                        por.contentDisposition = @"inline";
+                                        por.data = videoData;
+                                        [s3 putObject:por];
+                                        
+                                        s3path = [NSString stringWithFormat:@"%@/%@", event.event_id, segmentfile];
+                                        S3PutObjectRequest *seg = [[S3PutObjectRequest alloc] initWithKey:s3path inBucket:bucket];
+                                        seg.contentType = @"video/mp4";
+                                        seg.contentDisposition = @"inline";
+                                        seg.data = segmentData;
+                                        [s3 putObject:seg];
+                                        
+                                        if (counter == 1) {
+                                            NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8",
+                                                                        [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingurl"], event.event_id, team.teamid];
+                                            playbackstring = [playbackstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                                            NSURL *playbackurl = [NSURL URLWithString:playbackstring];
+                                            NSLog(@"%@", playbackurl);
+                                            AVAsset *asset = [AVAsset assetWithURL:playbackurl];
+                                            playerItem = [AVPlayerItem playerItemWithAsset:asset];
+                                            AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
+                                            [_playerView setPlayer:player];
+                                            
+                                            [_playerView.player play];
+                                        }
+                                        
                                         counter++;
-                                    
-                                    lastfile = videofile;
-                                    NSLog(@"lastfile end of loop=%@", lastfile);
+                                        
+                                        lastfile = videofile;
+                                        NSLog(@"lastfile end of loop=%@", lastfile);
+                                    }
                                 }
+                                
                             }
-                        }
-                        @catch ( AmazonServiceException *exception ) {
-                            NSLog( @"Upload Failed, Reason: %@", exception );
+                            @catch ( AmazonServiceException *exception ) {
+                                NSLog( @"Upload Failed, Reason: %@", exception );
+                            }
                         }
                     }
                 });
