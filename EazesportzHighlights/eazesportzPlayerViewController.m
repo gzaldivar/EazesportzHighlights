@@ -11,6 +11,7 @@
 #import "Video.h"
 #import "ShuffleAlphabet.h"
 #import "eazesportzUploadHighlight.h"
+#import "eazesportzEditHighlightWindowController.h"
 
 #import <AWSiOSSDK/S3/S3Bucket.h>
 #import <AWSiOSSDK/S3/AmazonS3Client.h>
@@ -21,6 +22,8 @@
 #import <libavutil/opt.h>
 
 @interface eazesportzPlayerViewController () <AmazonServiceRequestDelegate>
+
+@property (nonatomic, strong) IBOutlet eazesportzEditHighlightWindowController *editHighlightController;
 
 @end
 
@@ -43,6 +46,7 @@
 @synthesize team;
 @synthesize sport;
 @synthesize user;
+@synthesize getPlayers;
 @synthesize highdef;
 @synthesize highlightDate;
 
@@ -58,16 +62,14 @@
 
 - (void)loadView {
     [super loadView];
-    
     bucket = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3bucket"];
     // Initialize the S3 Client.
     s3 = [[AmazonS3Client alloc] initWithAccessKey:user.awskeyid withSecretKey:user.awssecretkey];
     
     [_activityIndicator setDisplayedWhenStopped:YES];
     _activityIndicator.hidden = YES;
-    _renameTextField.hidden = YES;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uploadResult:) name:@"ClipUploadNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uploadResult:) name:@"VideoUploadCompletedNotification" object:nil];
 
     clips = [[NSMutableArray alloc] init];
     clipnumber = 0;
@@ -146,7 +148,6 @@
     if (clips.count > 0) {
         _saveButton.enabled = NO;
         _trimButton.enabled = NO;
-        _renameButton.enabled = NO;
         _deleteButton.enabled = NO;
         _reloadButton.enabled = NO;
         _activityIndicator.hidden = NO;
@@ -291,33 +292,32 @@
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
     selectedClip = [_clipTableView selectedRow];
     if (selectedClip > -1) {
-        _renameTextField.stringValue = [[clips objectAtIndex:selectedClip] clipName];
-        _renameTextField.hidden = NO;
-    } else {
-        _renameTextField.hidden = YES;
+        self.editHighlightController = [[eazesportzEditHighlightWindowController alloc] initWithWindowNibName:@"eazesportzEditHighlightWindowController"];
+        self.editHighlightController.sport = sport;
+        self.editHighlightController.team = team;
+        self.editHighlightController.game = game;
+        self.editHighlightController.user = user;
+        self.editHighlightController.getPlayers = getPlayers;
+        self.editHighlightController.clipname = [[clips objectAtIndex:selectedClip] clipName];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(highlightUpdated:) name:@"HighlightsDataUpdtedNotification" object:nil];
+        [self.editHighlightController showWindow:self];
     }
 }
 
-- (IBAction)renameButtonClicked:(id)sender {
-    if (selectedClip > -1) {
-        eazesportzAVClip *theclip = [clips objectAtIndex:selectedClip];
-        
-        for (int i = 0; i < clips.count; i++) {
-            if ([[clips objectAtIndex:i] isEqualToString:_renameTextField.stringValue]) {
-                NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
-                                                   otherButton:nil informativeTextWithFormat:@"Clip name already exists. Please use another name"];
-                [alert setIcon:[sport getImage:@"tiny"]];
-                [alert runModal];
-                return;
-            }
-        }
-        
-        theclip.clipName = _renameTextField.stringValue;
-        [_clipTableView deselectColumn:selectedClip];
-        [_clipTableView reloadData];
-        selectedClip = -1;
-        _renameTextField.hidden = YES;
-    }
+- (void)highlightUpdated:(NSNotification *)notification {
+    eazesportzAVClip *theclip = [clips objectAtIndex:selectedClip];
+    theclip.clipName = self.editHighlightController.highlightNameTextField.stringValue;
+    theclip.video.displayName = theclip.clipName;
+    theclip.video.description = self.editHighlightController.highlightsDescription.string;
+    theclip.video.players = self.editHighlightController.players;
+    theclip.video.gamelog = self.editHighlightController.gamelog.gamelogid;
+    
+    if (self.editHighlightController.game.id.length > 0)
+        theclip.video.schedule = self.editHighlightController.game.id;
+    
+    theclip.video.teamid = team.teamid;
+    
+    [_clipTableView reloadData];
 }
 
 - (IBAction)deleteButtonClicked:(id)sender {
@@ -326,7 +326,6 @@
         [_clipTableView deselectColumn:selectedClip];
         [_clipTableView reloadData];
         selectedClip = -1;
-        _renameTextField.hidden = YES;
     }
 }
 
@@ -400,7 +399,7 @@
             
             if (status == 0) {
 //                [self uploadVideo:videoClip];
-                [upload uploadVideo:[videoClip.clip.outputURL path] Hidden:[_hideClipsButton state]];
+                [upload uploadVideo:[videoClip.clip.outputURL path] Video:videoClip.video Hidden:[_hideClipsButton state]];
                 
 //                dispatch_async(dispatch_get_main_queue(), ^{
 //                    [self uploadSuccesful:videoClip];
@@ -517,7 +516,6 @@
         [_activityIndicator stopAnimation:self];
         _saveButton.enabled = YES;
         _trimButton.enabled = YES;
-        _renameButton.enabled = YES;
         _deleteButton.enabled = YES;
         _reloadButton.enabled = YES;
         

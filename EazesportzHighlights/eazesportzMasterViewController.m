@@ -31,6 +31,7 @@
 @synthesize videoUrl;
 @synthesize game;
 @synthesize team;
+@synthesize getPlayers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,14 +54,14 @@
 //    if (err != noErr) {
         dvdPlayer = NO;
 //    }
+    getPlayers = [[EazesportzRetrievePlayers alloc] init];
 }
 
 - (IBAction)teamButtonClicked:(id)sender {
     self.selectTeamController = [[eazesportzSelectTeamWindowController alloc] initWithWindowNibName:@"eazesportzSelectTeamWindowController"];
     self.selectTeamController.sport = sport;
     self.selectTeamController.user = user;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(teamSelected:) name:@"TeamSelectedNotification"
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(teamSelected:) name:@"TeamSelectedNotification" object:nil];
     [self.selectTeamController showWindow:self];
 }
 
@@ -69,6 +70,14 @@
     team = self.selectTeamController.team;
     _teamLabel.stringValue = team.team_name;
     [self.selectTeamController close];
+    [_activityIndicator startAnimation:self];
+    [getPlayers retrievePlayers:sport Team:team User:user];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotRoster:) name:@"RosterChangedNotification" object:nil];
+    [getPlayers retrievePlayers:sport Team:team User:user];
+}
+
+- (void)gotRoster:(NSNotification *)notification {
+    [_activityIndicator stopAnimation:self];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -206,8 +215,7 @@
 
 - (IBAction)gameButtonClicked:(id)sender {
     if (team) {
-        self.selectGameController = [[eazesportzSelectGameWindowController alloc]
-                                     initWithWindowNibName:@"eazesportzSelectGameWindowController"];
+        self.selectGameController = [[eazesportzSelectGameWindowController alloc] initWithWindowNibName:@"eazesportzSelectGameWindowController"];
         self.selectGameController.sport = sport;
         self.selectGameController.user = user;
         self.selectGameController.team = team;

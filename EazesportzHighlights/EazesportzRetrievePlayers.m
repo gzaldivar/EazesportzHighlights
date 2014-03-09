@@ -7,7 +7,6 @@
 //
 
 #import "EazesportzRetrievePlayers.h"
-#import "Athlete.h"
 
 @implementation EazesportzRetrievePlayers {
     long responseStatusCode;
@@ -75,6 +74,19 @@
     } else {
         return request;
     }
+}
+
+- (Athlete *)findAthleteById:(NSString *)athleteid {
+    Athlete *theplayer = nil;
+    
+    for (int i = 0; i < roster.count; i++) {
+        if ([[[roster objectAtIndex:i] athleteid] isEqualToString:athleteid]) {
+            theplayer = [roster objectAtIndex:i];
+            break;
+        }
+    }
+    
+    return theplayer;
 }
 
 @end

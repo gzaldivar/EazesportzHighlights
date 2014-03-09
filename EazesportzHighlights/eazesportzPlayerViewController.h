@@ -15,6 +15,7 @@
 #import "User.h"
 #import "Team.h"
 #import "Sport.h"
+#import "EazesportzRetrievePlayers.h"
 
 @interface eazesportzPlayerViewController : NSViewController
 
@@ -25,6 +26,8 @@
 @property (nonatomic, strong) Team *team;
 @property (nonatomic, strong) Sport *sport;
 @property (nonatomic, strong) User *user;
+@property (nonatomic, strong) EazesportzRetrievePlayers *getPlayers;
+
 @property (nonatomic, assign) BOOL highdef;
 @property (nonatomic, strong) NSDate *highlightDate;
 
@@ -36,11 +39,8 @@
 @property (weak) IBOutlet NSTextField *gameLabel;
 @property (weak) IBOutlet NSButton *saveButton;
 @property (weak) IBOutlet NSProgressIndicator *activityIndicator;
-@property (weak) IBOutlet NSButton *renameButton;
-- (IBAction)renameButtonClicked:(id)sender;
 @property (weak) IBOutlet NSButton *deleteButton;
 - (IBAction)deleteButtonClicked:(id)sender;
-@property (weak) IBOutlet NSTextField *renameTextField;
 @property (weak) IBOutlet NSButton *trimButton;
 @property (weak) IBOutlet NSButton *reloadButton;
 - (IBAction)homeButtonClicked:(id)sender;

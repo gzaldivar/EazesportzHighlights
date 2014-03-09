@@ -9,6 +9,7 @@
 #import "eazesportzUploadHighlight.h"
 
 #import <libavformat/avformat.h>
+#import <AVFoundation/AVFoundation.h>
 
 @implementation eazesportzUploadHighlight {
     float duration;
@@ -18,7 +19,7 @@
     float framerate;
 }
 
-- (void)uploadVideo:(NSString *)pathname Hidden:(BOOL)hidden {
+- (void)uploadVideo:(NSString *)pathname Video:(Video *)video Hidden:(BOOL)hidden {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         NSError *err;
@@ -32,14 +33,15 @@
                 
                 NSData *videoData = [NSData dataWithContentsOfURL:[NSURL fileURLWithPath:pathname]];
                 
-                NSMutableDictionary *videoDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys: [pathname lastPathComponent], @"filename",
-                                                  [pathname lastPathComponent], @"displayname", @"video/mp4", @"filetype", _team.teamid, @"team_id",
-                                                  _user.userid, @"user_id", _game.id, @"gameschedule_id",
-                                                  [NSString stringWithFormat:@"%f", duration], @"duration",
+                NSMutableDictionary *videoDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys: video.displayName, @"filename",
+                                                  video.displayName, @"displayname", @"video/mp4", @"filetype", _team.teamid, @"team_id",
+                                                  _user.userid, @"user_id", _game.id, @"gameschedule_id", video.gamelog, @"gamelog_id",
+                                                  [video.duration stringValue], @"duration", video.description, @"description",
                                                   [NSString stringWithFormat:@"%lu", videoData.length], @"size",
                                                   [NSString stringWithFormat:@"%d", (int)posterImage.size.width], @"width",
                                                   [NSString stringWithFormat:@"%d", (int)posterImage.size.height], @"height",
-                                                  [NSString stringWithFormat:@"%d", hidden], @"hidden", nil];
+                                                  [NSString stringWithFormat:@"%d", hidden], @"hidden",
+                                                  video.description, @"description", nil];
                 
                 NSMutableURLRequest *urlrequest = [NSMutableURLRequest requestWithURL:url];
                 NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:videoDict, @"videoclip", nil];
@@ -114,10 +116,10 @@
                                                            _sport.id, video.videoid, _user.authtoken]];
                         
                         NSMutableDictionary *videoDict =  [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                                                           [NSString stringWithFormat:@"%@.mp4", [pathname lastPathComponent]],
-                                                           @"filename", [pathname lastPathComponent], @"displayname", @"video/mp4", @"filetype",
+                                                           [NSString stringWithFormat:@"%@.mp4", video.displayName], @"filename",
+                                                           video.displayName, @"displayname", @"video/mp4", @"filetype",
                                                            _team.teamid, @"team_id", _user.userid, @"user_id", _game.id, @"gameschedule_id",
-                                                           [video.duration stringValue], @"duration",
+                                                           [video.duration stringValue], @"duration", video.description, @"description",
                                                            [NSString stringWithFormat:@"%@/%@.jpg", posterpath, [pathname lastPathComponent]],
                                                            @"poster_filepath",
                                                            [NSString stringWithFormat:@"%@/%@.mp4", videopath, [pathname lastPathComponent]],
@@ -150,42 +152,24 @@
                         
                         if ([httpResponse statusCode] == 200) {
                             NSDictionary *items = [serverData objectForKey:@"videoclip"];
-                            video = [[Video alloc] initWithDirectory:items];
-                            [self uploadSuccessful:pathname];
-                            [[NSNotificationCenter defaultCenter] postNotificationName:@"ClipUploadNotification" object:nil
-                                                                userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Success", @"Result",
-                                                                          [pathname lastPathComponent], @"clipname", nil]];
+                            [self uploadSuccessful:pathname Video:[[Video alloc] initWithDirectory:items]];
                         } else {
                             [self uploadFailed:pathname Video:video];
-                            [[NSNotificationCenter defaultCenter] postNotificationName:@"ClipUploadNotification" object:nil
-                                                userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Error updating meta data. Contact admin.",
-                                                          @"Result", [pathname lastPathComponent], @"clipname", nil]];
                         }
                     }
                     @catch ( AmazonServiceException *exception ) {
                         NSLog( @"Upload Failed, Reason: %@", exception );
                         [self uploadFailed:pathname Video:video];
-                        [[NSNotificationCenter defaultCenter] postNotificationName:@"ClipUploadNotification" object:nil
-                                                            userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:exception.reason, @"Result",
-                                                            [pathname lastPathComponent], @"clipname", nil]];
                     }
                     
                 } else {
                     [self uploadFailed:pathname Video:nil];
-                    [[NSNotificationCenter defaultCenter] postNotificationName:@"ClipUploadNotification" object:nil
-                            userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Error Creating video meta data. Contact admin.", @"Result",
-                                      [pathname lastPathComponent], @"clipname", nil]];
-                }
+               }
             } else {
                 [self uploadFailed:pathname Video:nil];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"ClipUploadNotification" object:nil
-                                        userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Error Creating viposter image. Contact admin.", @"Result",
-                                                                            [pathname lastPathComponent], @"clipname", nil]];
             }
         } else {
             [self uploadFailed:pathname Video:nil];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"ClipUploadNotification" object:nil
-                        userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Video not found.", @"Result", [pathname lastPathComponent], @"clipname", nil]];
         }
     });
 }
@@ -213,8 +197,10 @@
         return nil;
 }
 
-- (void)uploadSuccessful:(NSString *)pathname {
+- (void)uploadSuccessful:(NSString *)pathname Video:(Video *)video {
     [[NSFileManager defaultManager] removeItemAtPath:pathname error:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoUploadCompletedNotification" object:video
+                                        userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Success", @"Result", _clipindex, @"clipindex", nil]];
 }
 
 - (void)uploadFailed:(NSString *)pathname Video:(Video *)video {
@@ -254,6 +240,47 @@
             [alert runModal];
         }
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoUploadCompletedNotification" object:video
+                                                      userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Upload Error", @"Result", nil]];
+}
+
+- (void)addVideoTags:(Video *)avideo {
+/*    NSURL *aurl = [NSURL URLWithString:[sportzServerInit tagAthletesVideo:video Token:currentSettings.user.authtoken]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:aurl];
+    NSMutableDictionary *tagDict = [[NSMutableDictionary alloc] init];
+    
+    for (int i = 0; i < [addtags count]; i++) {
+        [tagDict setObject:[[addtags objectAtIndex:i] athleteid] forKey:[[addtags objectAtIndex:i] logname]];
+    }
+    
+    NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:tagDict, @"videoclip", nil];
+    NSError *jsonSerializationError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:&jsonSerializationError];
+    
+    if (!jsonSerializationError) {
+        NSString *serJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"Serialized JSON: %@", serJson);
+    } else {
+        NSLog(@"JSON Encoding Failed: %@", [jsonSerializationError localizedDescription]);
+    }
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:[NSString stringWithFormat:@"%d", [jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPMethod:@"PUT"];
+    [request setHTTPBody:jsonData];
+    
+    //Capturing server response
+    NSURLResponse* response;
+    NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&jsonSerializationError];
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:result options:kNilOptions error:&jsonSerializationError];
+    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+    if ([httpResponse statusCode] != 200) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error updating videoclip data" message:[json objectForKey:@"error"]
+                                                       delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert setAlertViewStyle:UIAlertViewStyleDefault];
+        [alert show];
+    } */
 }
 
 @end

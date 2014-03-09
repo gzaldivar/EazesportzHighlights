@@ -49,13 +49,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadPlayerView:) name:@"PlayerReadyNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(processVideoView:) name:@"DisplayProcessVideoNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(homeView:) name:@"DisplayMainViewController" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(highlightClips:) name:@"CreateLiveHighlightsNotification" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(liveHighlights:) name:@"DisplayLiveHighlightsNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(liveHighlights:) name:@"CreateLiveHighlightsNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(highlightClips:) name:@"DisplayLiveHighlightsNotification" object:nil];
     
     [self.window setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"Footballbkg.png"]]];
+    _window = self.window;
     
-    self.loginViewController =
-    [[eazesportzLoginViewController alloc] initWithNibName:@"eazesportzLoginViewController" bundle:nil];
+    self.loginViewController = [[eazesportzLoginViewController alloc] initWithNibName:@"eazesportzLoginViewController" bundle:nil];
     
     [self.loginViewController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     [self resizeWindowForContentSize:[self.loginViewController.view frame].size];
@@ -252,6 +252,10 @@
         [self.masterViewController.view removeFromSuperview];
     } else if ([[[notification userInfo] objectForKey:@"Message"] isEqualToString:@"LiveView"]) {
         [self.liveHighlightsController.view removeFromSuperview];
+        self.liveHighlightsController = nil;
+    } else if ([[[notification userInfo] objectForKey:@"Message"] isEqualToString:@"SelectHighlightView"]) {
+        [self.selectLiveHighlightsController.view removeFromSuperview];
+        self.selectLiveHighlightsController = nil;
     }
     
     [self.processVideoController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
@@ -276,6 +280,7 @@
     self.playerController.team = self.masterViewController.team;
     self.playerController.sport = getSport.sport;
     self.playerController.user = self.loginViewController.user;
+    self.playerController.getPlayers = self.masterViewController.getPlayers;
     self.playerController.highlightDate = [self.masterViewController.highlightDate dateValue];
     
 //    if ([_hdmenuitem state] == NSOnState)
@@ -301,17 +306,20 @@
 }
 
 - (void)highlightClips:(NSNotification *)notification {
-    [self.processVideoController.view removeFromSuperview];
+    [self.selectLiveHighlightsController.view removeFromSuperview];
     self.liveHighlightsController = [[eazesportzLiveHighlightViewController alloc] initWithNibName:@"eazesportzLiveHighlightViewController" bundle:nil];
     self.liveHighlightsController.sport = getSport.sport;
+    self.liveHighlightsController.team = self.selectLiveHighlightsController.team;
     self.liveHighlightsController.user = self.loginViewController.user;
+    self.liveHighlightsController.event = self.selectLiveHighlightsController.event;
+    self.liveHighlightsController.getPlayers = self.selectLiveHighlightsController.getPlayers;
     [self.liveHighlightsController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     [self resizeWindowForContentSize:[self.liveHighlightsController.view frame].size];
     [self.window.contentView addSubview:self.liveHighlightsController.view];
 }
 
 - (void)liveHighlights:(NSNotification *)notification {
-    [self.liveHighlightsController.view removeFromSuperview];
+    [self.processVideoController.view removeFromSuperview];
     self.selectLiveHighlightsController =
             [[eazesportzSelectLiveHighlightsViewController alloc] initWithNibName:@"eazesportzSelectLiveHighlightsViewController" bundle:nil];
     self.selectLiveHighlightsController.sport = getSport.sport;

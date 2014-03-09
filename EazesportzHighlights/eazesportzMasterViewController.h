@@ -12,6 +12,7 @@
 #import "Team.h"
 #import "User.h"
 #import "GameSchedule.h"
+#import "EazesportzRetrievePlayers.h"
 
 @interface eazesportzMasterViewController : NSViewController
 
@@ -38,5 +39,8 @@
 @property (weak) IBOutlet NSTextField *gameLabel;
 @property (weak) IBOutlet NSDatePicker *highlightDate;
 - (IBAction)downloadFileButtonClicked:(id)sender;
+
+@property (nonatomic, strong, readonly) EazesportzRetrievePlayers *getPlayers;
+@property (weak) IBOutlet NSProgressIndicator *activityIndicator;
 
 @end

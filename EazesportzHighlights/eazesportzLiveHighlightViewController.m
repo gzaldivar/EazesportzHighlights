@@ -8,19 +8,20 @@
 
 #import "eazesportzLiveHighlightViewController.h"
 #import "eazesportzSelectTeamWindowController.h"
-#import "Team.h"
 #import "GameSchedule.h"
 #import "eazesportzAVClip.h"
 #import "EazesportzRetrieveEvents.h"
-#import "Event.h"
+#import "eazesportzEditHighlightWindowController.h"
 #import "eazesportzUploadHighlight.h"
+#import "eazesportzAppDelegate.h"
 
 #import <AWSiOSSDK/S3/S3Bucket.h>
 #import <AWSiOSSDK/S3/AmazonS3Client.h>
 
-@interface eazesportzLiveHighlightViewController ()
+@interface eazesportzLiveHighlightViewController () <NSAlertDelegate>
 
 @property (nonatomic, strong) IBOutlet eazesportzSelectTeamWindowController *selectTeamController;
+@property (nonatomic, strong) IBOutlet eazesportzEditHighlightWindowController *editHighlightController;
 
 @end
 
@@ -32,7 +33,7 @@
     BOOL startclip;
     AVPlayerItem *playerItem;
     NSURL *videoUrl;
-    
+    long selectedItem;
     int clipnumber;
     NSMutableArray *clips;
     
@@ -40,13 +41,16 @@
     NSString *documentsPath;
     
     GameSchedule *game;
-    Team *team;
     EazesportzRetrieveEvents *getEvents;
-    Event *event;
+    eazesportzAppDelegate *appDelegate;
+    NSMutableArray *videos;
 }
 
 @synthesize user;
 @synthesize sport;
+@synthesize team;
+@synthesize event;
+@synthesize getPlayers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -60,7 +64,9 @@
 
 - (void)loadView {
     [super loadView];
+    videos = [[NSMutableArray alloc] init];
     bucket = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingbucket"];
+    appDelegate = (eazesportzAppDelegate *)[[NSApplication sharedApplication] delegate];
     
     if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"BroadcastTestUrl"] length] == 0) {
         // Initialize the S3 Client.
@@ -70,61 +76,43 @@
     clips = [[NSMutableArray alloc] init];
     startclip = NO;
     clipnumber = 0;
-    _uploadButton.enabled = NO;
     filemgr = [NSFileManager defaultManager];
     documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     _playerView.hidden = YES;
-    [_eventendDatePicker setDateValue:[[NSDate alloc] init]];
-    [_eventStartDatePicker setDateValue:[[NSDate alloc] init]];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uploadResult:) name:@"ClipUploadNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uploadResult:) name:@"VideoUploadCompletedNotification" object:nil];
+    videoname = team.teamid;
+
+    if (event.gameschedule_id.length > 0)
+        game = [event getGame:sport Team:team User:user];
+    
+    NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8",
+                                [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingurl"], event.event_id, team.teamid];
+    playbackstring = [playbackstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *key = [NSString stringWithFormat:@"%@/%@", event.event_id, [playbackstring lastPathComponent]];
+
+    S3GetObjectMetadataRequest *getMetadataRequest = [[S3GetObjectMetadataRequest alloc] initWithKey:key withBucket:bucket];
+    S3GetObjectMetadataResponse *getMetadataResponse = [s3 getObjectMetadata:getMetadataRequest];
+    
+    if (getMetadataResponse.lastModified) {
+        NSURL *playbackurl = [NSURL URLWithString:playbackstring];
+        NSLog(@"%@", playbackurl);
+        AVAsset *asset = [AVAsset assetWithURL:playbackurl];
+        playerItem = [AVPlayerItem playerItemWithAsset:asset];
+        AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
+        [_playerView setPlayer:player];
+        [_playerView.player play];
+        _playerView.hidden = NO;
+    } else {
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
+                                           otherButton:nil informativeTextWithFormat:@"Broadcast has not started. Please contact broadcastor."];
+        [alert setIcon:[sport getImage:@"tiny"]];
+        [alert runModal];
+    }
 }
 
 - (IBAction)homeButtonClicked:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DisplayMainViewController" object:nil
                                             userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"LiveView", @"Message", nil]];
-}
-
-- (IBAction)eventButtonClicked:(id)sender {
-    if (team) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotEvents:) name:@"EventListChangedNotification" object:nil];
-        getEvents = [[EazesportzRetrieveEvents alloc] init];
-        getEvents.startdate = _eventStartDatePicker.dateValue;
-        getEvents.enddate = _eventendDatePicker.dateValue;
-        [getEvents retrieveEvents:sport Team:team Token:user];
-    } else {
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
-                                           otherButton:nil informativeTextWithFormat:@"Please select a team."];
-        [alert setIcon:[sport getImage:@"tiny"]];
-        [alert runModal];
-    }
-}
-
-- (void)gotEvents:(NSNotification *)notification {
-    if ([[[notification userInfo] valueForKey:@"Result"] isEqualToString:@"Success"]) {
-        [_eventTableView reloadData];
-    } else {
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
-                                           otherButton:nil informativeTextWithFormat:@"Error retrieving events"];
-        [alert setIcon:[sport getImage:@"tiny"]];
-        [alert runModal];
-    }
-}
-
-- (IBAction)teamButtonClicked:(id)sender {
-    self.selectTeamController = [[eazesportzSelectTeamWindowController alloc] initWithWindowNibName:@"eazesportzSelectTeamWindowController"];
-    self.selectTeamController.sport = sport;
-    self.selectTeamController.user = user;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(teamSelected:) name:@"TeamSelectedNotification"
-                                               object:nil];
-    [self.selectTeamController showWindow:self];
-}
-
-- (void)teamSelected:(NSNotification *)notification {
-//    _sportNameLabel.stringValue = [NSString stringWithFormat:@"%@%@%@", sport.sitename, @" - ", self.selectTeamController.team.team_name];
-    team = self.selectTeamController.team;
-    _teamLabel.stringValue = team.team_name;
-    videoname = team.teamid;
-    [self.selectTeamController close];
 }
 
 - (void)cleanupDirectories {
@@ -143,7 +131,6 @@
             
             if (startclip) {
                 startclip = NO;
-                _uploadButton.enabled = YES;
 
 //                [writer writeData:[@"q" dataUsingEncoding:NSUTF8StringEncoding]];
                 clipnumber++;
@@ -156,7 +143,6 @@
                 }
             } else {
                 startclip = YES;
-                _uploadButton.enabled = NO;
 
                 [_clipButton setTitle:@"Stop Clip Recording"];
                 NSString *filePath = [documentsPath stringByAppendingPathComponent:@"createclip-errors.txt"];
@@ -176,12 +162,12 @@
                                            [[NSBundle mainBundle] pathForResource:@"HighlightScript" ofType:@"command"]];
                         clipfile = [highlightsPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_%d.mp4", videoname, clipnumber]];
                         
-                        if ((team) && (game)) {
+/*                        if ((team) && (game)) {
                             _highlightNameTextField.stringValue = [NSString stringWithFormat:@"%@ - %d", [game vsOpponent], clipnumber];
                         } else {
                             _highlightNameTextField.stringValue = clipfile;
                         }
-                        
+*/
                         if ([filemgr createDirectoryAtPath:highlightsPath withIntermediateDirectories:YES attributes:nil error:nil]) {
                             self.clipTask = [[NSTask alloc] init];
                             self.clipTask.launchPath = path;
@@ -211,6 +197,11 @@
                             [self.clipTask waitUntilExit];
                             int status = [self.clipTask terminationStatus];
                             [file closeFile];
+                            Video *avideo = [[Video alloc] init];
+                            avideo.displayName = [clipfile lastPathComponent];
+                            [videos addObject:avideo];
+                            [clips addObject:clipfile];
+                            [_uploadComboBox reloadData];
                             
                             if (status != 0) {
                                 NSLog(@"Clip Error = %d", status);
@@ -238,128 +229,12 @@
     }
 }
 
-- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    
-    // Get a new ViewCell
-    Event *anevent = [getEvents.videoEventList objectAtIndex:row];
-    // Get an existing cell with the MyView identifier if it exists
-    
-    if ([tableColumn.identifier isEqualToString:@"DateColumn"]) {
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"DateTableCellView" owner:self];
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:@"MM/dd/yyyy"];
-        cellView.textField.stringValue = [dateFormat stringFromDate:anevent.startdate];
-        return cellView;
-    } else if ([tableColumn.identifier isEqualToString:@"StartTimeColumn"]) {
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"StartTimeTableCellView" owner:self];
-        NSDateFormatter *timeFormatter = [[NSDateFormatter alloc]init];
-        timeFormatter.dateFormat = @"HH:mm";
-        cellView.textField.stringValue = [timeFormatter stringFromDate:anevent.startdate];
-        return cellView;
-    } else if ([tableColumn.identifier isEqualToString:@"StopTimeColumn"]) {
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"StopTimeTableCellView" owner:self];
-        NSDateFormatter *timeFormatter = [[NSDateFormatter alloc]init];
-        timeFormatter.dateFormat = @"HH:mm";
-        cellView.textField.stringValue = [timeFormatter stringFromDate:anevent.enddate];
-        return cellView;
-    } else if ([tableColumn.identifier isEqualToString:@"EventColumn"]) {
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"EventTableCellView" owner:self];
-        cellView.textField.stringValue = anevent.eventname;
-        return cellView;
-    } else {
-        // if ([tableColumn.identifier isEqualToString:@"OpponentColumn"])
-        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"OpponnentTableCellView" owner:self];
-        
-        if (anevent.gameschedule_id.length > 0)
-            cellView.textField.stringValue = [[anevent getGame:sport Team:team User:user] opponent_mascot];
-        else
-            cellView.textField.stringValue = @"";
-        
-        return cellView;
-    }
-}
-
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return getEvents.videoEventList.count;
-}
-
-- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    if ([_eventTableView selectedRow] >= 0) {
-        NSInteger eventSelected = [_eventTableView selectedRow];
-        event = [getEvents.videoEventList objectAtIndex:eventSelected];
-        
-        if (event) {
-            if (event.gameschedule_id.length > 0)
-                game = [event getGame:sport Team:team User:user];
-            
-            NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8",
-                                        [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingurl"], event.event_id, team.teamid];
-            playbackstring = [playbackstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-            
-            S3GetObjectRequest *getObjectRequest = [[S3GetObjectRequest alloc] initWithKey:playbackstring withBucket:bucket];
-            
-            if (getObjectRequest) {
-                NSURL *playbackurl = [NSURL URLWithString:playbackstring];
-                NSLog(@"%@", playbackurl);
-                AVAsset *asset = [AVAsset assetWithURL:playbackurl];
-                playerItem = [AVPlayerItem playerItemWithAsset:asset];
-                AVPlayer *player = [AVPlayer playerWithPlayerItem:playerItem];
-                [_playerView setPlayer:player];
-                [_playerView.player play];
-                _playerView.hidden = NO;
-            } else {
-                NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
-                                                   otherButton:nil informativeTextWithFormat:@"Broadcast has not started. Please contact broadcastor."];
-                [alert setIcon:[sport getImage:@"tiny"]];
-                [alert runModal];
-            }
-        } else {
-            NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
-                                               otherButton:nil informativeTextWithFormat:@"Event data is null."];
-            [alert setIcon:[sport getImage:@"tiny"]];
-            [alert runModal];
-        }
-    }
-}
-
-- (IBAction)uploadHighlighButtonClicked:(id)sender {
-    eazesportzUploadHighlight *upload = [[eazesportzUploadHighlight alloc] init];
-    upload.sport = sport;
-    upload.team = team;
-    upload.game = game;
-    upload.user = user;
-    upload.bucket = bucket;
-    upload.s3 = s3;
-    
-    for (int i = 0; i < clips.count; i++) {
-        if (![[[clips objectAtIndex:i] lastPathComponent] isEqualToString:[_uploadComboBox.objectValues objectAtIndex:i]]) {
-            NSString *newpath = [[clips objectAtIndex:i] stringByDeletingLastPathComponent];
-            newpath = [newpath stringByAppendingPathComponent:[_uploadComboBox.objectValues objectAtIndex:i]];
-            
-            if ([filemgr moveItemAtPath:[clips objectAtIndex:i] toPath:newpath error:nil]) {
-                [clips replaceObjectAtIndex:i withObject:newpath];
-             } else {
-                NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
-                                otherButton:nil informativeTextWithFormat:@"Error moving file. Did you name it the same as an already existing file?"];
-                [alert setIcon:[sport getImage:@"tiny"]];
-                [alert runModal];
-                NSLog(@"Error moving file %@. Did you name it the same as an already existing file?", [clips objectAtIndex:i]);
-            }
-        }
-        
-        [upload uploadVideo:[clips objectAtIndex:i] Hidden:NO];
-    }
-}
-
 - (void)uploadResult:(NSNotification *)notification {
     if ([[[notification userInfo] objectForKey:@"Result"] isEqualToString:@"Success"]) {
-        for (int i = 0; i < clips.count; i++) {
-            if ([[clips objectAtIndex:i] isEqualToString:[[notification userInfo] objectForKey:@"clipname"]]) {
-                [clips removeObjectAtIndex:i];
-                [_uploadComboBox removeItemAtIndex:i];
-                break;
-            }
-        }
+        int clipindex = [[[notification userInfo] objectForKey:@"clipindex"] intValue];
+        [clips removeObjectAtIndex:clipindex];
+        [videos removeObjectAtIndex:clipindex];
+        [_uploadComboBox reloadData];
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
                                            otherButton:nil informativeTextWithFormat:@"Fatal error uploading clip %@",
@@ -367,6 +242,75 @@
         [alert setIcon:[sport getImage:@"tiny"]];
         [alert runModal];
     }
+}
+
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox {
+    return videos.count;
+}
+
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index {
+//    return [clips objectAtIndex:index];
+    return [[videos objectAtIndex:index] displayName];
+}
+- (void)comboBoxSelectionDidChange:(NSNotification *)notification {
+    if (videos.count > 0 ) {
+        NSLog(@"[%@ %@] value == %@", NSStringFromClass([self class]),
+              NSStringFromSelector(_cmd), [clips objectAtIndex:
+                                           [(NSComboBox *)[notification object] indexOfSelectedItem]]);
+        selectedItem = [(NSComboBox *)[notification object] indexOfSelectedItem];
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"Edit"];
+        [alert addButtonWithTitle:@"Delete"];
+        [alert addButtonWithTitle:@"Upload"];
+        [alert setMessageText:@"Video Clip"];
+        [alert setInformativeText:[NSString stringWithFormat:@"Clip - %@", [[videos objectAtIndex:selectedItem] displayName]]];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setIcon:[sport getImage:@"tiny"]];
+        [alert beginSheetModalForWindow:appDelegate.window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+    }
+}
+
+- (void) alertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo {
+	if (returnCode == NSAlertFirstButtonReturn) {
+		// Do something
+        self.editHighlightController = [[eazesportzEditHighlightWindowController alloc] initWithWindowNibName:@"eazesportzEditHighlightWindowController"];
+        self.editHighlightController.sport = sport;
+        self.editHighlightController.user = user;
+        self.editHighlightController.team = team;
+        self.editHighlightController.game = game;
+        self.editHighlightController.getPlayers = getPlayers;
+        self.editHighlightController.clipname = [[clips objectAtIndex:selectedItem] lastPathComponent];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(highlightUpdated:) name:@"HighlightsDataUpdtedNotification" object:nil];
+        [self.editHighlightController showWindow:self];
+	} else if (returnCode == NSAlertSecondButtonReturn) {
+        [filemgr removeItemAtPath:[clips objectAtIndex:selectedItem] error:nil];
+        [clips removeObjectAtIndex:selectedItem];
+        [videos removeObjectAtIndex:selectedItem];
+        [_uploadComboBox reloadData];
+    } else {
+        eazesportzUploadHighlight *upload = [[eazesportzUploadHighlight alloc] init];
+        upload.sport = sport;
+        upload.team = team;
+        upload.game = game;
+        upload.user = user;
+        upload.bucket = bucket;
+        upload.s3 = s3;
+        [upload uploadVideo:[clips objectAtIndex:selectedItem] Video:[videos objectAtIndex:selectedItem] Hidden:NO];
+    }
+}
+
+- (void)highlightUpdated:(NSNotification *)notification {
+    Video *video = [videos objectAtIndex:selectedItem];
+    video.displayName = self.editHighlightController.highlightNameTextField.stringValue;
+    video.description = self.editHighlightController.highlightsDescription.string;
+    video.players = self.editHighlightController.players;
+    video.gamelog = self.editHighlightController.gamelog.gamelogid;
+    
+    if (self.editHighlightController.game.id.length > 0)
+        video.schedule = self.editHighlightController.game.id;
+    
+    video.teamid = team.teamid;
+    [_uploadComboBox reloadData];
 }
 
 @end

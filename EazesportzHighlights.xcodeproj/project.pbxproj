@@ -208,6 +208,11 @@
 		2B24D17D18C6F89900584B38 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17B18C6F89900584B38 /* home.png */; };
 		2B24D17F18C6FA9F00584B38 /* TranscodeClip.command in Resources */ = {isa = PBXBuildFile; fileRef = 2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */; };
 		2BB157AB18C822E7007B05AE /* StreamFile.command in Resources */ = {isa = PBXBuildFile; fileRef = 2BB157AA18C822E7007B05AE /* StreamFile.command */; };
+		B41F54C718CB856300BD4957 /* tag.png in Resources */ = {isa = PBXBuildFile; fileRef = B41F54C618CB856300BD4957 /* tag.png */; };
+		B41F54CB18CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F54C918CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.m */; };
+		B41F54CC18CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41F54CA18CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.xib */; };
+		B41F54D018CBEC7600BD4957 /* eazesportzEditHighlightWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B41F54CE18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.m */; };
+		B41F54D118CBEC7600BD4957 /* eazesportzEditHighlightWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41F54CF18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.xib */; };
 		B45CB1E518CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */; };
 		B45CB1E618CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */; };
 		B4A45C1F18C999D300BD94A9 /* PosterScript.command in Resources */ = {isa = PBXBuildFile; fileRef = B4A45C1E18C999D300BD94A9 /* PosterScript.command */; };
@@ -518,6 +523,13 @@
 		2B24D17B18C6F89900584B38 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = TranscodeClip.command; sourceTree = "<group>"; };
 		2BB157AA18C822E7007B05AE /* StreamFile.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = StreamFile.command; sourceTree = "<group>"; };
+		B41F54C618CB856300BD4957 /* tag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tag.png; sourceTree = "<group>"; };
+		B41F54C818CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzSelectPlayerWindowController.h; sourceTree = "<group>"; };
+		B41F54C918CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzSelectPlayerWindowController.m; sourceTree = "<group>"; };
+		B41F54CA18CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzSelectPlayerWindowController.xib; sourceTree = "<group>"; };
+		B41F54CD18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzEditHighlightWindowController.h; sourceTree = "<group>"; };
+		B41F54CE18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzEditHighlightWindowController.m; sourceTree = "<group>"; };
+		B41F54CF18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzEditHighlightWindowController.xib; sourceTree = "<group>"; };
 		B45CB1E218CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzSelectLiveHighlightsViewController.h; sourceTree = "<group>"; };
 		B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzSelectLiveHighlightsViewController.m; sourceTree = "<group>"; };
 		B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzSelectLiveHighlightsViewController.xib; sourceTree = "<group>"; };
@@ -950,6 +962,7 @@
 		2B24D02618C6E95700584B38 /* EazesportzHighlights */ = {
 			isa = PBXGroup;
 			children = (
+				B41F54C618CB856300BD4957 /* tag.png */,
 				2B24D17818C6F23700584B38 /* Footballbkg.png */,
 				2B24D0B918C6EBD400584B38 /* add-item.png */,
 				2B24D0BA18C6EBD400584B38 /* arrow-big-01.png */,
@@ -1125,6 +1138,12 @@
 				B45CB1E218CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.h */,
 				B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */,
 				B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */,
+				B41F54C818CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.h */,
+				B41F54C918CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.m */,
+				B41F54CA18CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.xib */,
+				B41F54CD18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.h */,
+				B41F54CE18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.m */,
+				B41F54CF18CBEC7600BD4957 /* eazesportzEditHighlightWindowController.xib */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -1313,6 +1332,7 @@
 				2B24D0D518C6EC3F00584B38 /* power-button.png in Resources */,
 				2B24D0D818C6EC3F00584B38 /* scissor.png in Resources */,
 				2B24D17D18C6F89900584B38 /* home.png in Resources */,
+				B41F54C718CB856300BD4957 /* tag.png in Resources */,
 				2B24D0D418C6EC3F00584B38 /* photo.png in Resources */,
 				2B24D0F818C6ECF000584B38 /* eazesportzLoginViewController.xib in Resources */,
 				2B24D02B18C6E95700584B38 /* InfoPlist.strings in Resources */,
@@ -1338,8 +1358,10 @@
 				2B24D0C218C6EBE800584B38 /* copy-item.png in Resources */,
 				2B24D0D318C6EC3F00584B38 /* photo_processing.png in Resources */,
 				2B24D03718C6E95700584B38 /* MainMenu.xib in Resources */,
+				B41F54CC18CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.xib in Resources */,
 				2B24D0B418C6EB6D00584B38 /* eazesportzMasterViewController.xib in Resources */,
 				2B24D17F18C6FA9F00584B38 /* TranscodeClip.command in Resources */,
+				B41F54D118CBEC7600BD4957 /* eazesportzEditHighlightWindowController.xib in Resources */,
 				2B24D0DA18C6EC3F00584B38 /* search.png in Resources */,
 				B4A45C1F18C999D300BD94A9 /* PosterScript.command in Resources */,
 			);
@@ -1456,12 +1478,14 @@
 				2B24D0AF18C6EB3500584B38 /* eazesportzGetGame.m in Sources */,
 				2B24D0A818C6EB0100584B38 /* eazesportzPlayerViewController.m in Sources */,
 				2B24D0B718C6EBA100584B38 /* ShuffleAlphabet.m in Sources */,
+				B41F54CB18CBB3D800BD4957 /* eazesportzSelectPlayerWindowController.m in Sources */,
 				2B24D0F718C6ECF000584B38 /* eazesportzLoginViewController.m in Sources */,
 				2B24D0EF18C6EC9D00584B38 /* eazesportzSelectTeamWindowController.m in Sources */,
 				2B24D0A118C6EA8E00584B38 /* Team.m in Sources */,
 				2B24D02D18C6E95700584B38 /* main.m in Sources */,
 				2B24D0A218C6EA8E00584B38 /* User.m in Sources */,
 				2B24D06618C6EA4200584B38 /* EazesportzRetrievePlayers.m in Sources */,
+				B41F54D018CBEC7600BD4957 /* eazesportzEditHighlightWindowController.m in Sources */,
 				2B24D09A18C6EA8E00584B38 /* FootballReceivingStat.m in Sources */,
 				2B24D06718C6EA4200584B38 /* EazesportzRetrieveSport.m in Sources */,
 				2B24D09418C6EA8E00584B38 /* Event.m in Sources */,
