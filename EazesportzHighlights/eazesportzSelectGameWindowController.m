@@ -94,9 +94,9 @@
     if ([_gamesTableView selectedRow] >= 0) {
         NSInteger gameselected = [_gamesTableView selectedRow];
         game = [getGames.gameList objectAtIndex:gameselected];
-        [self.window close];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"GameSelectedNotification" object:nil];
         [[NSNotificationCenter defaultCenter] removeObserver:self];
+        [self.window close];
     }
 }
 

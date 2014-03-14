@@ -22,14 +22,14 @@
         <window title="Edit Broadcast Event" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" animationBehavior="default" id="1">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="600" height="475"/>
+            <rect key="contentRect" x="196" y="240" width="600" height="550"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="600" height="475"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7KG-3b-tAc">
-                        <rect key="frame" x="20" y="254" width="560" height="22"/>
+                        <rect key="frame" x="20" y="329" width="560" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Filename or Event Title" bezelStyle="round" id="oJc-S6-Sac">
                             <font key="font" metaFont="system" size="16"/>
@@ -38,7 +38,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V96-GY-CMQ">
-                        <rect key="frame" x="20" y="222" width="110" height="25"/>
+                        <rect key="frame" x="20" y="223" width="110" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="squareTextured" title="Select Game" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i9A-7I-aBH">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -49,7 +49,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hX-rZ-Ull">
-                        <rect key="frame" x="143" y="224" width="437" height="22"/>
+                        <rect key="frame" x="143" y="225" width="437" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Game - Select to add to game schedule" id="BKr-Hw-e7P">
                             <font key="font" metaFont="system" size="16"/>
@@ -58,7 +58,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rt4-Z4-MQh">
-                        <rect key="frame" x="76" y="420" width="504" height="22"/>
+                        <rect key="frame" x="76" y="495" width="504" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Team - Required" id="JJh-fG-nEf">
                             <font key="font" metaFont="system" size="16"/>
@@ -67,16 +67,16 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DyA-TW-8Gi">
-                        <rect key="frame" x="20" y="351" width="262" height="48"/>
+                        <rect key="frame" x="20" y="426" width="316" height="48"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="Broadcast Event - File must be local to prevent broadcast latency." id="iLh-Le-f00">
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="If broadcasting from a file, the file must be local to prevent broadcast latency." id="iLh-Le-f00">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v85-c5-9Dk">
-                        <rect key="frame" x="18" y="404" width="52" height="53"/>
+                        <rect key="frame" x="18" y="479" width="52" height="53"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="arrow-big-01" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="baU-Gf-hpB">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -87,7 +87,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0Q-xj-KqP">
-                        <rect key="frame" x="130" y="17" width="154" height="53"/>
+                        <rect key="frame" x="130" y="18" width="154" height="53"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" title="Schedule Event" bezelStyle="regularSquare" image="save" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kg9-ed-Pzd">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -98,7 +98,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2O-5z-PSX">
-                        <rect key="frame" x="317" y="17" width="154" height="53"/>
+                        <rect key="frame" x="317" y="18" width="154" height="53"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" title="Delete Event" bezelStyle="regularSquare" image="delete-item" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="N1V-Da-fQu">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -109,7 +109,7 @@
                         </connections>
                     </button>
                     <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NdN-M0-clr">
-                        <rect key="frame" x="344" y="351" width="239" height="24"/>
+                        <rect key="frame" x="344" y="426" width="239" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="kd1-C0-TSM">
                             <font key="font" metaFont="system" size="16"/>
@@ -143,7 +143,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </datePickerCell>
                     </datePicker>
                     <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VeG-hk-dQk">
-                        <rect key="frame" x="346" y="284" width="236" height="27"/>
+                        <rect key="frame" x="346" y="359" width="236" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="zcY-w6-3rS">
                             <font key="font" metaFont="system" size="16"/>
@@ -177,7 +177,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </datePickerCell>
                     </datePicker>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2wR-Y5-qmy">
-                        <rect key="frame" x="344" y="388" width="234" height="22"/>
+                        <rect key="frame" x="344" y="463" width="234" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Event Start Time" id="hmS-Qn-6RG">
                             <font key="font" metaFont="system" size="16"/>
@@ -186,7 +186,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NVs-r2-VIW">
-                        <rect key="frame" x="346" y="321" width="233" height="22"/>
+                        <rect key="frame" x="346" y="396" width="233" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="Event Stop Time" id="yH2-Xq-dUK">
                             <font key="font" metaFont="system" size="16"/>
@@ -195,7 +195,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </textFieldCell>
                     </textField>
                     <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLi-yq-gxf">
-                        <rect key="frame" x="20" y="285" width="262" height="58"/>
+                        <rect key="frame" x="20" y="360" width="262" height="58"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         <size key="cellSize" width="239" height="18"/>
@@ -206,7 +206,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </buttonCell>
                         <cells>
                             <column>
-                                <buttonCell type="radio" title="Live Event" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="qS4-zY-Dgi">
+                                <buttonCell type="radio" title="Live Event - Camera" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="qS4-zY-Dgi">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -225,7 +225,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </connections>
                     </matrix>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jf2-lZ-Ovd">
-                        <rect key="frame" x="20" y="193" width="160" height="23"/>
+                        <rect key="frame" x="20" y="194" width="160" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Event Description:" id="AmP-iQ-Pyz">
                             <font key="font" metaFont="system" size="16"/>
@@ -234,7 +234,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </textFieldCell>
                     </textField>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRk-Ah-enK">
-                        <rect key="frame" x="20" y="81" width="558" height="104"/>
+                        <rect key="frame" x="20" y="82" width="558" height="104"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="AT8-v7-OCX">
                             <rect key="frame" x="1" y="1" width="556" height="102"/>
@@ -262,6 +262,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wov-qm-Oyu">
+                        <rect key="frame" x="18" y="255" width="564" height="66"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="0IX-ym-QZS">
+                            <font key="font" metaFont="system" size="18"/>
+                            <string key="title">Select Game only for scheduling a live broadcast of a game. Date and times will be automatically filled in. It is not intended for tagging events other than live game broadcasts.</string>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <connections>

@@ -29,7 +29,6 @@
     AmazonS3Client *s3;
     NSString *bucket;
     NSString *videoname;
-//    __block BOOL broadcasting;
     BOOL startclip;
     AVPlayerItem *playerItem;
     NSURL *videoUrl;
@@ -67,7 +66,10 @@
     
     self.IsBroadcasting = NO;
     _teamLabel.stringValue = team.team_name;
-    _gameLabel.stringValue = [[event getGame:sport Team:team User:user] vsOpponent];
+    
+    if (event.gameschedule_id.length > 0)
+        _gameLabel.stringValue = [[event getGame:sport Team:team User:user] vsOpponent];
+    
     _eventLabel.stringValue = event.eventname;
 
     if ([event.videoevent intValue] > 1) {
@@ -204,8 +206,8 @@
                                         [s3 putObject:seg];
                                         
                                         if (counter == 1) {
-                                            NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8",
-                                                                        [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingurl"], event.event_id, team.teamid];
+                                            NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8", sport.streamingurl,
+                                                                        event.event_id, team.teamid];
                                             playbackstring = [playbackstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
                                             NSURL *playbackurl = [NSURL URLWithString:playbackstring];
                                             NSLog(@"%@", playbackurl);

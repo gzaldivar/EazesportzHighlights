@@ -20,6 +20,6 @@
 @property (nonatomic, strong) Sport *sport;
 @property (nonatomic, strong) User *user;
 
-@property (nonatomic, strong, readonly) Team *team;
+@property (nonatomic, strong) Team *team;
 
 @end

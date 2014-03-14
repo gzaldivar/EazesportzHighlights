@@ -10,7 +10,7 @@
                 <outlet property="gameTextField" destination="kpN-Nz-uOg" id="WlD-gm-gaZ"/>
                 <outlet property="gamelogComboBox" destination="HtE-iF-ysD" id="mod-Hw-8sy"/>
                 <outlet property="highlightNameTextField" destination="6er-YB-GBx" id="hOO-VS-02N"/>
-                <outlet property="highlightsDescription" destination="8jn-Xy-pEq" id="uGP-QX-YbA"/>
+                <outlet property="highlightsDescription" destination="9iw-9r-Pce" id="csM-Ch-zvu"/>
                 <outlet property="playerTagsComboBox" destination="wg5-dh-CMz" id="OrO-2L-BI4"/>
                 <outlet property="playtagLabel" destination="ner-37-Xkx" id="PHH-qj-3vc"/>
                 <outlet property="teamLabel" destination="zML-D0-7Dh" id="jAL-sn-3uf"/>
@@ -98,35 +98,6 @@
                             <action selector="saveButtonClicked:" target="-2" id="xIR-OX-BTB"/>
                         </connections>
                     </button>
-                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fc3-w1-gBi">
-                        <rect key="frame" x="20" y="72" width="508" height="109"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="Gvx-y8-WNo">
-                            <rect key="frame" x="1" y="1" width="506" height="107"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="8jn-Xy-pEq">
-                                    <rect key="frame" x="0.0" y="0.0" width="506" height="107"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="506" height="107"/>
-                                    <size key="maxSize" width="512" height="10000000"/>
-                                    <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="506" height="107"/>
-                                    <size key="maxSize" width="512" height="10000000"/>
-                                </textView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </clipView>
-                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="jRD-Xi-Ebb">
-                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="zw4-XL-I8P">
-                            <rect key="frame" x="491" y="1" width="16" height="107"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </scroller>
-                    </scrollView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LwF-p6-Zus">
                         <rect key="frame" x="20" y="308" width="60" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -162,6 +133,15 @@
                             <outlet property="delegate" destination="-2" id="Yff-vN-NTw"/>
                         </connections>
                     </comboBox>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9iw-9r-Pce">
+                        <rect key="frame" x="20" y="72" width="505" height="107"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dzY-3A-rJ3">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <connections>

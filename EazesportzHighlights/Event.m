@@ -132,9 +132,9 @@
     NSMutableDictionary *serverData = [NSJSONSerialization JSONObjectWithData:result options:0 error:&jsonSerializationError];
     NSLog(@"%@", serverData);
     NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
-    NSDictionary *items = [serverData objectForKey:@"event"];
     
     if ([httpResponse statusCode] == 200) {
+        NSDictionary *items = [serverData objectForKey:@"event"];
         [self initWithDictionary:items Sport:sport];
         
         return YES;

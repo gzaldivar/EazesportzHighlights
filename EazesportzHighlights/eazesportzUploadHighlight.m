@@ -71,10 +71,10 @@
                 
                 if ([httpResponse statusCode] == 200) {
                     NSDictionary *items = [serverData objectForKey:@"videoclip"];
-                    Video *video = [[Video alloc] initWithDirectory:items];
+                    video.videoid = [items objectForKey:@"_id"];
                     
                     NSString *posterpath = [NSString stringWithFormat:@"videos/%@", video.videoid];
-                    NSString *awsposterobject = [NSString stringWithFormat:@"%@/%@", _bucket, posterpath];
+//                    NSString *awsposterobject = [NSString stringWithFormat:@"%@/%@", _bucket, posterpath];
                     
                     @try {
                         // upload poster ...
@@ -85,8 +85,8 @@
                         [posterImage unlockFocus];
                         NSData *photoData = [bitmapRep representationUsingType:NSPNGFileType properties:Nil];
                         
-                        S3PutObjectRequest *por = [[S3PutObjectRequest alloc] initWithKey:
-                                                   [NSString stringWithFormat:@"%@.jpg", [pathname lastPathComponent]] inBucket:awsposterobject];
+                        S3PutObjectRequest *por = [[S3PutObjectRequest alloc] initWithKey:[NSString stringWithFormat:@"%@/%@.jpg", posterpath,
+                                                                                           video.displayName] inBucket:_bucket];
                         por.contentType = @"image/jpeg";
                         por.data = photoData;
                         [_s3 putObject:por];
@@ -103,9 +103,9 @@
                         // upload video ....
                         
                         NSString *videopath = [NSString stringWithFormat:@"videos/%@", video.videoid];
-                        NSString *awsvideoobject = [NSString stringWithFormat:@"%@/%@", _bucket, videopath];
-                        por = [[S3PutObjectRequest alloc] initWithKey:[NSString stringWithFormat:@"%@.mp4", [pathname lastPathComponent]]
-                                                             inBucket:awsvideoobject];
+//                        NSString *awsvideoobject = [NSString stringWithFormat:@"%@/%@", _bucket, videopath];
+                        por = [[S3PutObjectRequest alloc] initWithKey:[NSString stringWithFormat:@"%@/%@.mp4", videopath, video.displayName]
+                                                             inBucket:_bucket];
                         por.contentType = @"video/mp4";
                         por.data = videoData;
                         por.contentLength = [videoData length];
@@ -116,14 +116,9 @@
                                                            _sport.id, video.videoid, _user.authtoken]];
                         
                         NSMutableDictionary *videoDict =  [[NSMutableDictionary alloc] initWithObjectsAndKeys:
-                                                           [NSString stringWithFormat:@"%@.mp4", video.displayName], @"filename",
-                                                           video.displayName, @"displayname", @"video/mp4", @"filetype",
-                                                           _team.teamid, @"team_id", _user.userid, @"user_id", _game.id, @"gameschedule_id",
-                                                           [video.duration stringValue], @"duration", video.description, @"description",
-                                                           [NSString stringWithFormat:@"%@/%@.jpg", posterpath, [pathname lastPathComponent]],
-                                                           @"poster_filepath",
-                                                           [NSString stringWithFormat:@"%@/%@.mp4", videopath, [pathname lastPathComponent]],
-                                                           @"filepath", nil];
+                                                           [NSString stringWithFormat:@"%@/%@.mp4", videopath, video.displayName], @"filepath",
+                                                           [NSString stringWithFormat:@"%@/%@.jpg", posterpath, video.displayName], @"poster_filepath",
+                                                           nil];
                         
                         NSMutableURLRequest *urlrequest = [NSMutableURLRequest requestWithURL:url];
                         NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:videoDict, @"videoclip", nil];
@@ -199,7 +194,7 @@
 
 - (void)uploadSuccessful:(NSString *)pathname Video:(Video *)video {
     [[NSFileManager defaultManager] removeItemAtPath:pathname error:nil];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoUploadCompletedNotification" object:video
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoUploadCompletedNotification" object:nil
                                         userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Success", @"Result", _clipindex, @"clipindex", nil]];
 }
 
@@ -241,7 +236,7 @@
         }
     }
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoUploadCompletedNotification" object:video
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoUploadCompletedNotification" object:nil
                                                       userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Upload Error", @"Result", nil]];
 }
 

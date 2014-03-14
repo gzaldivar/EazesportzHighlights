@@ -37,7 +37,7 @@
 @property (weak) IBOutlet NSButton *gameButton;
 - (IBAction)gameButtonClicked:(id)sender;
 - (IBAction)playerButtonClicked:(id)sender;
-@property (unsafe_unretained) IBOutlet NSTextView *highlightsDescription;
 @property (weak) IBOutlet NSComboBox *playerTagsComboBox;
+@property (weak) IBOutlet NSTextField *highlightsDescription;
 
 @end

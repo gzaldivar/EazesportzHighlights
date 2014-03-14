@@ -148,6 +148,17 @@
     _gameLabel.stringValue = [self.selectGameController.game vsOpponent];
     game = self.selectGameController.game;
     [_starttimeDatePicker setDateValue:game.gamedatetime];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setHour:4];
+    [_stoptimeDatePicker setDateValue:[gregorian dateByAddingComponents:components toDate:game.gamedatetime options:0]];
+    [components setMinute:-30];
+    [_starttimeDatePicker setDateValue:[gregorian dateByAddingComponents:components toDate:game.gamedatetime options:0]];
+    
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
+                                       otherButton:nil informativeTextWithFormat:@"Broadcast date automatically filled in with game schedule date."];
+    [alert setIcon:[sport getImage:@"tiny"]];
+    [alert runModal];
 }
 
 - (IBAction)openfileButtonClicked:(id)sender {

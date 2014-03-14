@@ -70,6 +70,7 @@
 - (void)gotEvents:(NSNotification *)notification {
     if ([[[notification userInfo] valueForKey:@"Result"] isEqualToString:@"Success"]) {
         [_eventTableView reloadData];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"EventListChangedNotification" object:nil];
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
                                            otherButton:nil informativeTextWithFormat:@"Error retrieving events"];
@@ -90,13 +91,14 @@
     //    _sportNameLabel.stringValue = [NSString stringWithFormat:@"%@%@%@", sport.sitename, @" - ", self.selectTeamController.team.team_name];
     team = self.selectTeamController.team;
     _teamLabel.stringValue = team.team_name;
-    [self.selectTeamController close];
     [_activityIndicator startAnimation:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"TeamSelectedNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotPlayers:) name:@"RosterChangedNotification" object:nil];
     [getPlayers retrievePlayers:sport Team:team User:user];
 }
 
 - (void)gotPlayers:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"RosterChangedNotification" object:nil];
     [_activityIndicator stopAnimation:self];
 }
 

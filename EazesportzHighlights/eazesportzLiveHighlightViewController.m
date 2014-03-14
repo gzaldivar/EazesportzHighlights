@@ -65,7 +65,7 @@
 - (void)loadView {
     [super loadView];
     videos = [[NSMutableArray alloc] init];
-    bucket = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingbucket"];
+    bucket = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3bucket"];
     appDelegate = (eazesportzAppDelegate *)[[NSApplication sharedApplication] delegate];
     
     if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"BroadcastTestUrl"] length] == 0) {
@@ -85,12 +85,12 @@
     if (event.gameschedule_id.length > 0)
         game = [event getGame:sport Team:team User:user];
     
-    NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8",
-                                [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingurl"], event.event_id, team.teamid];
+    NSString *playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8", sport.streamingurl, event.event_id, team.teamid];
     playbackstring = [playbackstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *key = [NSString stringWithFormat:@"%@/%@", event.event_id, [playbackstring lastPathComponent]];
 
-    S3GetObjectMetadataRequest *getMetadataRequest = [[S3GetObjectMetadataRequest alloc] initWithKey:key withBucket:bucket];
+    S3GetObjectMetadataRequest *getMetadataRequest = [[S3GetObjectMetadataRequest alloc] initWithKey:key
+                                                                        withBucket:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingbucket"]];
     S3GetObjectMetadataResponse *getMetadataResponse = [s3 getObjectMetadata:getMetadataRequest];
     
     if (getMetadataResponse.lastModified) {
@@ -175,8 +175,7 @@
                             NSString *playbackstring;
                             
                             if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"BroadcastTestUrl"] length] == 0)
-                                playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8",
-                                                            [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingurl"], event.event_id, team.teamid];
+                                playbackstring = [NSString stringWithFormat:@"%@/%@/%@.m3u8", sport.streamingurl, event.event_id, team.teamid];
                             else {
                                 NSString *testDirectory = [documentsPath stringByAppendingPathComponent:
                                                            [[NSBundle mainBundle] objectForInfoDictionaryKey:@"streamingdirectory"]];
@@ -234,6 +233,7 @@
         int clipindex = [[[notification userInfo] objectForKey:@"clipindex"] intValue];
         [clips removeObjectAtIndex:clipindex];
         [videos removeObjectAtIndex:clipindex];
+        _uploadComboBox.stringValue = @"";
         [_uploadComboBox reloadData];
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
@@ -300,9 +300,10 @@
 }
 
 - (void)highlightUpdated:(NSNotification *)notification {
+    _uploadComboBox.stringValue = @"";
     Video *video = [videos objectAtIndex:selectedItem];
     video.displayName = self.editHighlightController.highlightNameTextField.stringValue;
-    video.description = self.editHighlightController.highlightsDescription.string;
+    video.description = self.editHighlightController.highlightsDescription.stringValue;
     video.players = self.editHighlightController.players;
     video.gamelog = self.editHighlightController.gamelog.gamelogid;
     

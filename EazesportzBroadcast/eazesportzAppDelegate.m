@@ -46,6 +46,7 @@
                                                  name:@"LiveVideoViewNotification" object:nil];
     
     [self.window setBackgroundColor:[NSColor colorWithPatternImage:[NSImage imageNamed:@"Footballbkg.png"]]];
+    _window = self.window;
     
     self.loginViewController =
                 [[eazesportzLoginViewController alloc] initWithNibName:@"eazesportzLoginViewController" bundle:nil];

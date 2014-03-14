@@ -308,7 +308,7 @@
     eazesportzAVClip *theclip = [clips objectAtIndex:selectedClip];
     theclip.clipName = self.editHighlightController.highlightNameTextField.stringValue;
     theclip.video.displayName = theclip.clipName;
-    theclip.video.description = self.editHighlightController.highlightsDescription.string;
+    theclip.video.description = self.editHighlightController.highlightsDescription.stringValue;
     theclip.video.players = self.editHighlightController.players;
     theclip.video.gamelog = self.editHighlightController.gamelog.gamelogid;
     

@@ -35,6 +35,8 @@
 @property(nonatomic, assign) int goldMedia;
 @property(nonatomic, assign) int platinumMedia;
 
+@property (nonatomic, strong) NSString *streamingurl;
+
 @property(nonatomic, strong) NSNumber *teamcount;
 
 @property(nonatomic, strong) NSMutableDictionary *playerPositions;

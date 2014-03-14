@@ -345,6 +345,7 @@
 		B4B899BB18C8328D00830EED /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993818C8321A00830EED /* libfaac.0.dylib */; };
 		B4B899BD18C837D700830EED /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B899BC18C837D700830EED /* AWSiOSSDK.framework */; };
 		B4CC63DC18C83F6900B5BF0C /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */; };
+		B4F6BB0718CE05F1001A7EF0 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = B4F6BB0518CE05F1001A7EF0 /* ffmpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -602,6 +603,7 @@
 		B4B8997A18C8326100830EED /* EazesportzHighlights.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = EazesportzHighlights.xcodeproj; sourceTree = "<group>"; };
 		B4B899BC18C837D700830EED /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSiOSSDK.framework; sourceTree = "<group>"; };
 		B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSiOSSDK.framework; path = "../aws-sdk-ios-master/AWSiOSSDK.framework"; sourceTree = "<group>"; };
+		B4F6BB0518CE05F1001A7EF0 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -962,6 +964,7 @@
 		2B24D02618C6E95700584B38 /* EazesportzHighlights */ = {
 			isa = PBXGroup;
 			children = (
+				B4F6BB0418CE05F1001A7EF0 /* ffmpeg */,
 				B41F54C618CB856300BD4957 /* tag.png */,
 				2B24D17818C6F23700584B38 /* Footballbkg.png */,
 				2B24D0B918C6EBD400584B38 /* add-item.png */,
@@ -1151,6 +1154,15 @@
 		B4B8997B18C8326100830EED /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B4F6BB0418CE05F1001A7EF0 /* ffmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				B4F6BB0518CE05F1001A7EF0 /* ffmpeg */,
+			);
+			name = ffmpeg;
+			path = ../ffmpeg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1348,6 +1360,7 @@
 				2B24D0BC18C6EBD400584B38 /* arrow-big-01.png in Resources */,
 				2B24D0D618C6EC3F00584B38 /* reload.png in Resources */,
 				2B24D0C118C6EBE800584B38 /* calendar.png in Resources */,
+				B4F6BB0718CE05F1001A7EF0 /* ffmpeg in Resources */,
 				2B24D0C418C6EBE800584B38 /* document.png in Resources */,
 				2B24D0EC18C6EC9D00584B38 /* eazesportzSelectGameWindowController.xib in Resources */,
 				2B24D03118C6E95700584B38 /* Credits.rtf in Resources */,

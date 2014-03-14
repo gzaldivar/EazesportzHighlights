@@ -9,7 +9,7 @@
 #import "eazesportzSelectTeamWindowController.h"
 #import "EazesportzRetrieveTeams.h"
 
-@interface eazesportzSelectTeamWindowController ()
+@interface eazesportzSelectTeamWindowController () <NSAlertDelegate>
 
 @end
 
@@ -48,10 +48,19 @@
 
 - (void)gotTeams:(NSNotification *)notification {
     if (getTeams.teams.count == 1) {
-        [self teamSelected:[getTeams.teams objectAtIndex:0]];
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"OK"];
+        [alert setInformativeText:[NSString stringWithFormat:@"Auto selecting only team - %@", [[getTeams.teams objectAtIndex:0] team_name]]];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setIcon:[sport getImage:@"tiny"]];
+        [alert beginSheetModalForWindow:self.window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
     } else {
         [_teamTableView reloadData];
     }
+}
+
+- (void) alertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo {
+    [self teamSelected:[getTeams.teams objectAtIndex:0]];
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -81,8 +90,9 @@
 
 - (void)teamSelected:(Team *)theteam {
     team = theteam;
-    [self.window close];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"TeamSelectedNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.window close];
 }
 
 @end

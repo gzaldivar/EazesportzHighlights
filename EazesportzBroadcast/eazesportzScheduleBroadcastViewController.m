@@ -48,7 +48,6 @@
     [_startDatePicker setDateValue:[[NSDate alloc] init]];
     [_endDatePicker setDateValue:[[NSDate alloc] init]];
     getEvents = [[EazesportzRetrieveEvents alloc] init];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(teamSelected:) name:@"TeamSelectedNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventsReceived:) name:@"EventListChangedNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(eventSelected:) name:@"EventListUpdatedNotification" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addEvent:) name:@"EventAddedNotification" object:nil];
@@ -64,6 +63,7 @@
 }
 
 - (IBAction)selectTeamButtonClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(teamSelected:) name:@"TeamSelectedNotification" object:nil];
     self.selectTeamController = [[eazesportzSelectTeamWindowController alloc] initWithWindowNibName:@"eazesportzSelectTeamWindowController"];
     self.selectTeamController.sport = sport;
     self.selectTeamController.user = user;
@@ -71,9 +71,9 @@
 }
 
 - (void)teamSelected:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"TeamSelectedNotification" object:nil];
     _teamLabel.stringValue = self.selectTeamController.team.team_name;
     team = self.selectTeamController.team;
-    self.selectTeamController = nil;
 }
 
 - (IBAction)newScheduleButtonClicked:(id)sender {
