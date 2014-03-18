@@ -38,15 +38,11 @@
 	<string>http://powerful-everglades-2345.herokuapp.com</string>
 	<key>s3bucket</key>
 	<string>sportzteams</string>
-	<key>s3streamingbucket</key>
-	<string>eazesportz</string>
-	<key>s3streamingurl</key>
-	<string>http://eazesportzstreaming.s3-website-us-east-1.amazonaws.com</string>
 	<key>streamingdirectory</key>
 	<string>/eazesportzstreaming</string>
 	<key>highlightsdirectory</key>
 	<string>/eazesportzhighlights</string>
-	<key>BroadcastTestUrl</key>
-	<string></string>
+	<key>WelcomeMessage</key>
+	<string>EazeSportz Broadcast Manager</string>
 </dict>
 </plist>

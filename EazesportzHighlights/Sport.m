@@ -38,6 +38,7 @@
 @synthesize platinumMedia;
 
 @synthesize streamingurl;
+@synthesize streamingbucket;
 
 @synthesize teamcount;
 
@@ -89,6 +90,7 @@
         platinumMedia = [[sportDictionary objectForKey:@"platinumMedia"] intValue];
         teamcount = [sportDictionary objectForKey:@"teamcount"];
         streamingurl = [sportDictionary objectForKey:@"streamingurl"];
+        streamingbucket = [sportDictionary objectForKey:@"streamingbucket"];
         
         if ([name isEqualToString:@"Soccer"]) {
             playerPositions = [self parsePositions:[sportDictionary objectForKey:@"soccer_positions"]];

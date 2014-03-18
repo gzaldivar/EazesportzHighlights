@@ -177,6 +177,9 @@
     }
 }
 
+- (IBAction)preferencesMenuItemClicked:(id)sender {
+}
+
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
     // Save changes in the application's managed object context before the application terminates.

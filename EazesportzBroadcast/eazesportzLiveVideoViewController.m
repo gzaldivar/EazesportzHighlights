@@ -57,7 +57,7 @@
 
 - (void)loadView {
     [super loadView];
-    bucket = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingbucket"];
+    bucket = sport.streamingbucket;
     
     if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"BroadcastTesturl"] length] == 0) {
         // Initialize the S3 Client.
@@ -170,23 +170,46 @@
                 
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                     self.IsBroadcasting = YES;
-                    int counter = 0;
+                    int counter = 0, filecount = 0;
                     NSString *lastfile = @"";
                     NSString *videofile;
+//                    NSDate *lastmodified = [NSDate date];
                     
                     if ([[[NSBundle mainBundle] objectForInfoDictionaryKey:@"BroadcastTestUrl"] length] == 0) {
                         while (self.IsBroadcasting) {
                             @try {
                                 if ([filemgr fileExistsAtPath:[streamingPath stringByAppendingPathComponent:segmentfile]]) {
+                                    NSDictionary *attributes = [filemgr attributesOfItemAtPath:[streamingPath stringByAppendingPathComponent:segmentfile]
+                                                                                         error:nil];
+//                                    NSDate *filemodified = [attributes objectForKey:NSFileModificationDate];
+                                    
+//                                    if ([lastmodified compare:filemodified] == NSOrderedAscending) {
+//                                        videofile = [NSString stringWithFormat:@"%@%d.ts", videoname, filecount];
                                     NSString *stringdata = [NSString stringWithContentsOfFile:[streamingPath stringByAppendingPathComponent:segmentfile]
-                                                                                     encoding:NSUTF8StringEncoding error:nil];
-                                    if (stringdata.length > 0) {
-                                        NSArray *m3u8array = [stringdata componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-                                        long pos = m3u8array.count - 2;
-                                        videofile = [m3u8array objectAtIndex:pos];
-                                    }
+                                                                                         encoding:NSUTF8StringEncoding error:nil];
+                                    if (stringdata != nil) {
+                                        if (stringdata.length > 0) {
+                                            NSArray *m3u8array = [stringdata componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+                                            if (m3u8array.count > 2) {
+                                                long pos = m3u8array.count - 2;
+                                                NSString *thesegment = [m3u8array objectAtIndex:pos];
+                                                NSArray *filenamebits = [thesegment componentsSeparatedByString:@"."];
+                                                if (filenamebits.count == 2) {
+                                                    if ([[filenamebits objectAtIndex:1] isEqualToString:@"ts"])
+                                                        videofile = thesegment;
+                                                    else
+                                                        videofile = lastfile;
+                                                } else
+                                                    videofile = lastfile;
+                                            } else
+                                                videofile = lastfile;
+                                        } else
+                                            videofile = lastfile;
+                                    } else
+                                        videofile = lastfile;
                                 
                                     if (![lastfile isEqualToString:videofile]) {
+                                        
                                         NSString *segmentfile = [NSString stringWithFormat:@"%@.m3u8", videoname];
                                         NSData *videoData = [[NSData alloc] initWithContentsOfFile:[streamingPath stringByAppendingPathComponent:videofile]];
                                         NSData *segmentData = [stringdata dataUsingEncoding:NSUTF8StringEncoding];
@@ -221,8 +244,20 @@
                                         
                                         counter++;
                                         
+                                        if (filecount == 4)
+                                            filecount = 0;
+                                        else
+                                            filecount++;
+                                        
                                         lastfile = videofile;
-                                        NSLog(@"lastfile end of loop=%@", lastfile);
+//                                        lastmodified = filemodified;
+                                        NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+                                        [dateformatter setDateFormat:@"YYYY-mm-dd HH:mm:ss"];
+//                                        NSLog(@"last date end of loop=%@", [dateformatter stringFromDate:lastmodified]);
+                                        NSLog(@"last file=%@", videofile);
+                                    } else {
+                                        sleep(3);
+                                        NSLog(@"sleep videofile=%@", videofile);
                                     }
                                 }
                                 

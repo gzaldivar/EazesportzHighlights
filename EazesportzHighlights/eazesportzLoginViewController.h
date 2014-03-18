@@ -14,6 +14,7 @@
 @property (weak) IBOutlet NSTextField *emailTextField;
 @property (weak) IBOutlet NSSecureTextField *passwordTextField;
 - (IBAction)loginButtonClicked:(id)sender;
+@property (weak) IBOutlet NSTextField *welcomeLabel;
 
 @property (nonatomic, strong) User *user;
 

@@ -17,5 +17,6 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)saveAction:(id)sender;
+- (IBAction)preferencesMenuItemClicked:(id)sender;
 
 @end

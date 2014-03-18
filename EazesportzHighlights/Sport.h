@@ -36,6 +36,7 @@
 @property(nonatomic, assign) int platinumMedia;
 
 @property (nonatomic, strong) NSString *streamingurl;
+@property (nonatomic, strong) NSString *streamingbucket;
 
 @property(nonatomic, strong) NSNumber *teamcount;
 

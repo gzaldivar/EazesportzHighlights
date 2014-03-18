@@ -30,6 +30,7 @@
 
 - (void)loadView {
     [super loadView];
+    _welcomeLabel.stringValue = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"WelcomeMessage"];
     
     login = [[EazesportzLogin alloc] init];
 }

@@ -192,7 +192,7 @@
         return nil;
 }
 
-- (void)uploadSuccessful:(NSString *)pathname Video:(Video *)video {
+- (void)uploadSuccessful:(NSString *)pathname Video:(Video *)video {    
     [[NSFileManager defaultManager] removeItemAtPath:pathname error:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoUploadCompletedNotification" object:nil
                                         userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"Success", @"Result", _clipindex, @"clipindex", nil]];

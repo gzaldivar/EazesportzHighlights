@@ -89,8 +89,7 @@
     playbackstring = [playbackstring stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *key = [NSString stringWithFormat:@"%@/%@", event.event_id, [playbackstring lastPathComponent]];
 
-    S3GetObjectMetadataRequest *getMetadataRequest = [[S3GetObjectMetadataRequest alloc] initWithKey:key
-                                                                        withBucket:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"s3streamingbucket"]];
+    S3GetObjectMetadataRequest *getMetadataRequest = [[S3GetObjectMetadataRequest alloc] initWithKey:key withBucket:sport.streamingbucket];
     S3GetObjectMetadataResponse *getMetadataResponse = [s3 getObjectMetadata:getMetadataRequest];
     
     if (getMetadataResponse.lastModified) {
@@ -252,6 +251,7 @@
 //    return [clips objectAtIndex:index];
     return [[videos objectAtIndex:index] displayName];
 }
+
 - (void)comboBoxSelectionDidChange:(NSNotification *)notification {
     if (videos.count > 0 ) {
         NSLog(@"[%@ %@] value == %@", NSStringFromClass([self class]),

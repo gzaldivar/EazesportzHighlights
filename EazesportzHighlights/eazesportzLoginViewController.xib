@@ -10,6 +10,7 @@
                 <outlet property="emailTextField" destination="ZSc-z9-fIM" id="cqr-Oo-6nU"/>
                 <outlet property="passwordTextField" destination="7WT-e4-9ZA" id="jfT-EO-IVz"/>
                 <outlet property="view" destination="1" id="2"/>
+                <outlet property="welcomeLabel" destination="DeJ-yy-7mg" id="UyS-oG-39Y"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>

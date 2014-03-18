@@ -38,16 +38,12 @@
 	<string>http://192.168.1.87:3000</string>
 	<key>s3bucket</key>
 	<string>sportsite_solutions</string>
-	<key>s3streamingbucket</key>
-	<string>eazesportzstreaming</string>
-	<key>s3streamingurl</key>
-	<string>http://eazesportzstreaming.s3-website-us-east-1.amazonaws.com</string>
 	<key>streamingdirectory</key>
 	<string>/eazesportzstreaming</string>
 	<key>highlightsdirectory</key>
 	<string>/eazesportzhighlights</string>
-	<key>BroadcastTestMode</key>
-	<string></string>
+	<key>WelcomeMessage</key>
+	<string>EazeSportz Highlights Manager</string>
 	<key>ffmpeglocation</key>
 	<string>/Applications/ffmpeg</string>
 </dict>
