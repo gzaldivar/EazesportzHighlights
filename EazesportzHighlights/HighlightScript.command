@@ -10,4 +10,4 @@ echo "************************************"
 echo "Creating a clip"
 echo "************************************"
 
-/Applications/ffmpeg/ffmpeg -re -i "${1}" -ss 00:00:00.0 -t 00:00:55.0 -c:v copy -acodec aac -strict experimental -ac 2 -ab 64k -y "${2}"
+"${3}" -re -y -i "${1}" -ss 00:00:00.0 -t 00:00:55.0 -c:v copy -acodec aac -strict experimental -ac 2 -ab 64k "${2}"

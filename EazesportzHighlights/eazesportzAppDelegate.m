@@ -332,4 +332,6 @@
     [self.window.contentView addSubview:self.selectLiveHighlightsController.view];
 }
 
+- (IBAction)preferencesButtonClicked:(id)sender {
+}
 @end

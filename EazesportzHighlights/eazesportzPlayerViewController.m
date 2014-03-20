@@ -12,6 +12,7 @@
 #import "ShuffleAlphabet.h"
 #import "eazesportzUploadHighlight.h"
 #import "eazesportzEditHighlightWindowController.h"
+#import "EazesportzAppDelegate.h"
 
 #import <AWSiOSSDK/S3/S3Bucket.h>
 #import <AWSiOSSDK/S3/AmazonS3Client.h>
@@ -30,7 +31,7 @@
 @implementation eazesportzPlayerViewController {
     AVPlayerItem *playerItem;
     NSMutableArray *clips;
-    int clipnumber, uploadedclips;
+    int clipnumber;
     
     AmazonS3Client *s3;
     NSString *bucket;
@@ -39,6 +40,8 @@
     NSInteger selectedClip;
     NSFileManager *fileMgr;
     NSString *transcodeDir;
+    
+    eazesportzAppDelegate *appDelegate;
 }
 
 @synthesize videoUrl;
@@ -70,10 +73,10 @@
     _activityIndicator.hidden = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(uploadResult:) name:@"VideoUploadCompletedNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateClipTable:) name:@"UpdateClipTableNotification" object:nil];
 
     clips = [[NSMutableArray alloc] init];
     clipnumber = 0;
-    uploadedclips = 0;
     selectedClip = -1;
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
@@ -126,8 +129,7 @@
                 }
                 
                 newclip.clip = assetExportSession;
-                Float64 dur = CMTimeGetSeconds([[assetExportSession asset] duration]);
-                newclip.video.duration = [NSNumber numberWithFloat:dur];
+                newclip.video.displayName = newclip.clipName;
                 [clips addObject:newclip];
                 [_clipTableView reloadData];
             } else if (result == AVPlayerViewTrimCancelButton) {
@@ -156,13 +158,14 @@
         videoQueue = dispatch_queue_create("Video Queue", NULL);
         NSString *applicationDocumentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         transcodeDir = [applicationDocumentsDir stringByAppendingPathComponent:team.teamid];
-        transcodeDir = [transcodeDir stringByAppendingPathComponent:game.opponent_mascot];
+        
+        if (game)
+            transcodeDir = [transcodeDir stringByAppendingPathComponent:game.opponent_mascot];
         
         if ([fileMgr createDirectoryAtPath:transcodeDir withIntermediateDirectories:YES attributes:nil error:nil]) {
             for (int i = 0; i < clips.count; i++) {
-                if (![[clips objectAtIndex:i] uploaded]) {
-                    NSString *storePath = [transcodeDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4",
-                                                                           [[clips objectAtIndex:i] clipName]]];
+                if (![[[clips objectAtIndex:i] uploaded] isEqualToString:@"Error"]) {
+                    NSString *storePath = [transcodeDir stringByAppendingPathComponent:[NSString stringWithFormat:@"%@_temp.mp4", [[clips objectAtIndex:i] clipName]]];
 
                     if ([fileMgr fileExistsAtPath:storePath]) {
                         [fileMgr removeItemAtPath:storePath error:NULL];
@@ -173,9 +176,9 @@
                     [[clips objectAtIndex:i] clip].shouldOptimizeForNetworkUse = YES;
                     
                     [[[clips objectAtIndex:i] clip] exportAsynchronouslyWithCompletionHandler:^{
-                        dispatch_async(dispatch_get_main_queue(), ^{
+//                        dispatch_async(dispatch_get_main_queue(), ^{
                             [self exportDidFinish:[clips objectAtIndex:i]];
-                        });
+//                        });
                     }];
                 }
             }
@@ -195,41 +198,42 @@
 
 -(void)exportDidFinish:(eazesportzAVClip *)clip {
     if ([clip.clip status] == AVAssetExportSessionStatusCompleted) {
-        dispatch_async(videoQueue, ^{
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             
-            AVCodecContext *codecCtx = [self HDVideo:clip];
-            NSString *filetype = [[clip.clip.outputURL absoluteString] pathExtension];
-            NSString *filename = [[clip.clip.outputURL absoluteString] lastPathComponent];
+        AVCodecContext *codecCtx = [self HDVideo:clip];
+        AVURLAsset* asset = [AVURLAsset URLAssetWithURL:clip.clip.outputURL options:nil];
+        CMTime duration = asset.duration;
+        clip.video.duration = [NSNumber numberWithFloat:CMTimeGetSeconds(duration)];
+        NSString *filetype = [[clip.clip.outputURL absoluteString] pathExtension];
+        NSString *filename = [[clip.clip.outputURL path] lastPathComponent];
+        NSArray *filebits = [filename componentsSeparatedByString:@"_"];
+    
+        if (codecCtx->codec->id == AV_CODEC_ID_H264) {      // content is h.264
+            NSMutableArray *arguments = [[NSMutableArray alloc] init];
+                [arguments addObject:[clip.clip.outputURL path]];
             
-            if (codecCtx->codec->id == AV_CODEC_ID_H264) {      // content is h.264
-                NSMutableArray *arguments = [[NSMutableArray alloc] init];
-                NSFileManager *filemgr;
+            if (highdef)
+                [arguments addObject:@"852x480"];
+            else
+                [arguments addObject:@"480x360"];
+            
+            if ([filetype isEqualToString:@"mov"]) {
                 
-                filemgr = [NSFileManager defaultManager];
-                NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-
-                [arguments addObject:[NSString stringWithFormat:@"%@/%@", documentsPath, filename]];
+            } else if ([filetype isEqualToString:@"mts"]) {
                 
-                if (highdef)
-                    [arguments addObject:@"640x360"];
-                else
-                    [arguments addObject:@"480x360"];
+            } else if ([filetype isEqualToString:@"mpeg"]) {
                 
-                if ([filetype isEqualToString:@"mov"]) {
-                    
-                } else if ([filetype isEqualToString:@"mts"]) {
-                    
-                } else if ([filetype isEqualToString:@"mpeg"]) {
-                    
-                } else if ([filetype isEqualToString:@"mp4"]) {
-                    [arguments addObject:[NSString stringWithFormat:@"%@/%@.%@", documentsPath, filename, @"mp4"]];
-                }
-                
-                [self runScript:arguments VideoClip:clip];
-            } else {                                            // we need to convert the video to h.264
-                
+            } else if ([filetype isEqualToString:@"mp4"]) {
+//                    [arguments addObject:[NSString stringWithFormat:@"%@/%@.%@", documentsPath, filename, @"mp4"]];
+                [arguments addObject:[NSString stringWithFormat:@"%@/%@.mp4", transcodeDir, [filebits objectAtIndex:0]]];
             }
-        });
+            
+            [arguments addObject:[NSString stringWithFormat:@"%@/Contents/Resources/ffmpeg", [[NSBundle mainBundle] bundlePath]]];
+            [self runScript:arguments VideoClip:clip];
+        } else {                                            // we need to convert the video to h.264
+            
+        }
+//        });
     } else if ([clip.clip status] == AVAssetExportSessionStatusFailed) {
         NSAlert *alert = [NSAlert alertWithError:[clip.clip error]];
         [alert setIcon:[sport getImage:@"tiny"]];
@@ -291,7 +295,20 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
     selectedClip = [_clipTableView selectedRow];
+    
     if (selectedClip > -1) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        [alert addButtonWithTitle:@"Edit"];
+        [alert addButtonWithTitle:@"Delete"];
+        [alert setInformativeText:[NSString stringWithFormat:@"Clip - %@", [[clips objectAtIndex:selectedClip] clipName]]];
+        [alert setAlertStyle:NSWarningAlertStyle];
+        [alert setIcon:[sport getImage:@"tiny"]];
+        [alert beginSheetModalForWindow:appDelegate.window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+    }
+}
+
+- (void) alertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo {
+    if (returnCode == NSAlertFirstButtonReturn) {
         self.editHighlightController = [[eazesportzEditHighlightWindowController alloc] initWithWindowNibName:@"eazesportzEditHighlightWindowController"];
         self.editHighlightController.sport = sport;
         self.editHighlightController.team = team;
@@ -301,6 +318,8 @@
         self.editHighlightController.clipname = [[clips objectAtIndex:selectedClip] clipName];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(highlightUpdated:) name:@"HighlightsDataUpdtedNotification" object:nil];
         [self.editHighlightController showWindow:self];
+    } else {
+        [self deleteButtonClicked:self];
     }
 }
 
@@ -324,9 +343,10 @@
     if (selectedClip > -1) {
         [clips removeObjectAtIndex:selectedClip];
         [_clipTableView deselectColumn:selectedClip];
-        [_clipTableView reloadData];
         selectedClip = -1;
     }
+    
+    [_clipTableView reloadData];
 }
 
 - (void)stopTranscodeTask {
@@ -398,13 +418,8 @@
             [file closeFile];
             
             if (status == 0) {
-//                [self uploadVideo:videoClip];
-                [upload uploadVideo:[videoClip.clip.outputURL path] Video:videoClip.video Hidden:[_hideClipsButton state]];
-                
-//                dispatch_async(dispatch_get_main_queue(), ^{
-//                    [self uploadSuccesful:videoClip];
-//                });
-            } else {
+                upload.clipindex = [videoClip.clipNumber intValue];
+                [upload uploadVideo:[arguments objectAtIndex:2] Video:videoClip.video Hidden:[_hideClipsButton state]];
             }
 
         }
@@ -494,7 +509,7 @@
     eazesportzAVClip *clip;
     
     for (int theclip = 0; theclip < clips.count; theclip++) {
-        if ([[[clips objectAtIndex:theclip] clipName] isEqualToString:[[notification userInfo] objectForKey:@"clipname"]]) {
+        if ([[[clips objectAtIndex:theclip] clipNumber] intValue] == [[[notification userInfo] objectForKey:@"clipindex"] intValue]) {
             clip = [clips objectAtIndex:theclip];
             break;
         }
@@ -502,16 +517,17 @@
     
     if ([[[notification userInfo] objectForKey:@"Result"] isEqualToString:@"Success"]) {
         [clips removeObject:clip];
+        [[NSFileManager defaultManager] removeItemAtPath:[clip.clip.outputURL path] error:nil];
     } else {
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
-                                    otherButton:nil informativeTextWithFormat:@"Error uploading clip %@", [[notification userInfo] objectForKey:@"clipname"]];
-        [alert setIcon:[sport getImage:@"tiny"]];
-        [alert runModal];
+        clip.uploaded = @"Error";
     }
     
-    uploadedclips++;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateClipTableNotification" object:self];
+}
 
-    if (uploadedclips == clips.count) {
+- (void)updateClipTable:(NSNotification *)notification {
+
+    if (clips.count == 0) {
         _activityIndicator.hidden = YES;
         [_activityIndicator stopAnimation:self];
         _saveButton.enabled = YES;
@@ -520,7 +536,6 @@
         _reloadButton.enabled = YES;
         
         [fileMgr removeItemAtPath:[transcodeDir stringByDeletingLastPathComponent] error:nil];
-        uploadedclips = 0;
     }
     
     [_clipTableView reloadData];

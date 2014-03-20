@@ -33,15 +33,11 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>EazesportzSSLUrl</key>
-	<string>http://192.168.1.87:3000</string>
+	<string>https://powerful-everglades-2345.herokuapp.com</string>
 	<key>EazesportzUrl</key>
-	<string>http://192.168.1.87:3000</string>
+	<string>http://powerful-everglades-2345.herokuapp.com</string>
 	<key>s3bucket</key>
-	<string>sportsite_solutions</string>
-	<key>streamingdirectory</key>
-	<string>/eazesportzstreaming</string>
-	<key>highlightsdirectory</key>
-	<string>/eazesportzhighlights</string>
+	<string>sportzteams</string>
 	<key>WelcomeMessage</key>
 	<string>EazeSportz Highlights Manager</string>
 	<key>ffmpeglocation</key>

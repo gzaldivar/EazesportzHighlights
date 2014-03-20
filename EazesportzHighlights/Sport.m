@@ -18,6 +18,7 @@
 @synthesize year;
 @synthesize zip;
 @synthesize state;
+@synthesize country;
 @synthesize city;
 @synthesize banner;
 @synthesize season;
@@ -39,6 +40,8 @@
 
 @synthesize streamingurl;
 @synthesize streamingbucket;
+@synthesize streamquality;
+@synthesize allstreams;
 
 @synthesize teamcount;
 
@@ -66,12 +69,17 @@
     if ((self = [super init]) && (sportDictionary.count > 0)) {
         playerPositions = [[NSMutableDictionary alloc] init];
         
-        self.id = [sportDictionary objectForKey:@"id"];
+        if ([sportDictionary objectForKey:@"id"])
+            self.id = [sportDictionary objectForKey:@"id"];
+        else if ([sportDictionary objectForKey:@"_id"])
+            self.id = [sportDictionary objectForKey:@"_id"];
+        
         sitename = [sportDictionary objectForKey:@"sitename"];
         mascot = [sportDictionary objectForKey:@"mascot"];
         year = [sportDictionary objectForKey:@"year"];
         zip = [sportDictionary objectForKey:@"zip"];
         state = [sportDictionary objectForKey:@"state"];
+        country = [sportDictionary objectForKey:@"country"];
         city = [sportDictionary objectForKey:@"city"];
         sport_logo_thumb = [sportDictionary objectForKey:@"sport_logo_thumb"];
         sport_logo_tiny = [sportDictionary objectForKey:@"sport_logo_tiny"];
@@ -91,6 +99,8 @@
         teamcount = [sportDictionary objectForKey:@"teamcount"];
         streamingurl = [sportDictionary objectForKey:@"streamingurl"];
         streamingbucket = [sportDictionary objectForKey:@"streamingbucket"];
+        streamquality = [sportDictionary objectForKey:@"streamquality"];
+        allstreams = [[sportDictionary objectForKey:@"allstreams"] boolValue];
         
         if ([name isEqualToString:@"Soccer"]) {
             playerPositions = [self parsePositions:[sportDictionary objectForKey:@"soccer_positions"]];
@@ -164,6 +174,70 @@
         return YES;
     else
         return NO;
+}
+
+- (BOOL)saveSport:(User *)user {
+    NSString *stringurl;
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    
+    if (self.id.length > 0) {
+        stringurl = [NSString stringWithFormat:@"%@%@%@%@%@", [mainBundle objectForInfoDictionaryKey:@"EazesportzUrl"], @"/sports/",
+                     self.id, @".json?auth_token=",  user.authtoken];
+        
+    } else {
+        stringurl = [NSString stringWithFormat:@"%@%@%@", [mainBundle objectForInfoDictionaryKey:@"EazesportzUrl"],
+                     @"/sports.json?auth_token=", user.authtoken];
+    }
+    
+    NSURL *url = [NSURL URLWithString:stringurl];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss+00:00"];
+    
+    NSMutableDictionary *sportDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:sitename, @"sitename",
+                                      mascot, @"mascot", year, @"year", zip, @"zip", country, @"country", city, @"city",
+                                     user.email, @"contactemail", season, @"season", streamquality,
+                                      @"streamquality", [NSString stringWithFormat:@"%d", allstreams], @"allstreams", nil];
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:sportDict, @"sport", nil];
+    
+    NSError *jsonSerializationError = nil;
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    if (self.id.length > 0) {
+        [request setHTTPMethod:@"PUT"];
+    } else {
+        [request setHTTPMethod:@"POST"];
+    }
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:&jsonSerializationError];
+    
+    if (!jsonSerializationError) {
+        NSString *serJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"Serialized JSON: %@", serJson);
+    } else {
+        NSLog(@"JSON Encoding Failed: %@", [jsonSerializationError localizedDescription]);
+    }
+    
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:jsonData];
+    
+    //Capturing server response
+    NSURLResponse* response;
+    NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&jsonSerializationError];
+    NSMutableDictionary *serverData = [NSJSONSerialization JSONObjectWithData:result options:0 error:&jsonSerializationError];
+    NSLog(@"%@", serverData);
+    NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)response;
+    
+    if ([httpResponse statusCode] == 200) {
+        NSDictionary *items = [serverData objectForKey:@"sport"];
+        [self initWithDictionary:items];
+        
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 @end

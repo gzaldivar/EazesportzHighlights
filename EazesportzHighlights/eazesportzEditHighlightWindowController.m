@@ -79,6 +79,7 @@
 
 - (IBAction)saveButtonClicked:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"HighlightsDataUpdtedNotification" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self close];
 }
 

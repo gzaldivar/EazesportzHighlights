@@ -113,33 +113,36 @@
     [openDlg setCanChooseDirectories:YES];
     [openDlg setCanChooseFiles:NO];
     [openDlg setFloatingPanel:YES];
+    [openDlg setCanCreateDirectories:YES];
     
     [openDlg beginWithCompletionHandler:^(NSInteger result){
-        NSArray* files = [openDlg URLs];
-        NSData *data;
-        NSString *filepath = [[files objectAtIndex:0] path];
-        filepath = [filepath stringByAppendingPathComponent:video.displayName];
-        
-        NSURL *url = [[NSURL alloc] initFileURLWithPath:filepath];
-        _downloadFileLabel.stringValue = [url path];
-        
-        if (url) {
-            _activityIndicator.hidden = NO;
-            [_activityIndicator startAnimation:self];
-            data = [NSData dataWithContentsOfURL:[NSURL URLWithString:video.video_url]];
-            NSLog(@"%@",filepath);
-            //do something with the file at filePath
+        if (result == NSFileHandlingPanelOKButton) {
+            NSArray* files = [openDlg URLs];
+            NSData *data;
+            NSString *filepath = [[files objectAtIndex:0] path];
+            filepath = [filepath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4", video.displayName]];
             
-            if (data) {
-                [data writeToFile:[url path] atomically:YES];
+            NSURL *url = [[NSURL alloc] initFileURLWithPath:filepath];
+            _downloadFileLabel.stringValue = [url path];
+            
+            if (url) {
+                _activityIndicator.hidden = NO;
+                [_activityIndicator startAnimation:self];
+                data = [NSData dataWithContentsOfURL:[NSURL URLWithString:video.video_url]];
+                NSLog(@"%@",filepath);
+                //do something with the file at filePath
+                
+                if (data) {
+                    [data writeToFile:[url path] atomically:YES];
+                }
+                
+                event.eventurl = [url path];
+                
+                _activityIndicator.hidden = YES;
+                [_activityIndicator stopAnimation:self];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoDownloadedNotification" object:nil];
+                [self.window close];
             }
-            
-            event.eventurl = [url path];
-            
-            _activityIndicator.hidden = YES;
-            [_activityIndicator stopAnimation:self];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"VideoDownloadedNotification" object:nil];
-            [self.window close];
         }
     }];
     

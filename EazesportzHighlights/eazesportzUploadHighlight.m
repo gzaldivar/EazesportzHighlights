@@ -35,13 +35,18 @@
                 
                 NSMutableDictionary *videoDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys: video.displayName, @"filename",
                                                   video.displayName, @"displayname", @"video/mp4", @"filetype", _team.teamid, @"team_id",
-                                                  _user.userid, @"user_id", _game.id, @"gameschedule_id", video.gamelog, @"gamelog_id",
-                                                  [video.duration stringValue], @"duration", video.description, @"description",
+                                                  _user.userid, @"user_id", [video.duration stringValue], @"duration",
+                                                  video.description, @"description",
                                                   [NSString stringWithFormat:@"%lu", videoData.length], @"size",
                                                   [NSString stringWithFormat:@"%d", (int)posterImage.size.width], @"width",
                                                   [NSString stringWithFormat:@"%d", (int)posterImage.size.height], @"height",
-                                                  [NSString stringWithFormat:@"%d", hidden], @"hidden",
-                                                  video.description, @"description", nil];
+                                                  [NSString stringWithFormat:@"%d", hidden], @"hidden", nil];
+                
+                if (_game)
+                    [videoDict setValue:_game.id forKey:@"gameschedule_id"];
+                
+                if (video.gamelog)
+                    [videoDict setValue:video.gamelog forKey:@"gamelog_id"];
                 
                 NSMutableURLRequest *urlrequest = [NSMutableURLRequest requestWithURL:url];
                 NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:videoDict, @"videoclip", nil];
@@ -229,10 +234,7 @@
         NSHTTPURLResponse* httpResponse = (NSHTTPURLResponse*)urlresponse;
         
         if ([httpResponse statusCode] != 200) {
-            NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil otherButton:nil
-                                 informativeTextWithFormat:@"Error uploading clip %@ to cloud", [pathname lastPathComponent]];
-            [alert setIcon:[_sport getImage:@"tiny"]];
-            [alert runModal];
+            NSLog(@"Error deleting data from database");
         }
     }
     

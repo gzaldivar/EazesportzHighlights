@@ -28,14 +28,4 @@
         return nil;
 }
 
-- (NSString *)getFilepathFromOutputUrl {
-    NSFileManager *filemgr;
-    
-    filemgr = [NSFileManager defaultManager];
-    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSArray *filecomponents = [[self.clip.outputURL absoluteString] componentsSeparatedByString:@"-"];
-    NSString *extension = [[filecomponents objectAtIndex:1] pathExtension];
-    return [NSString stringWithFormat:@"%@/%@.%@", documentsPath, [filecomponents objectAtIndex:0], extension];
-}
-
 @end

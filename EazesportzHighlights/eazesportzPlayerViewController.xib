@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.AVKitIBPlugin" version="3338"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="5053"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="eazesportzPlayerViewController">
@@ -10,7 +10,6 @@
                 <outlet property="activityIndicator" destination="Xty-ez-eNW" id="u3z-2H-gMW"/>
                 <outlet property="clipTableView" destination="vPn-jC-ypR" id="xlh-3P-oqd"/>
                 <outlet property="clipsLabel" destination="1Om-Ut-jIY" id="14f-9N-NSp"/>
-                <outlet property="deleteButton" destination="q4M-v9-HC5" id="ay3-DA-0Jz"/>
                 <outlet property="gameLabel" destination="3nb-9N-KX5" id="L5n-5U-6lN"/>
                 <outlet property="hideClipsButton" destination="1Mr-dB-A23" id="ihX-SX-Aeu"/>
                 <outlet property="nogameLabel" destination="sgB-QO-rHR" id="xgh-Ok-UjA"/>
@@ -32,7 +31,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </avPlayerView>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lF5-hT-Y5d">
-                    <rect key="frame" x="452" y="20" width="104" height="64"/>
+                    <rect key="frame" x="398" y="20" width="104" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="Create Clip" bezelStyle="regularSquare" image="scissor" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FMa-yw-mUa">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -212,7 +211,7 @@
                     </tableHeaderView>
                 </scrollView>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cbk-N4-xay">
-                    <rect key="frame" x="189" y="21" width="104" height="64"/>
+                    <rect key="frame" x="103" y="20" width="104" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="Upload All" bezelStyle="regularSquare" image="save" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tfn-gU-fD7">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -222,19 +221,8 @@
                         <action selector="saveButtonClicked:" target="-2" id="EAt-Nq-5BR"/>
                     </connections>
                 </button>
-                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q4M-v9-HC5">
-                    <rect key="frame" x="18" y="20" width="104" height="64"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="bevel" title="Delete Clip" bezelStyle="regularSquare" image="delete-item" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="unt-1J-mqn">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system" size="10"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="deleteButtonClicked:" target="-2" id="tru-Z9-uAg"/>
-                    </connections>
-                </button>
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lu9-xu-cKe">
-                    <rect key="frame" x="622" y="21" width="104" height="64"/>
+                    <rect key="frame" x="696" y="20" width="104" height="64"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" title="Reload" bezelStyle="regularSquare" image="reload" imagePosition="right" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GrH-fH-gXX">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -298,7 +286,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="delete-item" width="32" height="32"/>
         <image name="home" width="30" height="30"/>
         <image name="reload" width="32" height="32"/>
         <image name="save" width="32" height="32"/>

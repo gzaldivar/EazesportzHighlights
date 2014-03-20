@@ -24,6 +24,4 @@
 @property (nonatomic, strong) NSImage *posterImage;
 @property (nonatomic, assign) NSString *uploaded;
 
-- (NSString *)getFilepathFromOutputUrl;
-
 @end

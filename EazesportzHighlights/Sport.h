@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "User.h"
+
 @interface Sport : NSObject
 
 @property(nonatomic, strong) NSString *id;
@@ -19,6 +21,7 @@
 @property(nonatomic, strong) NSString *year;
 @property(nonatomic, strong) NSString *zip;
 @property(nonatomic, strong) NSString *state;
+@property(nonatomic, strong) NSString *country;
 @property(nonatomic, strong) NSString *city;
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSString *sport_logo_thumb;
@@ -37,6 +40,8 @@
 
 @property (nonatomic, strong) NSString *streamingurl;
 @property (nonatomic, strong) NSString *streamingbucket;
+@property (nonatomic, strong) NSString *streamquality;
+@property (nonatomic, assign) BOOL allstreams;
 
 @property(nonatomic, strong) NSNumber *teamcount;
 
@@ -54,5 +59,7 @@
 
 - (BOOL)isPackageEnabled;
 - (BOOL)isGoldPackage;
+
+- (BOOL)saveSport:(User *)user;
 
 @end

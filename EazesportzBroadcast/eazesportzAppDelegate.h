@@ -22,5 +22,6 @@
 - (IBAction)hdMenuItemClicked:(id)sender;
 @property (weak) IBOutlet NSMenuItem *hdmenuitem;
 @property (weak) IBOutlet NSMenuItem *sdmenuitem;
+- (IBAction)preferencesButtonClicked:(id)sender;
 
 @end

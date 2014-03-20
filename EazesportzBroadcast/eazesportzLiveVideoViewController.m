@@ -146,6 +146,16 @@
                 self.buildTask.launchPath = path;
                 NSString *segmentfile = [NSString stringWithFormat:@"%@.m3u8", videoname];
                 [arguments addObject:[streamingPath stringByAppendingPathComponent:segmentfile]];
+                [arguments addObject:[NSString stringWithFormat:@"%@/Contents/Resources/ffmpeg", [[NSBundle mainBundle] bundlePath]]];
+                
+                if ([sport.streamquality isEqualToString:@"Low"]) {
+                    [arguments addObject:@"400k"];
+                } else if ([sport.streamquality isEqualToString:@"Medium"]) {
+                    [arguments addObject:@"600k"];
+                } else if ([sport.streamquality isEqualToString:@"High"]) {
+                    [arguments addObject:@"1200k"];
+                }
+                
                 self.buildTask.arguments = arguments;
                 
                 self.outputPipe = [[NSPipe alloc] init];

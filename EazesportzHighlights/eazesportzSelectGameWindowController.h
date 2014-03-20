@@ -21,5 +21,6 @@
 @property (nonatomic, strong) User *user;
 @property (nonatomic, strong) Team *team;
 @property (nonatomic, strong, readonly) GameSchedule *game;
+@property (weak) IBOutlet NSProgressIndicator *activityIndicator;
 
 @end

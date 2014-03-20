@@ -66,19 +66,24 @@
 }
 
 - (void)teamSelected:(NSNotification *)notification {
+    game = nil;
+    _gameLabel.stringValue = @"Select Game";
     _sportNameLabel.stringValue = [NSString stringWithFormat:@"%@%@%@", sport.sitename, @" - ", self.selectTeamController.team.team_name];
     team = self.selectTeamController.team;
     _teamLabel.stringValue = team.team_name;
-    [self.selectTeamController close];
-    [_activityIndicator startAnimation:self];
-    [getPlayers retrievePlayers:sport Team:team User:user];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotRoster:) name:@"RosterChangedNotification" object:nil];
-    [getPlayers retrievePlayers:sport Team:team User:user];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"TeamSelectedNotification" object:nil];
+    
+    if (getPlayers.roster.count == 0) {
+        [_activityIndicator startAnimation:self];
+        [getPlayers retrievePlayers:sport Team:team User:user];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotRoster:) name:@"RosterChangedNotification" object:nil];
+        [getPlayers retrievePlayers:sport Team:team User:user];
+    }
 }
 
 - (void)gotRoster:(NSNotification *)notification {
     [_activityIndicator stopAnimation:self];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"RosterChangedNotification" object:nil];
 }
 
 - (IBAction)videoSegmentControlClicked:(id)sender {
@@ -234,8 +239,7 @@
 - (void)gameSelected:(NSNotification *)notification {
     game = self.selectGameController.game;
     _gameLabel.stringValue = game.opponent_name;
-    [self.selectGameController close];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"GameSelectedNotification" object:nil];
 }
 
 - (IBAction)downloadFileButtonClicked:(id)sender {

@@ -42,11 +42,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotGames:) name:@"GameListChangedNotification"
                                                object:nil];
     getGames = [[EazesportzRetrieveGames alloc] init];
+    [_activityIndicator startAnimation:self];
     [getGames retrieveGames:sport Team:team.teamid Token:user.authtoken];
     [_gamesTableView deselectAll:self];
 }
 
 - (void)gotGames:(NSNotification *)notification {
+    [_activityIndicator stopAnimation:self];
     [_gamesTableView reloadData];
 }
 
@@ -58,7 +60,7 @@
     if ([tableColumn.identifier isEqualToString:@"GameScheduleColumn"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"GameScheduleCell" owner:self];
         cellView.imageView.image = [agame opponentImage];        
-        cellView.textField.stringValue = [NSString stringWithFormat:@" vs. %@", agame.opponent_mascot];
+        cellView.textField.stringValue = agame.opponent_mascot;
         return cellView;
     } else if ([tableColumn.identifier isEqualToString:@"GameTimeColumn"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"GameTimeTableCell" owner:self];

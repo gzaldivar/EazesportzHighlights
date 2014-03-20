@@ -217,6 +217,11 @@
 		B45AFD3D18D7DC620043AE74 /* eazesportzHighlightsPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45AFD3B18D7DC620043AE74 /* eazesportzHighlightsPreferencesWindowController.xib */; };
 		B45CB1E518CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */; };
 		B45CB1E618CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */; };
+		B4903B6418DB315F008BF911 /* eazesportzAppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 2B0BED1118C818BB0040DB41 /* eazesportzAppDelegate.h */; };
+		B4903B6B18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4903B6918DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.m */; };
+		B4903B6C18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4903B6A18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.xib */; };
+		B4903B6F18DB7C1C008BF911 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = B4903B6E18DB7C1C008BF911 /* ffmpeg */; };
+		B49AF05018DA978E0053AD4E /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BFE15318DA2047007D3B7B /* AWSiOSSDK.framework */; };
 		B4A45C1F18C999D300BD94A9 /* PosterScript.command in Resources */ = {isa = PBXBuildFile; fileRef = B4A45C1E18C999D300BD94A9 /* PosterScript.command */; };
 		B4A45C2218C999F100BD94A9 /* eazesportzUploadHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A45C2118C999F100BD94A9 /* eazesportzUploadHighlight.m */; };
 		B4B8993918C8321A00830EED /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FA18C8321800830EED /* libasprintf.0.dylib */; };
@@ -265,8 +270,6 @@
 		B4B8996418C8321A00830EED /* libcrypto.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992518C8321900830EED /* libcrypto.1.0.0.dylib */; };
 		B4B8996518C8321A00830EED /* libncurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992618C8321A00830EED /* libncurses.a */; };
 		B4B8996618C8321A00830EED /* libncurses.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992718C8321A00830EED /* libncurses.5.dylib */; };
-		B4B8996718C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992818C8321A00830EED /* libdjvulibre.21.dylib */; };
-		B4B8996818C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992918C8321A00830EED /* libdjvulibre.21.dylib */; };
 		B4B8996918C8321A00830EED /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992A18C8321A00830EED /* libedit.0.dylib */; };
 		B4B8996A18C8321A00830EED /* libedit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992B18C8321A00830EED /* libedit.a */; };
 		B4B8996B18C8321A00830EED /* libedit.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8992C18C8321A00830EED /* libedit.0.dylib */; };
@@ -345,8 +348,8 @@
 		B4B899B918C8328D00830EED /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993818C8321A00830EED /* libfaac.0.dylib */; };
 		B4B899BA18C8328D00830EED /* libfaac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993718C8321A00830EED /* libfaac.a */; };
 		B4B899BB18C8328D00830EED /* libfaac.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8993818C8321A00830EED /* libfaac.0.dylib */; };
-		B4B899BD18C837D700830EED /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B899BC18C837D700830EED /* AWSiOSSDK.framework */; };
-		B4CC63DC18C83F6900B5BF0C /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */; };
+		B4BFE15418DA2047007D3B7B /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BFE15318DA2047007D3B7B /* AWSiOSSDK.framework */; };
+		B4BFE15E18DA371D007D3B7B /* TranscodeCopy.command in Resources */ = {isa = PBXBuildFile; fileRef = B4BFE15D18DA371D007D3B7B /* TranscodeCopy.command */; };
 		B4F6BB0718CE05F1001A7EF0 /* ffmpeg in Resources */ = {isa = PBXBuildFile; fileRef = B4F6BB0518CE05F1001A7EF0 /* ffmpeg */; };
 /* End PBXBuildFile section */
 
@@ -539,6 +542,10 @@
 		B45CB1E218CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzSelectLiveHighlightsViewController.h; sourceTree = "<group>"; };
 		B45CB1E318CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzSelectLiveHighlightsViewController.m; sourceTree = "<group>"; };
 		B45CB1E418CAEC5500919847 /* eazesportzSelectLiveHighlightsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzSelectLiveHighlightsViewController.xib; sourceTree = "<group>"; };
+		B4903B6818DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzBroadcastPreferencesWindowController.h; sourceTree = "<group>"; };
+		B4903B6918DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzBroadcastPreferencesWindowController.m; sourceTree = "<group>"; };
+		B4903B6A18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzBroadcastPreferencesWindowController.xib; sourceTree = "<group>"; };
+		B4903B6E18DB7C1C008BF911 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 		B4A45C1E18C999D300BD94A9 /* PosterScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PosterScript.command; sourceTree = "<group>"; };
 		B4A45C2018C999F100BD94A9 /* eazesportzUploadHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzUploadHighlight.h; sourceTree = "<group>"; };
 		B4A45C2118C999F100BD94A9 /* eazesportzUploadHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzUploadHighlight.m; sourceTree = "<group>"; };
@@ -606,8 +613,8 @@
 		B4B8993718C8321A00830EED /* libfaac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfaac.a; path = ../../../../../opt/local/lib/libfaac.a; sourceTree = "<group>"; };
 		B4B8993818C8321A00830EED /* libfaac.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfaac.0.dylib; path = ../../../../../opt/local/lib/libfaac.0.dylib; sourceTree = "<group>"; };
 		B4B8997A18C8326100830EED /* EazesportzHighlights.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = EazesportzHighlights.xcodeproj; sourceTree = "<group>"; };
-		B4B899BC18C837D700830EED /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSiOSSDK.framework; sourceTree = "<group>"; };
-		B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSiOSSDK.framework; path = "../aws-sdk-ios-master/AWSiOSSDK.framework"; sourceTree = "<group>"; };
+		B4BFE15318DA2047007D3B7B /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSiOSSDK.framework; sourceTree = "<group>"; };
+		B4BFE15D18DA371D007D3B7B /* TranscodeCopy.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TranscodeCopy.command; sourceTree = "<group>"; };
 		B4F6BB0518CE05F1001A7EF0 /* ffmpeg */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = ffmpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -616,7 +623,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4CC63DC18C83F6900B5BF0C /* AWSiOSSDK.framework in Frameworks */,
+				B49AF05018DA978E0053AD4E /* AWSiOSSDK.framework in Frameworks */,
 				B4B8997D18C8328D00830EED /* libasprintf.0.dylib in Frameworks */,
 				B4B8997E18C8328D00830EED /* libasprintf.a in Frameworks */,
 				B4B8997F18C8328D00830EED /* libasprintf.0.dylib in Frameworks */,
@@ -711,6 +718,7 @@
 				B4B8994118C8321A00830EED /* libavcodec.a in Frameworks */,
 				B4B8994218C8321A00830EED /* libavcodec.55.39.101.dylib in Frameworks */,
 				B4B8994318C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
+				B4BFE15418DA2047007D3B7B /* AWSiOSSDK.framework in Frameworks */,
 				B4B8994418C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
 				B4B8994518C8321A00830EED /* libavdevice.a in Frameworks */,
 				B4B8994618C8321A00830EED /* libavdevice.55.5.100.dylib in Frameworks */,
@@ -732,7 +740,6 @@
 				B4B8995618C8321A00830EED /* libavutil.52.48.101.dylib in Frameworks */,
 				B4B8995718C8321A00830EED /* libbluray.1.dylib in Frameworks */,
 				B4B8995818C8321A00830EED /* libbluray.a in Frameworks */,
-				B4B899BD18C837D700830EED /* AWSiOSSDK.framework in Frameworks */,
 				B4B8995918C8321A00830EED /* libbluray.1.dylib in Frameworks */,
 				B4B8995A18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */,
 				B4B8995B18C8321A00830EED /* libbz2.1.0.6.dylib in Frameworks */,
@@ -747,8 +754,6 @@
 				B4B8996418C8321A00830EED /* libcrypto.1.0.0.dylib in Frameworks */,
 				B4B8996518C8321A00830EED /* libncurses.a in Frameworks */,
 				B4B8996618C8321A00830EED /* libncurses.5.dylib in Frameworks */,
-				B4B8996718C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */,
-				B4B8996818C8321A00830EED /* libdjvulibre.21.dylib in Frameworks */,
 				B4B8996918C8321A00830EED /* libedit.0.dylib in Frameworks */,
 				B4B8996A18C8321A00830EED /* libedit.a in Frameworks */,
 				B4B8996B18C8321A00830EED /* libedit.0.dylib in Frameworks */,
@@ -787,6 +792,7 @@
 		2B0BEC9818C817CC0040DB41 /* EazesportzBroadcast */ = {
 			isa = PBXGroup;
 			children = (
+				B4903B6D18DB7C1C008BF911 /* ffmpeg */,
 				2BB157AA18C822E7007B05AE /* StreamFile.command */,
 				2B0BED2E18C818F90040DB41 /* GUI */,
 				2B0BED1118C818BB0040DB41 /* eazesportzAppDelegate.h */,
@@ -849,6 +855,9 @@
 				2B0BED2918C818E80040DB41 /* eazesportzEditEventWindowController.h */,
 				2B0BED2A18C818E80040DB41 /* eazesportzEditEventWindowController.m */,
 				2B0BED2B18C818E80040DB41 /* eazesportzEditEventWindowController.xib */,
+				B4903B6818DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.h */,
+				B4903B6918DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.m */,
+				B4903B6A18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.xib */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -879,8 +888,7 @@
 		2B24D01F18C6E95700584B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B4CC63DB18C83F6900B5BF0C /* AWSiOSSDK.framework */,
-				B4B899BC18C837D700830EED /* AWSiOSSDK.framework */,
+				B4BFE15318DA2047007D3B7B /* AWSiOSSDK.framework */,
 				B4B8997A18C8326100830EED /* EazesportzHighlights.xcodeproj */,
 				B4B898FA18C8321800830EED /* libasprintf.0.dylib */,
 				B4B898FB18C8321800830EED /* libasprintf.a */,
@@ -998,6 +1006,7 @@
 				2B24D17A18C6F89900584B38 /* HighlightScript.command */,
 				B4A45C1E18C999D300BD94A9 /* PosterScript.command */,
 				2B24D17E18C6FA9F00584B38 /* TranscodeClip.command */,
+				B4BFE15D18DA371D007D3B7B /* TranscodeCopy.command */,
 				2B24D0A418C6EAB000584B38 /* GUI */,
 				2B24D06A18C6EA4D00584B38 /* Model */,
 				2B24D05718C6EA0400584B38 /* Util */,
@@ -1159,6 +1168,14 @@
 			name = GUI;
 			sourceTree = "<group>";
 		};
+		B4903B6D18DB7C1C008BF911 /* ffmpeg */ = {
+			isa = PBXGroup;
+			children = (
+				B4903B6E18DB7C1C008BF911 /* ffmpeg */,
+			);
+			path = ffmpeg;
+			sourceTree = "<group>";
+		};
 		B4B8997B18C8326100830EED /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
@@ -1304,11 +1321,13 @@
 				2B0BED1618C818CB0040DB41 /* arrow-big-01.png in Resources */,
 				2B0BED1718C818CB0040DB41 /* calendar.png in Resources */,
 				2B0BED1818C818CB0040DB41 /* copy-item.png in Resources */,
+				B4903B6C18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.xib in Resources */,
 				2B0BED1918C818CB0040DB41 /* delete-item.png in Resources */,
 				2B0BED1A18C818CB0040DB41 /* document.png in Resources */,
 				2B0BED1B18C818CB0040DB41 /* download.png in Resources */,
 				2B0BED1C18C818CB0040DB41 /* film.png in Resources */,
 				2B0BED1D18C818CB0040DB41 /* home.png in Resources */,
+				B4903B6F18DB7C1C008BF911 /* ffmpeg in Resources */,
 				2B0BED1E18C818CB0040DB41 /* newspaper.png in Resources */,
 				2B0BED1F18C818CB0040DB41 /* photo_not_available.png in Resources */,
 				2B0BED2018C818CB0040DB41 /* photo_processing.png in Resources */,
@@ -1367,6 +1386,7 @@
 				2B24D17C18C6F89900584B38 /* HighlightScript.command in Resources */,
 				2B24D0A918C6EB0100584B38 /* eazesportzPlayerViewController.xib in Resources */,
 				2B24D0BC18C6EBD400584B38 /* arrow-big-01.png in Resources */,
+				B4BFE15E18DA371D007D3B7B /* TranscodeCopy.command in Resources */,
 				2B24D0D618C6EC3F00584B38 /* reload.png in Resources */,
 				2B24D0C118C6EBE800584B38 /* calendar.png in Resources */,
 				B4F6BB0718CE05F1001A7EF0 /* ffmpeg in Resources */,
@@ -1404,6 +1424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4903B6418DB315F008BF911 /* eazesportzAppDelegate.h in Sources */,
 				2B0BED6E18C81E440040DB41 /* eazesportzGetGame.h in Sources */,
 				2B0BED6F18C81E440040DB41 /* eazesportzGetGame.m in Sources */,
 				2B0BED7018C81E440040DB41 /* EazesportzLogin.h in Sources */,
@@ -1454,6 +1475,7 @@
 				2B0BED6418C81E350040DB41 /* Soccer.h in Sources */,
 				2B0BED6518C81E350040DB41 /* Soccer.m in Sources */,
 				2B0BED6618C81E350040DB41 /* Sport.h in Sources */,
+				B4903B6B18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.m in Sources */,
 				2B0BED6718C81E350040DB41 /* Sport.m in Sources */,
 				2B0BED6818C81E360040DB41 /* Team.h in Sources */,
 				2B0BED6918C81E360040DB41 /* Team.m in Sources */,
@@ -1644,8 +1666,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
-					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
@@ -1670,8 +1691,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
-					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzBroadcast/EazesportzBroadcast-Prefix.pch";
@@ -1800,9 +1820,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
-					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
-					/Users/dirctdt/Development/MacDevelopment/EazesportzHighlights,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzHighlights/EazesportzHighlights-Prefix.pch";
@@ -1828,9 +1846,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/Gil/Mac\\ Development/aws-sdk-ios-master",
-					"/Users/dirctdt/Development/MacDevelopment/aws-sdk-ios-master",
-					/Users/dirctdt/Development/MacDevelopment/EazesportzHighlights,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EazesportzHighlights/EazesportzHighlights-Prefix.pch";

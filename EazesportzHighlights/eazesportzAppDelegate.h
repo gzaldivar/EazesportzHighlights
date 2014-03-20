@@ -18,5 +18,6 @@
 
 - (IBAction)saveAction:(id)sender;
 - (IBAction)preferencesMenuItemClicked:(id)sender;
+@property (weak) IBOutlet NSMenuItem *preferencesMenuItem;
 
 @end

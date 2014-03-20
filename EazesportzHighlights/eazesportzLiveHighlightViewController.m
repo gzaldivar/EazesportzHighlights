@@ -112,6 +112,7 @@
 - (IBAction)homeButtonClicked:(id)sender {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"DisplayMainViewController" object:nil
                                             userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"LiveView", @"Message", nil]];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)cleanupDirectories {
@@ -183,6 +184,7 @@
                             
                             [arguments addObject:playbackstring];
                             [arguments addObject:clipfile];
+                            [arguments addObject:[NSString stringWithFormat:@"%@/Contents/Resources/ffmpeg", [[NSBundle mainBundle] bundlePath]]];
                             self.clipTask.arguments = arguments;
                             
                             NSPipe *writePipe = [NSPipe pipe];
@@ -197,6 +199,9 @@
                             [file closeFile];
                             Video *avideo = [[Video alloc] init];
                             avideo.displayName = [clipfile lastPathComponent];
+                            AVURLAsset* asset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:clipfile] options:nil];
+                            CMTime duration = asset.duration;
+                            avideo.duration = [NSNumber numberWithFloat:CMTimeGetSeconds(duration)];
                             [videos addObject:avideo];
                             [clips addObject:clipfile];
                             [_uploadComboBox reloadData];
@@ -295,6 +300,7 @@
         upload.user = user;
         upload.bucket = bucket;
         upload.s3 = s3;
+        upload.clipindex = (int)selectedItem;
         [upload uploadVideo:[clips objectAtIndex:selectedItem] Video:[videos objectAtIndex:selectedItem] Hidden:NO];
     }
 }

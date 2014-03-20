@@ -13,6 +13,7 @@
 #import "eazesportzLiveVideoViewController.h"
 
 #import "eazesportzSelectTeamWindowController.h"
+#import "eazesportzBroadcastPreferencesWindowController.h"
 
 #import <AWSiOSSDK/AmazonErrorHandler.h>
 
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) IBOutlet eazesportzLoginViewController *loginViewController;
 @property (nonatomic, strong) IBOutlet eazesportzScheduleBroadcastViewController *broadcastScheduleController;
 @property (nonatomic, strong) IBOutlet eazesportzLiveVideoViewController *liveVideoController;
+@property (nonatomic, strong) IBOutlet eazesportzBroadcastPreferencesWindowController *preferencesController;
 
 @end
 
@@ -292,6 +294,18 @@
     [self.liveVideoController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     [self resizeWindowForContentSize:[self.liveVideoController.view frame].size];
     [self.window.contentView addSubview:self.liveVideoController.view];
+}
+
+- (IBAction)preferencesButtonClicked:(id)sender {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferencesChanged:) name:@"PreferencesChangedNotification" object:nil];
+    self.preferencesController = [[eazesportzBroadcastPreferencesWindowController alloc] initWithWindowNibName:@"eazesportzBroadcastPreferencesWindowController"];
+    self.preferencesController.sport = getSport.sport;
+    self.preferencesController.user = self.loginViewController.user;
+    [self.preferencesController showWindow:self];
+}
+
+- (void)preferencesChanged:(NSNotification *)notification {
+    NSLog(@"Preferences Changed");
 }
 
 @end
