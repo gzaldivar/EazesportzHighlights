@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="1070" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="eazesportzMasterViewController">
@@ -119,7 +119,7 @@
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dHo-Vo-z79">
                     <rect key="frame" x="106" y="18" width="214" height="65"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="bevel" title="Download Eazesportz File" bezelStyle="regularSquare" image="download" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mW2-ap-Cvk">
+                    <buttonCell key="cell" type="bevel" title="Download Highlight" bezelStyle="regularSquare" image="download" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mW2-ap-Cvk">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="12" name="LucidaGrande"/>
                     </buttonCell>

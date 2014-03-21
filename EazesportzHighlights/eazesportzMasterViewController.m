@@ -202,17 +202,20 @@
 }
 
 - (IBAction)processVideoButtonClicked:(id)sender {
-    videoUrl = [self importVideoFile];
-    if ((videoUrl) && (team)) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayerReadyNotification" object:nil];
-    } else if (!team) {
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
-                                           otherButton:nil informativeTextWithFormat:@"Team required, Try again?"];
-        [alert setIcon:[sport getImage:@"tiny"]];
-        [alert runModal];
+    if (team ) {
+        videoUrl = [self importVideoFile];
+    
+        if ((videoUrl) && (team)) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayerReadyNotification" object:nil];
+        } else {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
+                                               otherButton:nil informativeTextWithFormat:@"No video selected, Try again?"];
+            [alert setIcon:[sport getImage:@"tiny"]];
+            [alert runModal];
+        }
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Notice" defaultButton:@"OK" alternateButton:nil
-                                           otherButton:nil informativeTextWithFormat:@"No video selected, Try again?"];
+                                           otherButton:nil informativeTextWithFormat:@"Team required, Try again?"];
         [alert setIcon:[sport getImage:@"tiny"]];
         [alert runModal];
     }

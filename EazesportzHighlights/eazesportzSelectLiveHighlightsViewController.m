@@ -69,7 +69,15 @@
 
 - (void)gotEvents:(NSNotification *)notification {
     if ([[[notification userInfo] valueForKey:@"Result"] isEqualToString:@"Success"]) {
-        [_eventTableView reloadData];
+        if (getEvents.eventlist.count > 0)
+            [_eventTableView reloadData];
+        else {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
+                                               otherButton:nil informativeTextWithFormat:@"No events match date range!"];
+            [alert setIcon:[sport getImage:@"tiny"]];
+            [alert runModal];
+        }
+        
         [[NSNotificationCenter defaultCenter] removeObserver:self name:@"EventListChangedNotification" object:nil];
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
