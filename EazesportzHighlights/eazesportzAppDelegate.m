@@ -15,6 +15,7 @@
 #import "eazesportzMainViewController.h"
 #import "eazesportzLiveHighlightViewController.h"
 #import "eazesportzSelectLiveHighlightsViewController.h"
+#import "eazesportzHighlightsPreferencesWindowController.h"
 
 #import "eazesportzSelectTeamWindowController.h"
 
@@ -28,6 +29,7 @@
 @property (nonatomic, strong) IBOutlet eazesportzMainViewController *processVideoController;
 @property (nonatomic, strong) IBOutlet eazesportzLiveHighlightViewController *liveHighlightsController;
 @property (nonatomic, strong) IBOutlet eazesportzSelectLiveHighlightsViewController *selectLiveHighlightsController;
+@property (nonatomic, strong) IBOutlet eazesportzHighlightsPreferencesWindowController *highlightsPreferencesController;
 
 @end
 
@@ -178,6 +180,13 @@
 }
 
 - (IBAction)preferencesMenuItemClicked:(id)sender {
+    if (self.loginViewController.user.userid.length > 0) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferencesChanged:) name:@"PreferencesChangedNotification" object:nil];
+        self.highlightsPreferencesController = [[eazesportzHighlightsPreferencesWindowController alloc] initWithWindowNibName:@"eazesportzHighlightsPreferencesWindowController"];
+        self.highlightsPreferencesController.sport = getSport.sport;
+        self.highlightsPreferencesController.user = self.loginViewController.user;
+        [self.highlightsPreferencesController showWindow:self];
+    }
 }
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
@@ -237,13 +246,39 @@
 - (void)gotSport:(NSNotification *)notification {
     if ([[[notification userInfo] objectForKey:@"Result"] isEqualToString:@"Success"]) {
         [self.loginViewController.view removeFromSuperview];
-        self.processVideoController =
-        [[eazesportzMainViewController alloc] initWithNibName:@"eazesportzMainViewController" bundle:nil];
+        self.processVideoController = [[eazesportzMainViewController alloc] initWithNibName:@"eazesportzMainViewController" bundle:nil];
         self.processVideoController.sport = getSport.sport;
         
         [self.processVideoController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
         [self resizeWindowForContentSize:[self.processVideoController.view frame].size];
         [self.window.contentView addSubview:self.processVideoController.view];
+        
+        if (![getSport.sport.highlightAppVersion isEqualToString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]) {
+            NSAlert *alert = [[NSAlert alloc] init];
+            [alert addButtonWithTitle:@"Dismiss"];
+            [alert addButtonWithTitle:@"Download"];
+            [alert setInformativeText:@"A newer version is available. Please visit Eazesportz.com to down load it!"];
+            [alert setAlertStyle:NSWarningAlertStyle];
+            [alert setIcon:[getSport.sport getImage:@"tiny"]];
+            [alert beginSheetModalForWindow:self.window modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+        }
+    }
+}
+
+- (void) alertDidEnd:(NSAlert *)alert returnCode:(int)returnCode contextInfo:(void *)contextInfo {
+	if (returnCode == NSAlertSecondButtonReturn) {
+        NSString *downloaddir = [NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *dmgpath = [NSString stringWithFormat:@"%@/%@", downloaddir, @"EazesportzHighlights.dmg"];
+        NSData *dmgdata = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", getSport.sport.streamingurl, @"EazesportzHighlights.dmg"]]];
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:dmgpath])
+            [[NSFileManager defaultManager] createFileAtPath:dmgpath contents:dmgdata attributes:nil];
+        else {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
+                                               otherButton:nil informativeTextWithFormat:@"EazesportzHighlights.dmg exists in your downloads directory. Please delete the old one."];
+            [alert setIcon:[getSport.sport getImage:@"tiny"]];
+            [alert runModal];
+        }
     }
 }
 
@@ -286,10 +321,10 @@
     self.playerController.getPlayers = self.masterViewController.getPlayers;
     self.playerController.highlightDate = [self.masterViewController.highlightDate dateValue];
     
-//    if ([_hdmenuitem state] == NSOnState)
-//        self.playerController.highdef = YES;
-//    else if ([_sdmenuitem state] == NSOnState)
-//        self.playerController.highdef = NO;
+    if ([self.highlightsPreferencesController.qualityComboBox.stringValue isEqualToString:@"SD"])
+        self.playerController.highdef = NO;
+    else
+        self.playerController.highdef = YES;
     
     [self.playerController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
     [self resizeWindowForContentSize:[self.playerController.view frame].size];
@@ -323,8 +358,7 @@
 
 - (void)liveHighlights:(NSNotification *)notification {
     [self.processVideoController.view removeFromSuperview];
-    self.selectLiveHighlightsController =
-            [[eazesportzSelectLiveHighlightsViewController alloc] initWithNibName:@"eazesportzSelectLiveHighlightsViewController" bundle:nil];
+    self.selectLiveHighlightsController = [[eazesportzSelectLiveHighlightsViewController alloc] initWithNibName:@"eazesportzSelectLiveHighlightsViewController" bundle:nil];
     self.selectLiveHighlightsController.sport = getSport.sport;
     self.selectLiveHighlightsController.user = self.loginViewController.user;
     [self.selectLiveHighlightsController.view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
@@ -334,4 +368,12 @@
 
 - (IBAction)preferencesButtonClicked:(id)sender {
 }
+
+- (void)preferencesChanged:(NSNotification *)notification {
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Success" defaultButton:@"OK" alternateButton:nil
+                                       otherButton:nil informativeTextWithFormat:@"Highlight preferences updated"];
+    [alert setIcon:[getSport.sport getImage:@"tiny"]];
+    [alert runModal];
+}
+
 @end

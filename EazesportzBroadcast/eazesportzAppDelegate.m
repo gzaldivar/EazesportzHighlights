@@ -297,15 +297,20 @@
 }
 
 - (IBAction)preferencesButtonClicked:(id)sender {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferencesChanged:) name:@"PreferencesChangedNotification" object:nil];
-    self.preferencesController = [[eazesportzBroadcastPreferencesWindowController alloc] initWithWindowNibName:@"eazesportzBroadcastPreferencesWindowController"];
-    self.preferencesController.sport = getSport.sport;
-    self.preferencesController.user = self.loginViewController.user;
-    [self.preferencesController showWindow:self];
+    if (self.loginViewController.user.userid.length > 0) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferencesChanged:) name:@"PreferencesChangedNotification" object:nil];
+        self.preferencesController = [[eazesportzBroadcastPreferencesWindowController alloc] initWithWindowNibName:@"eazesportzBroadcastPreferencesWindowController"];
+        self.preferencesController.sport = getSport.sport;
+        self.preferencesController.user = self.loginViewController.user;
+        [self.preferencesController showWindow:self];
+    }
 }
 
 - (void)preferencesChanged:(NSNotification *)notification {
-    NSLog(@"Preferences Changed");
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Success" defaultButton:@"OK" alternateButton:nil
+                                       otherButton:nil informativeTextWithFormat:@"Broadcast preferences updated"];
+    [alert setIcon:[getSport.sport getImage:@"tiny"]];
+    [alert runModal];
 }
 
 @end

@@ -229,6 +229,12 @@
             }
             
             [arguments addObject:[NSString stringWithFormat:@"%@/Contents/Resources/ffmpeg", [[NSBundle mainBundle] bundlePath]]];
+            
+            if (highdef)
+                [arguments addObject:@"1111k"];
+            else
+                [arguments addObject:@"600k"];
+            
             [self runScript:arguments VideoClip:clip];
         } else {                                            // we need to convert the video to h.264
             

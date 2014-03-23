@@ -14,11 +14,13 @@
 #import "EazesportzRetrieveEvents.h"
 #import "Event.h"
 #import "eazesportzGetGame.h"
+#import "eazesportzCameraWindowController.h"
 
 @interface eazesportzScheduleBroadcastViewController ()
 
 @property (nonatomic, strong) IBOutlet eazesportzSelectTeamWindowController *selectTeamController;
 @property (nonatomic, strong) IBOutlet eazesportzEditEventWindowController *editEventController;
+@property (nonatomic, strong) IBOutlet eazesportzCameraWindowController *cameraController;
 
 @end
 
@@ -162,13 +164,29 @@
         event = [getEvents.videoEventList objectAtIndex:eventSelected];
         
         if (broadcast) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"LiveVideoViewNotification" object:nil
+            if ([event.videoevent intValue] == 1) {    // Live event. Select camera
+                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupLiveBroadcast:) name:@"CameraSelectedNotification" object:nil];
+                self.cameraController = [[eazesportzCameraWindowController alloc] initWithWindowNibName:@"eazesportzCameraWindowController"];
+                [self.cameraController showWindow:self];
+            } else {
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"LiveVideoViewNotification" object:nil
                                             userInfo:[[NSDictionary alloc] initWithObjectsAndKeys:@"NotEvent", @"Message", event.eventurl, @"videourl", nil]];
+            }
 //            [[NSNotificationCenter defaultCenter] removeObserver:self];
        } else {
             [self editSchedule:event];
         }
     }
+}
+
+- (void)setupLiveBroadcast:(NSNotification *)notification {
+    if ([[[notification userInfo] objectForKey:@"Result"] isEqualToString:@"Camera"]) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"CameraSelectedNotification" object:nil];
+        
+    } else {
+        
+    }
+    
 }
 
 - (IBAction)broadcastScheduleButtonClicked:(id)sender {

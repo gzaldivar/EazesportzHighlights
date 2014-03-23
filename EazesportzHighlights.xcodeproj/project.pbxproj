@@ -224,6 +224,8 @@
 		B49AF05018DA978E0053AD4E /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4BFE15318DA2047007D3B7B /* AWSiOSSDK.framework */; };
 		B4A45C1F18C999D300BD94A9 /* PosterScript.command in Resources */ = {isa = PBXBuildFile; fileRef = B4A45C1E18C999D300BD94A9 /* PosterScript.command */; };
 		B4A45C2218C999F100BD94A9 /* eazesportzUploadHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A45C2118C999F100BD94A9 /* eazesportzUploadHighlight.m */; };
+		B4AD733D18DC7683009891CF /* eazesportzCameraWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AD733B18DC7683009891CF /* eazesportzCameraWindowController.m */; };
+		B4AD733E18DC7683009891CF /* eazesportzCameraWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4AD733C18DC7683009891CF /* eazesportzCameraWindowController.xib */; };
 		B4B8993918C8321A00830EED /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FA18C8321800830EED /* libasprintf.0.dylib */; };
 		B4B8993A18C8321A00830EED /* libasprintf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FB18C8321800830EED /* libasprintf.a */; };
 		B4B8993B18C8321A00830EED /* libasprintf.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B898FC18C8321800830EED /* libasprintf.0.dylib */; };
@@ -549,6 +551,9 @@
 		B4A45C1E18C999D300BD94A9 /* PosterScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PosterScript.command; sourceTree = "<group>"; };
 		B4A45C2018C999F100BD94A9 /* eazesportzUploadHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzUploadHighlight.h; sourceTree = "<group>"; };
 		B4A45C2118C999F100BD94A9 /* eazesportzUploadHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzUploadHighlight.m; sourceTree = "<group>"; };
+		B4AD733A18DC7683009891CF /* eazesportzCameraWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eazesportzCameraWindowController.h; sourceTree = "<group>"; };
+		B4AD733B18DC7683009891CF /* eazesportzCameraWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eazesportzCameraWindowController.m; sourceTree = "<group>"; };
+		B4AD733C18DC7683009891CF /* eazesportzCameraWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eazesportzCameraWindowController.xib; sourceTree = "<group>"; };
 		B4B898FA18C8321800830EED /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
 		B4B898FB18C8321800830EED /* libasprintf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libasprintf.a; path = ../../../../../opt/local/lib/libasprintf.a; sourceTree = "<group>"; };
 		B4B898FC18C8321800830EED /* libasprintf.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libasprintf.0.dylib; path = ../../../../../opt/local/lib/libasprintf.0.dylib; sourceTree = "<group>"; };
@@ -858,6 +863,9 @@
 				B4903B6818DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.h */,
 				B4903B6918DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.m */,
 				B4903B6A18DB3526008BF911 /* eazesportzBroadcastPreferencesWindowController.xib */,
+				B4AD733A18DC7683009891CF /* eazesportzCameraWindowController.h */,
+				B4AD733B18DC7683009891CF /* eazesportzCameraWindowController.m */,
+				B4AD733C18DC7683009891CF /* eazesportzCameraWindowController.xib */,
 			);
 			name = GUI;
 			sourceTree = "<group>";
@@ -1317,6 +1325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0BED1418C818CB0040DB41 /* Footballbkg.png in Resources */,
+				B4AD733E18DC7683009891CF /* eazesportzCameraWindowController.xib in Resources */,
 				2B0BED1518C818CB0040DB41 /* add-item.png in Resources */,
 				2B0BED1618C818CB0040DB41 /* arrow-big-01.png in Resources */,
 				2B0BED1718C818CB0040DB41 /* calendar.png in Resources */,
@@ -1495,6 +1504,7 @@
 				2B0BED4518C81E220040DB41 /* eazesportzVideoFileWindowController.h in Sources */,
 				2B0BED4618C81E220040DB41 /* eazesportzVideoFileWindowController.m in Sources */,
 				2B0BED4718C81E220040DB41 /* eazesportzVideoFileWindowController.xib in Sources */,
+				B4AD733D18DC7683009891CF /* eazesportzCameraWindowController.m in Sources */,
 				2B0BED3918C81E000040DB41 /* eazesportzLoginViewController.h in Sources */,
 				2B0BED3A18C81E000040DB41 /* eazesportzLoginViewController.m in Sources */,
 				2B0BED3B18C81E000040DB41 /* eazesportzLoginViewController.xib in Sources */,

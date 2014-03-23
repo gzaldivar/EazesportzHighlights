@@ -8,6 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "Sport.h"
+#import "User.h"
+
 @interface eazesportzHighlightsPreferencesWindowController : NSWindowController
+
+@property (weak) IBOutlet NSComboBox *qualityComboBox;
+
+@property (nonatomic, strong) Sport *sport;
+@property (nonatomic, strong) User *user;
+
+- (IBAction)submitButtonClicked:(id)sender;
 
 @end

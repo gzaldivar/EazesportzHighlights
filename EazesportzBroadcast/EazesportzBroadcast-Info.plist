@@ -21,7 +21,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0</string>
+	<key>EazesportzSSLUrl</key>
+	<string>https://powerful-everglades-2345.herokuapp.com</string>
+	<key>EazesportzUrl</key>
+	<string>http://powerful-everglades-2345.herokuapp.com</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.sports</string>
 	<key>LSMinimumSystemVersion</key>
@@ -32,13 +36,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>EazesportzSSLUrl</key>
-	<string>https://powerful-everglades-2345.herokuapp.com</string>
-	<key>EazesportzUrl</key>
-	<string>http://powerful-everglades-2345.herokuapp.com</string>
-	<key>s3bucket</key>
-	<string>sportzteams</string>
 	<key>WelcomeMessage</key>
 	<string>EazeSportz Broadcast Manager</string>
+	<key>s3bucket</key>
+	<string>sportzteams</string>
 </dict>
 </plist>

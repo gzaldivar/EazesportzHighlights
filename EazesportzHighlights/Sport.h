@@ -42,6 +42,10 @@
 @property (nonatomic, strong) NSString *streamingbucket;
 @property (nonatomic, strong) NSString *streamquality;
 @property (nonatomic, assign) BOOL allstreams;
+@property (nonatomic, strong) NSString *sdhdhighlights;
+
+@property (nonatomic, strong) NSString *broadcastAppVersion;
+@property (nonatomic, strong) NSString *highlightAppVersion;
 
 @property(nonatomic, strong) NSNumber *teamcount;
 

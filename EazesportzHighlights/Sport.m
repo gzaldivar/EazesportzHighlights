@@ -42,6 +42,10 @@
 @synthesize streamingbucket;
 @synthesize streamquality;
 @synthesize allstreams;
+@synthesize sdhdhighlights;
+
+@synthesize broadcastAppVersion;
+@synthesize highlightAppVersion;
 
 @synthesize teamcount;
 
@@ -101,6 +105,10 @@
         streamingbucket = [sportDictionary objectForKey:@"streamingbucket"];
         streamquality = [sportDictionary objectForKey:@"streamquality"];
         allstreams = [[sportDictionary objectForKey:@"allstreams"] boolValue];
+        sdhdhighlights = [sportDictionary objectForKey:@"sdhdhighlights"];
+        
+        broadcastAppVersion = [sportDictionary objectForKey:@"broadcastAppVersion"];
+        highlightAppVersion = [sportDictionary objectForKey:@"highlightAppVersion"];
         
         if ([name isEqualToString:@"Soccer"]) {
             playerPositions = [self parsePositions:[sportDictionary objectForKey:@"soccer_positions"]];
@@ -197,7 +205,8 @@
     NSMutableDictionary *sportDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:sitename, @"sitename",
                                       mascot, @"mascot", year, @"year", zip, @"zip", country, @"country", city, @"city",
                                      user.email, @"contactemail", season, @"season", streamquality,
-                                      @"streamquality", [NSString stringWithFormat:@"%d", allstreams], @"allstreams", nil];
+                                      @"streamquality", [NSString stringWithFormat:@"%d", allstreams], @"allstreams",
+                                      sdhdhighlights, @"sdhdhighlights", nil];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSMutableDictionary *jsonDict = [[NSMutableDictionary alloc] initWithObjectsAndKeys:sportDict, @"sport", nil];

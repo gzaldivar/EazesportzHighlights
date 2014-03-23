@@ -44,9 +44,15 @@
 - (IBAction)submitButtonClicked:(id)sender {
     sport.streamquality = _qualityComboBox.stringValue;
     sport.allstreams = _allStreamsCheckBox.state;
-    [sport saveSport:user];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"PreferencesChangedNotification" object:self];
-    [self close];
+    if ([sport saveSport:user]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"PreferencesChangedNotification" object:self];
+        [self close];
+    } else {
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Error" defaultButton:@"OK" alternateButton:nil
+                                           otherButton:nil informativeTextWithFormat:@"Error saving preferences"];
+        [alert setIcon:[sport getImage:@"tiny"]];
+        [alert runModal];
+    }
 }
 
 @end
